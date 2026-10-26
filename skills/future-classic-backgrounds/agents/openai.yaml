@@ -1,0 +1,4 @@
+interface:
+  display_name: "Future Classic Backgrounds"
+  short_description: "Create natural car-photo scenery and collect visual references"
+  default_prompt: "Use $future-classic-backgrounds to create believable, text-free wide backgrounds for later 9:16 car photographs, using available Future Classic references."

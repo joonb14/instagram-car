@@ -1,0 +1,959 @@
+{
+  "recordedDate": "2026-10-25",
+  "archiveRoot": "C:\\Users\\joonb\\OneDrive\\바탕 화면\\diy-cars\\artifacts\\social\\kling-success-records-2026-10-25",
+  "driveArchive": "https://drive.google.com/drive/folders/18wJF_rDccUhd97mZRmhL3UaevoDPbKxA",
+  "evidenceLimits": "Retention is owner selection. Model/aspect/resolution read from actual result detail; native metadata/hash from the actual downloaded bytes. Reference chip thumbnails and raw rendered text preserved. Historical costs and unobserved toggles remain unknown.",
+  "newPaidGenerationAuthorized": false,
+  "cases": [
+    {
+      "caseId": "943289885593579579",
+      "vehicle": "jeep",
+      "stage": "AFTER",
+      "shot": "front-half",
+      "titleKo": "정면 half · 번호판 없는 범퍼 양각 Jeep",
+      "providerResultUrl": "https://kling.ai/app/creations/grid?ac=12&project=941889208187895860&slotId=943289885593579579",
+      "providerRenderedPromptText": "The camera makes a short orbit at a slow, steady pace around the existing front headlamp toward the frontal centerline over three seconds, revealing slightly more grille and less outer fender. Retain the tight front-half framing without reaching a fully frontal view.Use \nn_v3 as the same single parked vehicle. Its position, orientation and tire contact patches remain fixed relative to the driveway. Keep camera height, focal length and subject distance steady, with natural scene parallax.Preserve the original black bumper geometry, seams and bolts. Its vertical front face remains exposed black metal throughout: no license plate, plate holder, dealer plate or rectangular plaque.The single original “Jeep” word is shallow, raised BLACK-ON-BLACK lettering molded directly into the bumper’s horizontal TOP surface immediately ahead of the grille. It is part of the bumper itself, with no separate backing panel, border or frame. Its visibility follows perspective and natural cropping.Keep the existing diagonal wipers and all lamps off. Only the camera moves; the vehicle and wheels remain stationary. One continuous shot, no zoom, cuts or fading.",
+      "providerRenderedSegments": [
+        {
+          "kind": "text",
+          "text": "The camera makes a short orbit at a slow, steady pace around the existing front headlamp toward the frontal centerline over three seconds, revealing slightly more grille and less outer fender. Retain the tight front-half framing without reaching a fully frontal view."
+        },
+        {
+          "kind": "text",
+          "text": "Use "
+        },
+        {
+          "images": [
+            "https://s15-kling.klingai.com/kimg/EMXN1y8qWAoGdXBsb2FkEg55bGFiLXN0dW50LXNncBo-YWlfcG9ydGFsLzE3OTI5MTE2OTcvTG1ybm5IWHk5VS9jaGF0Z3B0X19fX18yMDI2X18xMF9fMjVfXy5wbmc:240x240.webp?x-kcdn-pid=112372"
+          ],
+          "kind": "reference",
+          "text": ""
+        },
+        {
+          "kind": "text",
+          "text": "n_v3 as the same single parked vehicle. Its position, orientation and tire contact patches remain fixed relative to the driveway. Keep camera height, focal length and subject distance steady, with natural scene parallax."
+        },
+        {
+          "kind": "text",
+          "text": "Preserve the original black bumper geometry, seams and bolts. Its vertical front face remains exposed black metal throughout: no license plate, plate holder, dealer plate or rectangular plaque."
+        },
+        {
+          "kind": "text",
+          "text": "The single original “Jeep” word is shallow, raised BLACK-ON-BLACK lettering molded directly into the bumper’s horizontal TOP surface immediately ahead of the grille. It is part of the bumper itself, with no separate backing panel, border or frame. Its visibility follows perspective and natural cropping."
+        },
+        {
+          "kind": "text",
+          "text": "Keep the existing diagonal wipers and all lamps off. Only the camera moves; the vehicle and wheels remain stationary. One continuous shot, no zoom, cuts or fading."
+        }
+      ],
+      "observedSettings": {
+        "model": "Kling 3.0",
+        "aspectRatio": "9:16",
+        "resolution": "1080p"
+      },
+      "nativeMedia": {
+        "width": 1080,
+        "height": 1920,
+        "durationSeconds": 3.04,
+        "fps": 24.0,
+        "hasAudio": false,
+        "bytes": 13560922,
+        "sha256": "527db2a15745618ff298679886e8306b9ec57d1177c2b13f46d75cc82890c711"
+      },
+      "visualReview": {
+        "status": "sampled-frame inspection",
+        "fullPlaybackCertification": false
+      },
+      "recordFile": "RECORDS/jeep/after-front-half-943289885593579579.json"
+    },
+    {
+      "caseId": "943230458900004932",
+      "vehicle": "jeep",
+      "stage": "AFTER",
+      "shot": "front-three-quarter",
+      "titleKo": "전면 사선",
+      "providerResultUrl": "https://kling.ai/app/creations/grid?ac=12&project=941889208187895860&slotId=943230458900004932",
+      "providerRenderedPromptText": "The camera makes a small orbit at a slow, steady pace around the visible front corner toward the visible side over three seconds, revealing slightly more of the side while retaining the front three-quarter view.Use \n as the same single parked Jeep shown in the starting frame. Its position and orientation remain fixed relative to the driveway, with each tire planted on the same physical patch of asphalt.Keep the same camera height, focal length and distance from the car, with natural perspective changes and background parallax. Preserve the existing body proportions, copper paint, gold stripes and visible lettering in their original positions. All lamps remain off.Only the camera moves; the Jeep and wheels remain stationary. One continuous shot, no zoom, cuts or fading.",
+      "providerRenderedSegments": [
+        {
+          "kind": "text",
+          "text": "The camera makes a small orbit at a slow, steady pace around the visible front corner toward the visible side over three seconds, revealing slightly more of the side while retaining the front three-quarter view.Use "
+        },
+        {
+          "images": [],
+          "kind": "reference",
+          "text": ""
+        },
+        {
+          "kind": "text",
+          "text": " as the same single parked Jeep shown in the starting frame. Its position and orientation remain fixed relative to the driveway, with each tire planted on the same physical patch of asphalt.Keep the same camera height, focal length and distance from the car, with natural perspective changes and background parallax. Preserve the existing body proportions, copper paint, gold stripes and visible lettering in their original positions. All lamps remain off.Only the camera moves; the Jeep and wheels remain stationary. One continuous shot, no zoom, cuts or fading."
+        }
+      ],
+      "observedSettings": {
+        "model": "Kling 3.0",
+        "aspectRatio": "9:16",
+        "resolution": "1080p"
+      },
+      "nativeMedia": {
+        "width": 1080,
+        "height": 1916,
+        "durationSeconds": 3.04,
+        "fps": 24.0,
+        "hasAudio": false,
+        "bytes": 18210064,
+        "sha256": "d3ad18f4efe09c9a71938832284c23ed0a373ad0ef3c68bca8dcba85f48c8c1d"
+      },
+      "visualReview": {
+        "status": "sampled-frame inspection",
+        "fullPlaybackCertification": false
+      },
+      "recordFile": "RECORDS/jeep/after-front-three-quarter-943230458900004932.json"
+    },
+    {
+      "caseId": "943230152355086409",
+      "vehicle": "jeep",
+      "stage": "AFTER",
+      "shot": "front-straight",
+      "titleKo": "전면 전체",
+      "providerResultUrl": "https://kling.ai/app/creations/grid?ac=12&project=941889208187895860&slotId=943230152355086409",
+      "providerRenderedPromptText": "The camera makes a short orbit at a slow, steady pace around the front grille toward the front corner on the RIGHT of the starting image, keeping the front face dominant over three seconds, revealing only a little more of that side. Use \nas the same single parked Jeep. Its position and orientation stay fixed relative to the driveway, with each tire on the same physical asphalt patch. Keep camera height, focal length and subject distance steady, with natural scene parallax. Preserve the seven-slot chrome grille, single Jeep word on the bumper top and existing diagonal wipers. All lamps remain off. Only the camera moves; the Jeep and wheels remain stationary. One continuous shot, no zoom, cuts or fading.",
+      "providerRenderedSegments": [
+        {
+          "kind": "text",
+          "text": "The camera makes a short orbit at a slow, steady pace around the front grille toward the front corner on the RIGHT of the starting image, keeping the front face dominant over three seconds, revealing only a little more of that side. Use "
+        },
+        {
+          "images": [],
+          "kind": "reference",
+          "text": ""
+        },
+        {
+          "kind": "text",
+          "text": "as the same single parked Jeep. Its position and orientation stay fixed relative to the driveway, with each tire on the same physical asphalt patch. Keep camera height, focal length and subject distance steady, with natural scene parallax. Preserve the seven-slot chrome grille, single Jeep word on the bumper top and existing diagonal wipers. All lamps remain off. Only the camera moves; the Jeep and wheels remain stationary. One continuous shot, no zoom, cuts or fading."
+        }
+      ],
+      "observedSettings": {
+        "model": "Kling 3.0",
+        "aspectRatio": "9:16",
+        "resolution": "1080p"
+      },
+      "nativeMedia": {
+        "width": 1080,
+        "height": 1920,
+        "durationSeconds": 3.04,
+        "fps": 24.0,
+        "hasAudio": false,
+        "bytes": 17395913,
+        "sha256": "dc07028281a511144d4872ddec5292ac22eeb9d976f6d5540ff25dc646b51170"
+      },
+      "visualReview": {
+        "status": "sampled-frame inspection",
+        "fullPlaybackCertification": false
+      },
+      "recordFile": "RECORDS/jeep/after-front-straight-943230152355086409.json"
+    },
+    {
+      "caseId": "943229965707919419",
+      "vehicle": "jeep",
+      "stage": "AFTER",
+      "shot": "rear-straight",
+      "titleKo": "후면 전체",
+      "providerResultUrl": "https://kling.ai/app/creations/grid?ac=12&project=941889208187895860&slotId=943229965707919419",
+      "providerRenderedPromptText": "The camera makes a short orbit at a slow, steady pace around the rear-mounted spare toward the rear corner on the LEFT of the starting image, keeping the rear face dominant over three seconds, revealing only a little more of that visible side. Use \nas the same single parked Jeep. Its position and orientation stay fixed relative to the driveway, with each tire on the same physical asphalt patch. Keep camera height, focal length and subject distance steady, with natural scene parallax. Preserve the single spare, original tailgate hardware and plate-free rear body. All lamps remain off. Only the camera moves; the Jeep and wheels remain stationary. One continuous shot, no zoom, cuts or fading.",
+      "providerRenderedSegments": [
+        {
+          "kind": "text",
+          "text": "The camera makes a short orbit at a slow, steady pace around the rear-mounted spare toward the rear corner on the LEFT of the starting image, keeping the rear face dominant over three seconds, revealing only a little more of that visible side. Use "
+        },
+        {
+          "images": [],
+          "kind": "reference",
+          "text": ""
+        },
+        {
+          "kind": "text",
+          "text": "as the same single parked Jeep. Its position and orientation stay fixed relative to the driveway, with each tire on the same physical asphalt patch. Keep camera height, focal length and subject distance steady, with natural scene parallax. Preserve the single spare, original tailgate hardware and plate-free rear body. All lamps remain off. Only the camera moves; the Jeep and wheels remain stationary. One continuous shot, no zoom, cuts or fading."
+        }
+      ],
+      "observedSettings": {
+        "model": "Kling 3.0",
+        "aspectRatio": "9:16",
+        "resolution": "1080p"
+      },
+      "nativeMedia": {
+        "width": 1080,
+        "height": 1920,
+        "durationSeconds": 3.04,
+        "fps": 24.0,
+        "hasAudio": false,
+        "bytes": 15355599,
+        "sha256": "ec806543e52153170b988325388af048dc20e8e3ecde06e6ae43bbcda6af03a0"
+      },
+      "visualReview": {
+        "status": "sampled-frame inspection",
+        "fullPlaybackCertification": false
+      },
+      "recordFile": "RECORDS/jeep/after-rear-straight-943229965707919419.json"
+    },
+    {
+      "caseId": "943229865875095613",
+      "vehicle": "jeep",
+      "stage": "AFTER",
+      "shot": "side-body-detail",
+      "titleKo": "측면 Jeep / LAREDO / WRANGLER",
+      "providerResultUrl": "https://kling.ai/app/creations/grid?ac=12&project=941889208187895860&slotId=943229865875095613",
+      "providerRenderedPromptText": "The camera makes a short orbit at a slow, steady pace around the visible side door toward the rear quarter while retaining this side-body detail view over three seconds, revealing slightly more rear-quarter depth while keeping WRANGLER, Jeep and LAREDO in view. Use \nas the same single parked Jeep. Its position and orientation stay fixed relative to the driveway, with each tire on the same physical asphalt patch. Keep camera height, focal length and subject distance steady, with natural scene parallax. Preserve the three existing body words and single Jeep wheel-spoke marking. All lamps remain off. Only the camera moves; the Jeep and wheels remain stationary. One continuous shot, no zoom, cuts or fading.",
+      "providerRenderedSegments": [
+        {
+          "kind": "text",
+          "text": "The camera makes a short orbit at a slow, steady pace around the visible side door toward the rear quarter while retaining this side-body detail view over three seconds, revealing slightly more rear-quarter depth while keeping WRANGLER, Jeep and LAREDO in view. Use "
+        },
+        {
+          "images": [],
+          "kind": "reference",
+          "text": ""
+        },
+        {
+          "kind": "text",
+          "text": "as the same single parked Jeep. Its position and orientation stay fixed relative to the driveway, with each tire on the same physical asphalt patch. Keep camera height, focal length and subject distance steady, with natural scene parallax. Preserve the three existing body words and single Jeep wheel-spoke marking. All lamps remain off. Only the camera moves; the Jeep and wheels remain stationary. One continuous shot, no zoom, cuts or fading."
+        }
+      ],
+      "observedSettings": {
+        "model": "Kling 3.0",
+        "aspectRatio": "9:16",
+        "resolution": "1080p"
+      },
+      "nativeMedia": {
+        "width": 1080,
+        "height": 1916,
+        "durationSeconds": 3.04,
+        "fps": 24.0,
+        "hasAudio": false,
+        "bytes": 13898909,
+        "sha256": "09b9ac720d5a32e45cf0600435ee836810ea009fe4232601e08fe90326967708"
+      },
+      "visualReview": {
+        "status": "sampled-frame inspection",
+        "fullPlaybackCertification": false
+      },
+      "recordFile": "RECORDS/jeep/after-side-body-detail-943229865875095613.json"
+    },
+    {
+      "caseId": "943013819545813062",
+      "vehicle": "jeep",
+      "stage": "AFTER",
+      "shot": "soft-top-quarter",
+      "titleKo": "소프트톱 쿼터 · 대체 컷",
+      "providerResultUrl": "https://kling.ai/app/creations/grid?ac=12&project=941889208187895860&slotId=943013819545813062",
+      "providerRenderedPromptText": "The camera follows a two-degree orbit at a slow, steady pace around the existing soft-top rear-quarter window toward the rear of the Jeep over three seconds, retaining this side-quarter detail view. Use \n as the same single parked Jeep shown in the starting frame. Keep the same camera-to-window distance, height and focal length, with the window and rear wheel at approximately the same size in frame. The Jeep keeps the same position and orientation relative to the garden, with each tire on the same physical patch of asphalt. Keep the flexible windows transparent with the internal rollbar visible. Preserve the existing WRANGLER badge and Jeep wheel-spoke lettering. All lamps remain off. Only the camera moves; the car and wheels remain stationary. One continuous shot, no zoom, cuts or fading.",
+      "providerRenderedSegments": [
+        {
+          "kind": "text",
+          "text": "The camera follows a two-degree orbit at a slow, steady pace around the existing soft-top rear-quarter window toward the rear of the Jeep over three seconds, retaining this side-quarter detail view. Use "
+        },
+        {
+          "images": [
+            "https://s15-kling.klingai.com/kimg/EMXN1y8qUgoGdXBsb2FkEg55bGFiLXN0dW50LXNncBo4YWlfcG9ydGFsLzE3OTI4NTY5NjcvMm5taFlXc01uWS8wMS0wNy1mcm9udC1zdHJhaWdodC5wbmc:240x240.webp?x-kcdn-pid=112372"
+          ],
+          "kind": "reference",
+          "text": ""
+        },
+        {
+          "kind": "text",
+          "text": " as the same single parked Jeep shown in the starting frame. Keep the same camera-to-window distance, height and focal length, with the window and rear wheel at approximately the same size in frame. The Jeep keeps the same position and orientation relative to the garden, with each tire on the same physical patch of asphalt. Keep the flexible windows transparent with the internal rollbar visible. Preserve the existing WRANGLER badge and Jeep wheel-spoke lettering. All lamps remain off. Only the camera moves; the car and wheels remain stationary. One continuous shot, no zoom, cuts or fading."
+        }
+      ],
+      "observedSettings": {
+        "model": "Kling 3.0",
+        "aspectRatio": "9:16",
+        "resolution": "1080p"
+      },
+      "nativeMedia": {
+        "width": 1080,
+        "height": 1920,
+        "durationSeconds": 3.04,
+        "fps": 24.0,
+        "hasAudio": false,
+        "bytes": 16331847,
+        "sha256": "496c4f5c5c5275477b8b1843c70d9300592bc70c32643aec60dc36095f1833d4"
+      },
+      "visualReview": {
+        "status": "sampled-frame inspection",
+        "fullPlaybackCertification": false,
+        "priorCaveat": "Earlier strict QA noted inward size growth. Owner retained it; current edit omits this redundant angle."
+      },
+      "recordFile": "RECORDS/jeep/after-soft-top-quarter-943013819545813062.json"
+    },
+    {
+      "caseId": "942583255247761468",
+      "vehicle": "porsche-964",
+      "stage": "FINISHED",
+      "shot": "front-half-left-orbit",
+      "titleKo": "정면 half · 왼쪽 orbit",
+      "providerResultUrl": "https://kling.ai/app/creations/grid?ac=12&project=941889208187895860&slotId=942583255247761468",
+      "providerRenderedPromptText": "The camera ORBITS slowly around the car’s front corner toward the frontal centerline over three seconds. Follow a small circular arc to the LEFT around the stationary car, continuously turning the camera to keep the same headlamp in view. Reveal slightly more of the front bumper and less of the outer fender, with natural changes in perspective and background parallax. This is an orbit, not a sideways slide.Use \nas the same single parked Porsche. Keep a constant distance from the car, camera height and focal length. Maintain the tight front-half framing and keep the silver wheel hidden throughout.Preserve the existing Future Classic plate lettering on its original bumper bracket. The hood crest begins outside the left frame boundary; let its visibility follow the actual camera perspective naturally. Never pull it into view or add a second crest.The car and wheels remain stationary. All lights stay off. One continuous shot, no zoom or fading.",
+      "providerRenderedSegments": [
+        {
+          "kind": "text",
+          "text": "The camera ORBITS slowly around the car’s front corner toward the frontal centerline over three seconds. Follow a small circular arc to the LEFT around the stationary car, continuously turning the camera to keep the same headlamp in view. Reveal slightly more of the front bumper and less of the outer fender, with natural changes in perspective and background parallax. This is an orbit, not a sideways slide.Use "
+        },
+        {
+          "images": [
+            "https://s15-kling.klingai.com/kimg/EMXN1y8qSgoGdXBsb2FkEg55bGFiLXN0dW50LXNncBowYWlfcG9ydGFsLzE3OTI3MTM4NDcvZjN6RmFvQmFFei8wNS13aG9sZS1jYXIucG5n:240x240.webp?x-kcdn-pid=112372"
+          ],
+          "kind": "reference",
+          "text": ""
+        },
+        {
+          "kind": "text",
+          "text": "as the same single parked Porsche. Keep a constant distance from the car, camera height and focal length. Maintain the tight front-half framing and keep the silver wheel hidden throughout.Preserve the existing Future Classic plate lettering on its original bumper bracket. The hood crest begins outside the left frame boundary; let its visibility follow the actual camera perspective naturally. Never pull it into view or add a second crest.The car and wheels remain stationary. All lights stay off. One continuous shot, no zoom or fading."
+        }
+      ],
+      "observedSettings": {
+        "model": "Kling 3.0",
+        "aspectRatio": "9:16",
+        "resolution": "1080p"
+      },
+      "nativeMedia": {
+        "width": 1080,
+        "height": 1916,
+        "durationSeconds": 3.04,
+        "fps": 24.0,
+        "hasAudio": false,
+        "bytes": 10457365,
+        "sha256": "b102877cedb025f28cc6a65aa7cd4247a3a36f89ffce8d0802fdb840ac3a4c0c"
+      },
+      "visualReview": {
+        "status": "owner-selected; no new independent visual QA",
+        "fullPlaybackCertification": false
+      },
+      "recordFile": "RECORDS/porsche-964/finished-front-half-left-orbit-942583255247761468.json"
+    },
+    {
+      "caseId": "942461202473566304",
+      "vehicle": "jeep",
+      "stage": "BEFORE",
+      "shot": "soft-top-quarter",
+      "titleKo": "복원 전 소프트톱 쿼터",
+      "providerResultUrl": "https://kling.ai/app/creations/grid?ac=12&project=941889208187895860&slotId=942461202473566304",
+      "providerRenderedPromptText": "The camera operator slowly travels twenty centimetres toward the rear along the visible side of the Jeep over three seconds, gently panning to keep the soft-top quarter window framed. Use \n as the same parked car in the starting image. The car and wheels remain stationary. The camera moves through the location, producing natural perspective changes and parallax in the workshop and ground. Keep the same lens and camera height. Preserve the matte gray body, brown soft top, silver wheels, existing markings and Future Classic plate at their original positions. All lamps stay off. One continuous shot at a steady speed, no zoom, restoration transformation or fading.",
+      "providerRenderedSegments": [
+        {
+          "kind": "text",
+          "text": "The camera operator slowly travels twenty centimetres toward the rear along the visible side of the Jeep over three seconds, gently panning to keep the soft-top quarter window framed. Use "
+        },
+        {
+          "images": [],
+          "kind": "reference",
+          "text": ""
+        },
+        {
+          "kind": "text",
+          "text": " as the same parked car in the starting image. The car and wheels remain stationary. The camera moves through the location, producing natural perspective changes and parallax in the workshop and ground. Keep the same lens and camera height. Preserve the matte gray body, brown soft top, silver wheels, existing markings and Future Classic plate at their original positions. All lamps stay off. One continuous shot at a steady speed, no zoom, restoration transformation or fading."
+        }
+      ],
+      "observedSettings": {
+        "model": "Kling 3.0",
+        "aspectRatio": "9:16",
+        "resolution": "1080p"
+      },
+      "nativeMedia": {
+        "width": 1080,
+        "height": 1920,
+        "durationSeconds": 3.04,
+        "fps": 24.0,
+        "hasAudio": false,
+        "bytes": 14350823,
+        "sha256": "0b831893d706e63323607bfdeb28bb429778ed768a4b39a52ff7b3b46658b8d2"
+      },
+      "visualReview": {
+        "status": "sampled-frame inspection",
+        "fullPlaybackCertification": false
+      },
+      "recordFile": "RECORDS/jeep/before-soft-top-quarter-942461202473566304.json"
+    },
+    {
+      "caseId": "942460677011800093",
+      "vehicle": "jeep",
+      "stage": "BEFORE",
+      "shot": "side-wide",
+      "titleKo": "복원 전 측면 전체",
+      "providerResultUrl": "https://kling.ai/app/creations/grid?ac=12&project=941889208187895860&slotId=942460677011800093",
+      "providerRenderedPromptText": "The camera operator slowly travels thirty centimetres toward the front along the visible side of the Jeep over three seconds, gently panning to keep the whole car framed. Use \n as the same parked car in the starting image. The car and wheels remain stationary. The camera moves through the location, producing natural perspective changes and parallax in the workshop and ground. Keep the same lens and camera height. Preserve the matte gray body, brown soft top, silver wheels, existing markings and Future Classic plate at their original positions. All lamps stay off. One continuous shot at a steady speed, no zoom, restoration transformation or fading.",
+      "providerRenderedSegments": [
+        {
+          "kind": "text",
+          "text": "The camera operator slowly travels thirty centimetres toward the front along the visible side of the Jeep over three seconds, gently panning to keep the whole car framed. Use "
+        },
+        {
+          "images": [],
+          "kind": "reference",
+          "text": ""
+        },
+        {
+          "kind": "text",
+          "text": " as the same parked car in the starting image. The car and wheels remain stationary. The camera moves through the location, producing natural perspective changes and parallax in the workshop and ground. Keep the same lens and camera height. Preserve the matte gray body, brown soft top, silver wheels, existing markings and Future Classic plate at their original positions. All lamps stay off. One continuous shot at a steady speed, no zoom, restoration transformation or fading."
+        }
+      ],
+      "observedSettings": {
+        "model": "Kling 3.0",
+        "aspectRatio": "9:16",
+        "resolution": "1080p"
+      },
+      "nativeMedia": {
+        "width": 1080,
+        "height": 1920,
+        "durationSeconds": 3.04,
+        "fps": 24.0,
+        "hasAudio": false,
+        "bytes": 15599354,
+        "sha256": "80daec196ccc927f00c78fc14ede9bcf8dbc5b405f61114991f793bd2d74a131"
+      },
+      "visualReview": {
+        "status": "sampled-frame inspection",
+        "fullPlaybackCertification": false,
+        "editCaveat": "Late framing loses the rear of the car. Short version uses only 0.10–1.50 s."
+      },
+      "recordFile": "RECORDS/jeep/before-side-wide-942460677011800093.json"
+    },
+    {
+      "caseId": "942460248583979026",
+      "vehicle": "jeep",
+      "stage": "BEFORE",
+      "shot": "front-three-quarter",
+      "titleKo": "복원 전 전면 사선",
+      "providerResultUrl": "https://kling.ai/app/creations/grid?ac=12&project=941889208187895860&slotId=942460248583979026",
+      "providerRenderedPromptText": "The camera operator walks a slow, smooth six-degree arc toward the front of the Jeep over three seconds, revealing more of the grille and less of the visible side. Use \n as the same parked car in the starting image. The car and wheels remain stationary. The camera moves through the location, producing natural perspective changes and parallax in the workshop and ground. Keep the same lens and camera height. Preserve the matte gray body, brown soft top, silver wheels, existing markings and Future Classic plate at their original positions. All lamps stay off. One continuous shot at a steady speed, no zoom, restoration transformation or fading.",
+      "providerRenderedSegments": [
+        {
+          "kind": "text",
+          "text": "The camera operator walks a slow, smooth six-degree arc toward the front of the Jeep over three seconds, revealing more of the grille and less of the visible side. Use "
+        },
+        {
+          "images": [],
+          "kind": "reference",
+          "text": ""
+        },
+        {
+          "kind": "text",
+          "text": " as the same parked car in the starting image. The car and wheels remain stationary. The camera moves through the location, producing natural perspective changes and parallax in the workshop and ground. Keep the same lens and camera height. Preserve the matte gray body, brown soft top, silver wheels, existing markings and Future Classic plate at their original positions. All lamps stay off. One continuous shot at a steady speed, no zoom, restoration transformation or fading."
+        }
+      ],
+      "observedSettings": {
+        "model": "Kling 3.0",
+        "aspectRatio": "9:16",
+        "resolution": "1080p"
+      },
+      "nativeMedia": {
+        "width": 1080,
+        "height": 1920,
+        "durationSeconds": 3.04,
+        "fps": 24.0,
+        "hasAudio": false,
+        "bytes": 17088215,
+        "sha256": "e1723943d451c18003c6e48c9276162e3955f82a3916e9a524bb306835132fab"
+      },
+      "visualReview": {
+        "status": "sampled-frame inspection",
+        "fullPlaybackCertification": false
+      },
+      "recordFile": "RECORDS/jeep/before-front-three-quarter-942460248583979026.json"
+    },
+    {
+      "caseId": "942401159225688090",
+      "vehicle": "porsche-964",
+      "stage": "FINISHED",
+      "shot": "side-whole",
+      "titleKo": "측면 전체",
+      "providerResultUrl": "https://kling.ai/app/creations/grid?ac=12&project=941889208187895860&slotId=942401159225688090",
+      "providerRenderedPromptText": "The camera slowly glides sideways a short distance over three seconds, keeping the whole parked car in view. Use \n as the same single parked car shown in the starting frame. Keep the same camera height and focal length. Preserve the original body proportions, silver five-spoke wheels, Porsche crests and Future Classic plate. Let details follow perspective and natural occlusion; do not add or duplicate parts or text. All lamps remain off. Maintain natural colors and exposure. Only the camera moves; the car and wheels remain stationary. One continuous shot, no zoom, cuts or fading.",
+      "providerRenderedSegments": [
+        {
+          "kind": "text",
+          "text": "The camera slowly glides sideways a short distance over three seconds, keeping the whole parked car in view. Use "
+        },
+        {
+          "images": [],
+          "kind": "reference",
+          "text": ""
+        },
+        {
+          "kind": "text",
+          "text": " as the same single parked car shown in the starting frame. Keep the same camera height and focal length. Preserve the original body proportions, silver five-spoke wheels, Porsche crests and Future Classic plate. Let details follow perspective and natural occlusion; do not add or duplicate parts or text. All lamps remain off. Maintain natural colors and exposure. Only the camera moves; the car and wheels remain stationary. One continuous shot, no zoom, cuts or fading."
+        }
+      ],
+      "observedSettings": {
+        "model": "Kling 3.0",
+        "aspectRatio": "9:16",
+        "resolution": "1080p"
+      },
+      "nativeMedia": {
+        "width": 1080,
+        "height": 1920,
+        "durationSeconds": 3.04,
+        "fps": 24.0,
+        "hasAudio": false,
+        "bytes": 15279972,
+        "sha256": "c2c6a6a30d79a5385e8e3cff402bd2e9b78e63256f0df55cb70799d0ed8b42af"
+      },
+      "visualReview": {
+        "status": "owner-selected; no new independent visual QA",
+        "fullPlaybackCertification": false
+      },
+      "recordFile": "RECORDS/porsche-964/finished-side-whole-942401159225688090.json"
+    },
+    {
+      "caseId": "942399819506270215",
+      "vehicle": "porsche-964",
+      "stage": "FINISHED",
+      "shot": "hood-crest",
+      "titleKo": "후드 크레스트",
+      "providerResultUrl": "https://kling.ai/app/creations/grid?ac=12&project=941889208187895860&slotId=942399819506270215",
+      "providerRenderedPromptText": "The camera slowly moves along a tiny sideways arc around the existing hood crest over three seconds. Use \n for vehicle identity only; follow the starting frame for the close-up composition. Keep the crest at the same size and maintain the same focal length. Preserve the single classic Porsche crest, its gold PORSCHE and STUTTGART lettering, horse, antlers and red-and-black sections as a fixed physical badge attached to the hood. The car remains stationary. One continuous shot, no zoom, added symbols, color changes or fading.",
+      "providerRenderedSegments": [
+        {
+          "kind": "text",
+          "text": "The camera slowly moves along a tiny sideways arc around the existing hood crest over three seconds. Use "
+        },
+        {
+          "images": [],
+          "kind": "reference",
+          "text": ""
+        },
+        {
+          "kind": "text",
+          "text": " for vehicle identity only; follow the starting frame for the close-up composition. Keep the crest at the same size and maintain the same focal length. Preserve the single classic Porsche crest, its gold PORSCHE and STUTTGART lettering, horse, antlers and red-and-black sections as a fixed physical badge attached to the hood. The car remains stationary. One continuous shot, no zoom, added symbols, color changes or fading."
+        }
+      ],
+      "observedSettings": {
+        "model": "Kling 3.0",
+        "aspectRatio": "9:16",
+        "resolution": "1080p"
+      },
+      "nativeMedia": {
+        "width": 1080,
+        "height": 1920,
+        "durationSeconds": 3.04,
+        "fps": 24.0,
+        "hasAudio": false,
+        "bytes": 4850553,
+        "sha256": "f7151208f0d371609b9c1a2220dba07ca83436a35816d61cdd65ce12e92f9adc"
+      },
+      "visualReview": {
+        "status": "owner-selected; no new independent visual QA",
+        "fullPlaybackCertification": false
+      },
+      "recordFile": "RECORDS/porsche-964/finished-hood-crest-942399819506270215.json"
+    },
+    {
+      "caseId": "942399724764672031",
+      "vehicle": "porsche-964",
+      "stage": "FINISHED",
+      "shot": "front-three-quarter",
+      "titleKo": "전면 사선",
+      "providerResultUrl": "https://kling.ai/app/creations/grid?ac=12&project=941889208187895860&slotId=942399724764672031",
+      "providerRenderedPromptText": "The camera slowly arcs a few degrees around the front corner toward the visible side over three seconds. Use \n as the same single parked car shown in the starting frame. Keep the same camera height and focal length. Preserve the original body proportions, silver five-spoke wheels, Porsche crests and Future Classic plate. Let details follow perspective and natural occlusion; do not add or duplicate parts or text. All lamps remain off. Maintain natural colors and exposure. Only the camera moves; the car and wheels remain stationary. One continuous shot, no zoom, cuts or fading.",
+      "providerRenderedSegments": [
+        {
+          "kind": "text",
+          "text": "The camera slowly arcs a few degrees around the front corner toward the visible side over three seconds. Use "
+        },
+        {
+          "images": [],
+          "kind": "reference",
+          "text": ""
+        },
+        {
+          "kind": "text",
+          "text": " as the same single parked car shown in the starting frame. Keep the same camera height and focal length. Preserve the original body proportions, silver five-spoke wheels, Porsche crests and Future Classic plate. Let details follow perspective and natural occlusion; do not add or duplicate parts or text. All lamps remain off. Maintain natural colors and exposure. Only the camera moves; the car and wheels remain stationary. One continuous shot, no zoom, cuts or fading."
+        }
+      ],
+      "observedSettings": {
+        "model": "Kling 3.0",
+        "aspectRatio": "9:16",
+        "resolution": "1080p"
+      },
+      "nativeMedia": {
+        "width": 1080,
+        "height": 1920,
+        "durationSeconds": 3.04,
+        "fps": 24.0,
+        "hasAudio": false,
+        "bytes": 14437659,
+        "sha256": "9c0853ebdd86d666d2a3673f261626e8af45f60b9d8694a4ba740d377a23ff26"
+      },
+      "visualReview": {
+        "status": "owner-selected; no new independent visual QA",
+        "fullPlaybackCertification": false
+      },
+      "recordFile": "RECORDS/porsche-964/finished-front-three-quarter-942399724764672031.json"
+    },
+    {
+      "caseId": "942399551049842761",
+      "vehicle": "porsche-964",
+      "stage": "FINISHED",
+      "shot": "headlamp",
+      "titleKo": "헤드램프 디테일",
+      "providerResultUrl": "https://kling.ai/app/creations/grid?ac=12&project=941889208187895860&slotId=942399551049842761",
+      "providerRenderedPromptText": "The camera gently changes angle around the existing headlamp by only a few degrees over three seconds. Use \n as the same single parked car shown in the starting frame. Keep the same camera height and focal length. Preserve the existing ribbed lamp glass, mounting screw and original glass markings. Let details follow perspective and natural occlusion; do not add or duplicate parts or text. All lamps remain off. Maintain natural colors and exposure. Only the camera moves; the car and wheels remain stationary. One continuous shot, no zoom, cuts or fading.",
+      "providerRenderedSegments": [
+        {
+          "kind": "text",
+          "text": "The camera gently changes angle around the existing headlamp by only a few degrees over three seconds. Use "
+        },
+        {
+          "images": [],
+          "kind": "reference",
+          "text": ""
+        },
+        {
+          "kind": "text",
+          "text": " as the same single parked car shown in the starting frame. Keep the same camera height and focal length. Preserve the existing ribbed lamp glass, mounting screw and original glass markings. Let details follow perspective and natural occlusion; do not add or duplicate parts or text. All lamps remain off. Maintain natural colors and exposure. Only the camera moves; the car and wheels remain stationary. One continuous shot, no zoom, cuts or fading."
+        }
+      ],
+      "observedSettings": {
+        "model": "Kling 3.0",
+        "aspectRatio": "9:16",
+        "resolution": "1080p"
+      },
+      "nativeMedia": {
+        "width": 1080,
+        "height": 1920,
+        "durationSeconds": 3.04,
+        "fps": 24.0,
+        "hasAudio": false,
+        "bytes": 9142035,
+        "sha256": "605dab6005d4cbaacd5bccddef856d07695688f0cd7ee3e6ded9219119963235"
+      },
+      "visualReview": {
+        "status": "owner-selected; no new independent visual QA",
+        "fullPlaybackCertification": false
+      },
+      "recordFile": "RECORDS/porsche-964/finished-headlamp-942399551049842761.json"
+    },
+    {
+      "caseId": "942399454634721288",
+      "vehicle": "porsche-964",
+      "stage": "FINISHED",
+      "shot": "rear-three-quarter",
+      "titleKo": "후면 사선",
+      "providerResultUrl": "https://kling.ai/app/creations/grid?ac=12&project=941889208187895860&slotId=942399454634721288",
+      "providerRenderedPromptText": "The camera slowly arcs around the visible rear corner toward the rear wheel over three seconds. Use \n as the same single parked car shown in the starting frame. Keep the same camera height and focal length. Preserve the existing red PORSCHE reflector lettering, original rear grille and single exhaust outlet. Let details follow perspective and natural occlusion; do not add or duplicate parts or text. All lamps remain off. Maintain natural colors and exposure. Only the camera moves; the car and wheels remain stationary. One continuous shot, no zoom, cuts or fading.",
+      "providerRenderedSegments": [
+        {
+          "kind": "text",
+          "text": "The camera slowly arcs around the visible rear corner toward the rear wheel over three seconds. Use "
+        },
+        {
+          "images": [],
+          "kind": "reference",
+          "text": ""
+        },
+        {
+          "kind": "text",
+          "text": " as the same single parked car shown in the starting frame. Keep the same camera height and focal length. Preserve the existing red PORSCHE reflector lettering, original rear grille and single exhaust outlet. Let details follow perspective and natural occlusion; do not add or duplicate parts or text. All lamps remain off. Maintain natural colors and exposure. Only the camera moves; the car and wheels remain stationary. One continuous shot, no zoom, cuts or fading."
+        }
+      ],
+      "observedSettings": {
+        "model": "Kling 3.0",
+        "aspectRatio": "9:16",
+        "resolution": "1080p"
+      },
+      "nativeMedia": {
+        "width": 1080,
+        "height": 1920,
+        "durationSeconds": 3.04,
+        "fps": 24.0,
+        "hasAudio": false,
+        "bytes": 11235018,
+        "sha256": "7a4227fd778581795933bb4b568de03653d8db5863f2aaa8aea62b8cac3a5837"
+      },
+      "visualReview": {
+        "status": "owner-selected; no new independent visual QA",
+        "fullPlaybackCertification": false
+      },
+      "recordFile": "RECORDS/porsche-964/finished-rear-three-quarter-942399454634721288.json"
+    },
+    {
+      "caseId": "942399347143737357",
+      "vehicle": "porsche-964",
+      "stage": "FINISHED",
+      "shot": "front-toward-wheel",
+      "titleKo": "전면에서 휠 방향",
+      "providerResultUrl": "https://kling.ai/app/creations/grid?ac=12&project=941889208187895860&slotId=942399347143737357",
+      "providerRenderedPromptText": "The camera slowly arcs toward the visible front wheel over three seconds, revealing slightly more of the side. Use \n as the same single parked car shown in the starting frame. Keep the same camera height and focal length. Preserve the original body proportions, silver five-spoke wheels, Porsche crests and Future Classic plate. Let details follow perspective and natural occlusion; do not add or duplicate parts or text. All lamps remain off. Maintain natural colors and exposure. Only the camera moves; the car and wheels remain stationary. One continuous shot, no zoom, cuts or fading.",
+      "providerRenderedSegments": [
+        {
+          "kind": "text",
+          "text": "The camera slowly arcs toward the visible front wheel over three seconds, revealing slightly more of the side. Use "
+        },
+        {
+          "images": [],
+          "kind": "reference",
+          "text": ""
+        },
+        {
+          "kind": "text",
+          "text": " as the same single parked car shown in the starting frame. Keep the same camera height and focal length. Preserve the original body proportions, silver five-spoke wheels, Porsche crests and Future Classic plate. Let details follow perspective and natural occlusion; do not add or duplicate parts or text. All lamps remain off. Maintain natural colors and exposure. Only the camera moves; the car and wheels remain stationary. One continuous shot, no zoom, cuts or fading."
+        }
+      ],
+      "observedSettings": {
+        "model": "Kling 3.0",
+        "aspectRatio": "9:16",
+        "resolution": "1080p"
+      },
+      "nativeMedia": {
+        "width": 1080,
+        "height": 1920,
+        "durationSeconds": 3.04,
+        "fps": 24.0,
+        "hasAudio": false,
+        "bytes": 14431245,
+        "sha256": "5fbd15601c57650d6abdfb2d5fa03f3bc5a3ec5a8d92e958d73524a048d5e741"
+      },
+      "visualReview": {
+        "status": "owner-selected; no new independent visual QA",
+        "fullPlaybackCertification": false
+      },
+      "recordFile": "RECORDS/porsche-964/finished-front-toward-wheel-942399347143737357.json"
+    },
+    {
+      "caseId": "942373622126100569",
+      "vehicle": "bmw-e30",
+      "stage": "FINISHED",
+      "shot": "color-lights-off-closing",
+      "titleKo": "컬러 · 소등 · 후퇴 closing",
+      "providerResultUrl": "https://kling.ai/app/creations/grid?ac=12&project=941889208187895860&slotId=942373622126100569",
+      "providerRenderedPromptText": "The camera slowly dollies backward a short distance over three seconds, keeping the same low side-dominant viewing angle and focal length. Use @E30_325iX as the same single parked car shown in the starting frame. Keep the entire car and all visible wheels inside the frame. Preserve the original body proportions, black grille, emblems, gold wheels, E30 AWD decal and Future Classic plate. All headlights, auxiliary lamps, fog lights and indicators remain off throughout. Maintain the starting frame’s natural colors, soft daylight and exposure. Only the camera moves; the car and wheels remain stationary. One continuous shot, no cuts, color changes or fading.",
+      "providerRenderedSegments": [
+        {
+          "kind": "text",
+          "text": "The camera slowly dollies backward a short distance over three seconds, keeping the same low side-dominant viewing angle and focal length. Use @E30_325iX as the same single parked car shown in the starting frame. Keep the entire car and all visible wheels inside the frame. Preserve the original body proportions, black grille, emblems, gold wheels, E30 AWD decal and Future Classic plate. All headlights, auxiliary lamps, fog lights and indicators remain off throughout. Maintain the starting frame’s natural colors, soft daylight and exposure. Only the camera moves; the car and wheels remain stationary. One continuous shot, no cuts, color changes or fading."
+        }
+      ],
+      "observedSettings": {
+        "model": "Kling 3.0",
+        "aspectRatio": "9:16",
+        "resolution": "1080p"
+      },
+      "nativeMedia": {
+        "width": 1080,
+        "height": 1916,
+        "durationSeconds": 3.04,
+        "fps": 24.0,
+        "hasAudio": false,
+        "bytes": 11542463,
+        "sha256": "f45247e5846919036ff3eee88107ee1ec70d1f9bbfca27cc375ac83e9b04bafa"
+      },
+      "visualReview": {
+        "status": "owner-selected; no new independent visual QA",
+        "fullPlaybackCertification": false
+      },
+      "recordFile": "RECORDS/bmw-e30/finished-color-lights-off-closing-942373622126100569.json"
+    },
+    {
+      "caseId": "942271317754789902",
+      "vehicle": "bmw-e30",
+      "stage": "FINISHED",
+      "shot": "monochrome-lights-on-closing",
+      "titleKo": "흑백 · 양끝 헤드램프 · 후퇴 closing",
+      "providerResultUrl": "https://kling.ai/app/creations/grid?ac=12&project=941889208187895860&slotId=942271317754789902",
+      "providerRenderedPromptText": "The camera slowly dollies backward a short distance over three seconds, keeping the same low viewing angle and focal length. Use @E30_325iX as the same single parked car shown in the starting frame. Keep the entire car and all visible wheels inside the frame. Preserve the side profile, grille, emblems, E30 AWD decal and Future Classic plate without changing or duplicating them. Maintain the monochrome treatment, with warm color only in the two outermost headlights. All other lights remain off. Only the camera moves; the car and wheels stay stationary. One continuous shot, no cuts.",
+      "providerRenderedSegments": [
+        {
+          "kind": "text",
+          "text": "The camera slowly dollies backward a short distance over three seconds, keeping the same low viewing angle and focal length. Use @E30_325iX as the same single parked car shown in the starting frame. Keep the entire car and all visible wheels inside the frame. Preserve the side profile, grille, emblems, E30 AWD decal and Future Classic plate without changing or duplicating them. Maintain the monochrome treatment, with warm color only in the two outermost headlights. All other lights remain off. Only the camera moves; the car and wheels stay stationary. One continuous shot, no cuts."
+        }
+      ],
+      "observedSettings": {
+        "model": "Kling 3.0",
+        "aspectRatio": "9:16",
+        "resolution": "1080p"
+      },
+      "nativeMedia": {
+        "width": 1080,
+        "height": 1916,
+        "durationSeconds": 3.04,
+        "fps": 24.0,
+        "hasAudio": false,
+        "bytes": 9468947,
+        "sha256": "3469a9ca31fef187ad54867516926f72b1e59ee0a71cdc0316624c7dea67f81a"
+      },
+      "visualReview": {
+        "status": "owner-selected; no new independent visual QA",
+        "fullPlaybackCertification": false
+      },
+      "recordFile": "RECORDS/bmw-e30/finished-monochrome-lights-on-closing-942271317754789902.json"
+    },
+    {
+      "caseId": "942260562036785169",
+      "vehicle": "bmw-e30",
+      "stage": "FINISHED",
+      "shot": "hood-badge",
+      "titleKo": "후드 BMW 배지",
+      "providerResultUrl": "https://kling.ai/app/creations/grid?ac=12&project=941889208187895860&slotId=942260562036785169",
+      "providerRenderedPromptText": "Use @E30_325iX for vehicle identity only; follow the starting frame for the close-up composition and visible details. The camera slowly arcs sideways around the existing BMW hood emblem by only a few degrees over three seconds. Keep the emblem framed at the same size, with a constant camera height and distance. Preserve the single badge, its BMW lettering and blue-and-white quadrants exactly as shown, attached to the hood and following perspective naturally. The car remains stationary. One continuous shot, no zoom, no added symbols or text.",
+      "providerRenderedSegments": [
+        {
+          "kind": "text",
+          "text": "Use @E30_325iX for vehicle identity only; follow the starting frame for the close-up composition and visible details. The camera slowly arcs sideways around the existing BMW hood emblem by only a few degrees over three seconds. Keep the emblem framed at the same size, with a constant camera height and distance. Preserve the single badge, its BMW lettering and blue-and-white quadrants exactly as shown, attached to the hood and following perspective naturally. The car remains stationary. One continuous shot, no zoom, no added symbols or text."
+        }
+      ],
+      "observedSettings": {
+        "model": "Kling 3.0",
+        "aspectRatio": "9:16",
+        "resolution": "1080p"
+      },
+      "nativeMedia": {
+        "width": 1080,
+        "height": 1916,
+        "durationSeconds": 3.04,
+        "fps": 24.0,
+        "hasAudio": false,
+        "bytes": 3322512,
+        "sha256": "af6b222e71ed692973add71cea4277d8694fcb1663fcd75010dfd884a4c26ec6"
+      },
+      "visualReview": {
+        "status": "owner-selected; no new independent visual QA",
+        "fullPlaybackCertification": false
+      },
+      "recordFile": "RECORDS/bmw-e30/finished-hood-badge-942260562036785169.json"
+    },
+    {
+      "caseId": "942259078322733121",
+      "vehicle": "bmw-e30",
+      "stage": "FINISHED",
+      "shot": "front-whole",
+      "titleKo": "전면 전체",
+      "providerResultUrl": "https://kling.ai/app/creations/grid?ac=12&project=941889208187895860&slotId=942259078322733121",
+      "providerRenderedPromptText": "Use @E30_325iX as the same single parked car shown in the starting frame. The camera slowly arcs a few degrees around the front corner toward the visible side over three seconds. Keep the entire car, both bumpers and all visible wheels inside the frame throughout. Maintain the same camera height, distance and focal length. Preserve the original body proportions, black grille, lamps, single hood emblem, Future Classic plate lettering, gold wheels and E30 AWD side decal. Do not add or duplicate any details. Only the camera moves. The car and wheels remain stationary. One continuous shot, no zoom.",
+      "providerRenderedSegments": [
+        {
+          "kind": "text",
+          "text": "Use @E30_325iX as the same single parked car shown in the starting frame. The camera slowly arcs a few degrees around the front corner toward the visible side over three seconds. Keep the entire car, both bumpers and all visible wheels inside the frame throughout. Maintain the same camera height, distance and focal length. Preserve the original body proportions, black grille, lamps, single hood emblem, Future Classic plate lettering, gold wheels and E30 AWD side decal. Do not add or duplicate any details. Only the camera moves. The car and wheels remain stationary. One continuous shot, no zoom."
+        }
+      ],
+      "observedSettings": {
+        "model": "Kling 3.0",
+        "aspectRatio": "9:16",
+        "resolution": "1080p"
+      },
+      "nativeMedia": {
+        "width": 1080,
+        "height": 1916,
+        "durationSeconds": 3.04,
+        "fps": 24.0,
+        "hasAudio": false,
+        "bytes": 11144788,
+        "sha256": "a603ea02af68536a42cff53f81a35b765c245746d7b135448a8b9dcb224f35ec"
+      },
+      "visualReview": {
+        "status": "owner-selected; no new independent visual QA",
+        "fullPlaybackCertification": false
+      },
+      "recordFile": "RECORDS/bmw-e30/finished-front-whole-942259078322733121.json"
+    },
+    {
+      "caseId": "942258483381026852",
+      "vehicle": "bmw-e30",
+      "stage": "FINISHED",
+      "shot": "rear-three-quarter",
+      "titleKo": "후면 사선",
+      "providerResultUrl": "https://kling.ai/app/creations/grid?ac=12&project=941889208187895860&slotId=942258483381026852",
+      "providerRenderedPromptText": "Use @E30_325iX as the same single parked car shown in the starting frame. The camera slowly arcs around the visible rear corner toward the visible rear wheel over three seconds, revealing slightly more of the side. Keep the same low camera height, distance and focal length. Preserve the original taillights, trunk badges, Future Classic plate lettering, gold side stripes and E30 AWD decal, following perspective and occlusion naturally. Keep both exhaust tips together on the vehicle’s left side. Do not add or duplicate badges, lights, text or exhaust tips. Only the camera moves. The car and wheels remain stationary. One continuous shot, no zoom.",
+      "providerRenderedSegments": [
+        {
+          "kind": "text",
+          "text": "Use @E30_325iX as the same single parked car shown in the starting frame. The camera slowly arcs around the visible rear corner toward the visible rear wheel over three seconds, revealing slightly more of the side. Keep the same low camera height, distance and focal length. Preserve the original taillights, trunk badges, Future Classic plate lettering, gold side stripes and E30 AWD decal, following perspective and occlusion naturally. Keep both exhaust tips together on the vehicle’s left side. Do not add or duplicate badges, lights, text or exhaust tips. Only the camera moves. The car and wheels remain stationary. One continuous shot, no zoom."
+        }
+      ],
+      "observedSettings": {
+        "model": "Kling 3.0",
+        "aspectRatio": "9:16",
+        "resolution": "1080p"
+      },
+      "nativeMedia": {
+        "width": 1080,
+        "height": 1916,
+        "durationSeconds": 3.04,
+        "fps": 24.0,
+        "hasAudio": false,
+        "bytes": 7552438,
+        "sha256": "be4efa86f4b7d9e195d87892fd9ab3caa793d976973f6bca744438ffe5c398f8"
+      },
+      "visualReview": {
+        "status": "owner-selected; no new independent visual QA",
+        "fullPlaybackCertification": false
+      },
+      "recordFile": "RECORDS/bmw-e30/finished-rear-three-quarter-942258483381026852.json"
+    },
+    {
+      "caseId": "942258064609771604",
+      "vehicle": "bmw-e30",
+      "stage": "FINISHED",
+      "shot": "front-toward-wheel",
+      "titleKo": "전면에서 휠 방향",
+      "providerResultUrl": "https://kling.ai/app/creations/grid?ac=12&project=941889208187895860&slotId=942258064609771604",
+      "providerRenderedPromptText": "Use @E30_325iX as the same single parked car shown in the starting frame. The camera slowly arcs around the visible front corner toward the visible front wheel over three seconds, revealing slightly more of the side. Keep the same low camera height, distance and focal length. Preserve the black kidney grille, lamp arrangement, single hood emblem, Future Classic plate lettering and gold E30 AWD side decal in their original positions, following perspective and occlusion naturally. Do not add or duplicate badges, lights, text or graphics. Only the camera moves. The car and wheels remain stationary. One continuous shot, no zoom.",
+      "providerRenderedSegments": [
+        {
+          "kind": "text",
+          "text": "Use @E30_325iX as the same single parked car shown in the starting frame. The camera slowly arcs around the visible front corner toward the visible front wheel over three seconds, revealing slightly more of the side. Keep the same low camera height, distance and focal length. Preserve the black kidney grille, lamp arrangement, single hood emblem, Future Classic plate lettering and gold E30 AWD side decal in their original positions, following perspective and occlusion naturally. Do not add or duplicate badges, lights, text or graphics. Only the camera moves. The car and wheels remain stationary. One continuous shot, no zoom."
+        }
+      ],
+      "observedSettings": {
+        "model": "Kling 3.0",
+        "aspectRatio": "9:16",
+        "resolution": "1080p"
+      },
+      "nativeMedia": {
+        "width": 1080,
+        "height": 1916,
+        "durationSeconds": 3.04,
+        "fps": 24.0,
+        "hasAudio": false,
+        "bytes": 7400777,
+        "sha256": "26f2287d0db6a19d8629b97737cbcd8ad0c6a7ea18675127c7ea938a56f918f4"
+      },
+      "visualReview": {
+        "status": "owner-selected; no new independent visual QA",
+        "fullPlaybackCertification": false
+      },
+      "recordFile": "RECORDS/bmw-e30/finished-front-toward-wheel-942258064609771604.json"
+    },
+    {
+      "caseId": "942256216544264224",
+      "vehicle": "bmw-e30",
+      "stage": "FINISHED",
+      "shot": "front-corner-right-arc",
+      "titleKo": "전면 코너 오른쪽 arc",
+      "providerResultUrl": "https://kling.ai/app/creations/grid?ac=12&project=941889208187895860&slotId=942256216544264224",
+      "providerRenderedPromptText": "Use @E30_325iX as the same single parked car shown in the starting frame.The camera slowly moves along a small arc to the right around the visible front corner over three seconds. Keep the same camera height and focal length.The hood has exactly one BMW emblem at its original position. Keep the black kidney grille and lamp arrangement unchanged. Preserve the existing Future Classic plate lettering as a fixed printed surface, following its perspective naturally. Do not add or duplicate badges, text or graphics.Only the camera moves. The car and wheels remain stationary.",
+      "providerRenderedSegments": [
+        {
+          "kind": "text",
+          "text": "Use @E30_325iX as the same single parked car shown in the starting frame.The camera slowly moves along a small arc to the right around the visible front corner over three seconds. Keep the same camera height and focal length.The hood has exactly one BMW emblem at its original position. Keep the black kidney grille and lamp arrangement unchanged. Preserve the existing Future Classic plate lettering as a fixed printed surface, following its perspective naturally. Do not add or duplicate badges, text or graphics.Only the camera moves. The car and wheels remain stationary."
+        }
+      ],
+      "observedSettings": {
+        "model": "Kling 3.0",
+        "aspectRatio": "9:16",
+        "resolution": "1080p"
+      },
+      "nativeMedia": {
+        "width": 1080,
+        "height": 1916,
+        "durationSeconds": 3.04,
+        "fps": 24.0,
+        "hasAudio": false,
+        "bytes": 9342848,
+        "sha256": "22370477a8c96235e3828e5c9eeed7a9bc89c116a093e8ac0863c1e4cedc8e6d"
+      },
+      "visualReview": {
+        "status": "owner-selected; no new independent visual QA",
+        "fullPlaybackCertification": false
+      },
+      "recordFile": "RECORDS/bmw-e30/finished-front-corner-right-arc-942256216544264224.json"
+    }
+  ]
+}

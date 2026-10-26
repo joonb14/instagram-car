@@ -1,0 +1,26 @@
+---
+name: future-classic-home-films
+description: Connect newly published Future Classic YouTube videos to the exact vehicle's existing Gallery article and reviewed photographs, then prepare and verify a bilingual homepage film card. Use for new-upload home-card sync or repairing an existing pairing; not for generating or uploading videos.
+---
+
+# Future Classic home films
+
+Find new public videos on the owner's [YouTube channel](https://www.youtube.com/@future_classic_club), match the exact source vehicle, and update the existing home carousel. Use the current project named in the task; normally `C:/Users/joonb/OneDrive/바탕 화면/diy-cars`. Read its `AGENTS.md`, latest `docs/README.md` and `docs/frontend/home-films.md`. The source skill lives in `skills/future-classic-home-films`; keep the installed copy synchronized when changing it.
+
+## Match the vehicle
+
+Compare the channel's observed public uploads with `apps/web/app/content/home-films.json`; Shorts, watch and share URLs referring to the same video ID are one upload. A title, generation, colour or attractive thumbnail is not enough to identify the same vehicle. Use the actual video, original author/source thread, article and saved social-production source ledger. Confirm the channel, public status and actual embedded playback. Never publish a private, future or invented video ID.
+
+Reuse the existing published Gallery article and its source identity. Personally check the film and actual photo pixels against that exact case, including variant/colour/wheels/interior/work where visible. Select1–3 genuine, reviewed, plate-protected source photos with useful bilingual labels, captions and alt text; generated film frames do not become documentary restoration photos. Preserve photographer and source credits. If a frame shows a commenter's/reference vehicle, exclude it from the owner's photo pair. State a supported year only. Preserve the existing English-first editorial and Korean translation rules.
+
+For a new upload of the same car, update that car's existing card using `replacesVideoId`; do not create duplicate case cards or silently replace a different video. For an absent, unpublished or ambiguous article, save the observed evidence and exact missing link; do not pair a merely similar car or create a placeholder card. If the user wants a new article, use garage-forum-editorial's existing capture/editorial/publication workflow first, preserving its active collector lock. Only a confirmed published case can enter the home registry.
+
+## Register and verify
+
+Read [the manifest and tool contract](references/pairing.md). Prepare a private pairing manifest with observed review evidence, bilingual card data and per-photo source URLs/hashes. The deterministic tool performs a read-only plan followed by a locked local apply into an explicitly selected project/release. It checks publication/source membership, duplicate video/case identity, exact photo provenance, decoded WebP metadata/dimensions, path containment and stale inputs. Inspect the plan before applying; a successful apply means local registration, not live deployment.
+
+The registry is the single card list. Both server selectors include every registered film before legacy featured slugs, preserving source publication/filter eligibility. Do not reintroduce the historical three-card cap, edit only `featured-stories.ts`, remove existing cards to fit a limit, reset article dates or replace real feed pagination with a static snapshot. Existing card playback,12-second optional advance, native video controls and side chevrons remain unchanged.
+
+For an authorized website deployment, read the current [static publication procedure](../garage-forum-editorial/references/static-publication.md), resolve the actual live version/source from current docs, and plan/apply again against that staged source. Never deploy this checkout's unrelated changes or reuse a frozen dated release. Preserve concurrent publications, old public assets and production bindings. Rebuild all indexes and EN/KO static documents; run home-film, selector, sync and relevant publication tests, typecheck/build and actual browser checks. Verify the new video plays, its photos decode, existing videos remain reachable, correct article links work in both languages, controls/auto-hold work and feed pagination remains real. Record the actual deployed version and live evidence. Preserve any active collection run and its state.
+
+Creating this skill does not create a watcher. Invoke it after an upload or include it in an already authorized workflow. Do not create a new schedule, upload/edit YouTube videos, change channel settings, spend generation credits or deploy solely to test the skill. Apply existing explicit website-publication authorization; if the task is only pairing/preview, stop at its requested scope. Report cards added/updated/already linked and precise unmatched reasons, distinguishing local work from verified live results.

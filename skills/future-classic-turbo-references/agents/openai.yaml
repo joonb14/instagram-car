@@ -1,0 +1,4 @@
+interface:
+  display_name: "Porsche 993·964 레퍼런스"
+  short_description: "993·964 모든 버전과 997.1 Turbo의 외관 사진·Gallery 수집"
+  default_prompt: "Use $future-classic-turbo-references to collect attractive Porsche993/964 photos of any variant, plus997.1Turbo, and prepare reviewed Gallery introductions."

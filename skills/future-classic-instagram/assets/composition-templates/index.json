@@ -1,0 +1,84 @@
+{
+  "purpose": "CAMERA COMPOSITION ONLY; never Element identity; no automatic approval of detail fidelity",
+  "baseline": [
+    {
+      "id": "front-half",
+      "file": "front-half.jpg",
+      "source": "artifacts/video-camera-test-2026-10-23/e30-six-source-workflow/front-half.png",
+      "status": "owner-selected composition",
+      "usage": "Original car identity must come from the new vehicle"
+    },
+    {
+      "id": "front-low",
+      "file": "front-low.jpg",
+      "source": "artifacts/video-camera-test-2026-10-23/e30-six-source-workflow/front-low.png",
+      "status": "owner-selected composition",
+      "usage": "Original car identity must come from the new vehicle"
+    },
+    {
+      "id": "rear-three-quarter",
+      "file": "rear-three-quarter.jpg",
+      "source": "artifacts/video-camera-test-2026-10-23/e30-six-source-workflow/rear-three-quarter.png",
+      "status": "owner-selected composition",
+      "usage": "Original car identity must come from the new vehicle"
+    },
+    {
+      "id": "whole-car",
+      "file": "whole-car.jpg",
+      "source": "artifacts/video-camera-test-2026-10-23/e30-six-source-workflow/whole-car.png",
+      "status": "owner-selected composition",
+      "usage": "Original car identity must come from the new vehicle"
+    },
+    {
+      "id": "side-dominant",
+      "file": "side-dominant.jpg",
+      "source": "artifacts/video-camera-test-2026-10-23/e30-side-dominant-v02/whole-car-side-native.png",
+      "status": "owner-selected composition",
+      "usage": "Original car identity must come from the new vehicle"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "wheel-partial",
+      "source": "144789",
+      "crop": [
+        1550,
+        850,
+        1000,
+        1778
+      ],
+      "purpose": "Wheel/fender partial; keep entire near wheel and original crest; no spinning wheel.",
+      "file": "wheel-partial.jpg",
+      "status": "new candidate framing from actual964source, not owner-approved default",
+      "sourceCredit": "911UK · Chrism964"
+    },
+    {
+      "id": "rear-half",
+      "source": "132420",
+      "crop": [
+        100,
+        250,
+        675,
+        1200
+      ],
+      "purpose": "Rear reflector and bumper partial; preserve PORSCHE and actual exhaust; do not invent plate.",
+      "file": "rear-half.jpg",
+      "status": "new candidate framing from actual964source, not owner-approved default",
+      "sourceCredit": "911UK · Chrism964"
+    },
+    {
+      "id": "headlamp-detail",
+      "source": "139882",
+      "crop": [
+        250,
+        100,
+        2200,
+        3911
+      ],
+      "purpose": "Round headlamp macro; preserve actual ring, ribbedglass and mounting.",
+      "file": "headlamp-detail.jpg",
+      "status": "new candidate framing from actual964source, not owner-approved default",
+      "sourceCredit": "911UK · Chrism964"
+    }
+  ]
+}

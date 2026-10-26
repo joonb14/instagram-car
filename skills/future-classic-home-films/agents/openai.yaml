@@ -1,0 +1,4 @@
+interface:
+  display_name: "Future Classic 홈 영상 연동"
+  short_description: "새 YouTube 영상과 같은 차량의 사진·게시글을 홈 카드로 연결합니다"
+  default_prompt: "Use $future-classic-home-films to match new public channel uploads to their exact vehicle articles and photographs and update the homepage cards within the authorized scope."

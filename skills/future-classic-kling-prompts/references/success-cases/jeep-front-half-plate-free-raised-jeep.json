@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "caseId": "jeep-yj-front-half-plate-free-raised-jeep-2026-10-25",
+  "outcome": "owner-confirmed-success",
+  "reportedDateAsiaSeoul": "2026-10-25",
+  "ownerEvidenceQuote": "이 프롬프트로 성공했어!",
+  "scope": "Finished copper/gold Jeep YJ; tight front-half garden shot; source-documented diagonal wipers; no plates; existing raised Jeep on bumper top.",
+  "ownerVideoLabel": "01",
+  "workspaceSourceFileName": "02-front-half.png",
+  "associatedSourceFile": "C:\\Users\\joonb\\OneDrive\\바탕 화면\\diy-cars\\artifacts\\social\\jeep-finished-reel-2026-10-25-v04-selection\\IMAGES_AND_PROMPTS\\02-front-half.png",
+  "associatedSourceSha256": "d3ee3e8fd69b354b40264a0d4e67ec9cbfee286c9aa6e2b47650257eb67ab299",
+  "inputProvenanceLimit": "Workspace source associated with this shot; exact provider-uploaded bytes have not been independently compared.",
+  "elementName": "yj_garden_v3",
+  "elementSnapshotFile": "C:\\Users\\joonb\\OneDrive\\바탕 화면\\diy-cars\\artifacts\\social\\jeep-finished-reel-2026-10-25-v04-selection\\element-update.json",
+  "profile": {
+    "model": "Kling3.0",
+    "seconds": 3,
+    "resolution": "1080p",
+    "aspectRatio": "9:16",
+    "outputs": 1,
+    "nativeAudio": false,
+    "multiShot": false
+  },
+  "profileEvidence": "Current owner workflow and earlier UI checks; this result detail/native metadata will be recorded separately.",
+  "exactOwnerQuotedPrompt": "The camera makes a short orbit at a slow, steady pace around the existing front headlamp toward the frontal centerline over three seconds, revealing slightly more grille and less outer fender. Retain the tight front-half framing without reaching a fully frontal view.\nUse @yj_garden_v3 as the same single parked vehicle. Its position, orientation and tire contact patches remain fixed relative to the driveway. Keep camera height, focal length and subject distance steady, with natural scene parallax.\nPreserve the original black bumper geometry, seams and bolts. Its vertical front face remains exposed black metal throughout: no license plate, plate holder, dealer plate or rectangular plaque.\nThe single original “Jeep” word is shallow, raised BLACK-ON-BLACK lettering molded directly into the bumper’s horizontal TOP surface immediately ahead of the grille. It is part of the bumper itself, with no separate backing panel, border or frame. Its visibility follows perspective and natural cropping.\nKeep the existing diagonal wipers and all lamps off. Only the camera moves; the vehicle and wheels remain stationary. One continuous shot, no zoom, cuts or fading.",
+  "promptSha256": "d3d1431cae97acd4a813261cbeeb4eebd1fa14cf73352c6a11b9a62be0aacb3b",
+  "providerIdObservedOnRemainingGrid": "943289885593579579",
+  "providerResultUrl": "https://kling.ai/app/creations/grid?ac=12&project=941889208187895860&slotId=943289885593579579",
+  "agentVideoReview": "Sampled frames at 0,.5,1,1.5,2,2.5,2.96 seconds inspected; plate absent and original bumper-top Jeep relief retained in those samples. Not a full optical-flow certification.",
+  "nativeClip": "C:\\Users\\joonb\\OneDrive\\바탕 화면\\diy-cars\\artifacts\\social\\kling-success-records-2026-10-25\\CLIPS\\943289885593579579.mp4",
+  "priorFailureObservations": [
+    {
+      "condition": "plate-free bumper unchanged",
+      "ownerReport": "Invented Jeep license plate despite unplated input."
+    },
+    {
+      "condition": "no new lettering",
+      "ownerReport": "Original raised Jeep disappeared."
+    },
+    {
+      "condition": "short explicit raised-word preservation",
+      "ownerReport": "License plate still appeared."
+    }
+  ],
+  "reuseGuidance": [
+    "Retrieve this case for the same Jeep front-half setup; preserve the successful text verbatim as the baseline.",
+    "Transfer the distinction between allowed existing relief and prohibited separate plate panel, including material, mounting surface and physical attachment.",
+    "Adapt actual vehicle details for other cars; this is not a universal raised-logo or plate placement rule.",
+    "Keep owner-confirmed success distinct from independently inspected motion/identity QA.",
+    "The later protrude ABOVE wording was an untested alternative, not the wording the owner confirmed.",
+    "A case record or user approval does not authorize additional paid generation."
+  ],
+  "nativeMedia": {
+    "width": 1080,
+    "height": 1920,
+    "durationSeconds": 3.04,
+    "fps": 24.0,
+    "hasAudio": false,
+    "bytes": 13560922,
+    "sha256": "527db2a15745618ff298679886e8306b9ec57d1177c2b13f46d75cc82890c711"
+  },
+  "actualResultSettings": {
+    "model": "Kling 3.0",
+    "aspectRatio": "9:16",
+    "resolution": "1080p"
+  },
+  "providerRenderedPromptText": "The camera makes a short orbit at a slow, steady pace around the existing front headlamp toward the frontal centerline over three seconds, revealing slightly more grille and less outer fender. Retain the tight front-half framing without reaching a fully frontal view.Use \nn_v3 as the same single parked vehicle. Its position, orientation and tire contact patches remain fixed relative to the driveway. Keep camera height, focal length and subject distance steady, with natural scene parallax.Preserve the original black bumper geometry, seams and bolts. Its vertical front face remains exposed black metal throughout: no license plate, plate holder, dealer plate or rectangular plaque.The single original “Jeep” word is shallow, raised BLACK-ON-BLACK lettering molded directly into the bumper’s horizontal TOP surface immediately ahead of the grille. It is part of the bumper itself, with no separate backing panel, border or frame. Its visibility follows perspective and natural cropping.Keep the existing diagonal wipers and all lamps off. Only the camera moves; the vehicle and wheels remain stationary. One continuous shot, no zoom, cuts or fading.",
+  "providerRenderedSegments": [
+    {
+      "kind": "text",
+      "text": "The camera makes a short orbit at a slow, steady pace around the existing front headlamp toward the frontal centerline over three seconds, revealing slightly more grille and less outer fender. Retain the tight front-half framing without reaching a fully frontal view."
+    },
+    {
+      "kind": "text",
+      "text": "Use "
+    },
+    {
+      "images": [
+        "https://s15-kling.klingai.com/kimg/EMXN1y8qWAoGdXBsb2FkEg55bGFiLXN0dW50LXNncBo-YWlfcG9ydGFsLzE3OTI5MTE2OTcvTG1ybm5IWHk5VS9jaGF0Z3B0X19fX18yMDI2X18xMF9fMjVfXy5wbmc:240x240.webp?x-kcdn-pid=112372"
+      ],
+      "kind": "reference",
+      "text": ""
+    },
+    {
+      "kind": "text",
+      "text": "n_v3 as the same single parked vehicle. Its position, orientation and tire contact patches remain fixed relative to the driveway. Keep camera height, focal length and subject distance steady, with natural scene parallax."
+    },
+    {
+      "kind": "text",
+      "text": "Preserve the original black bumper geometry, seams and bolts. Its vertical front face remains exposed black metal throughout: no license plate, plate holder, dealer plate or rectangular plaque."
+    },
+    {
+      "kind": "text",
+      "text": "The single original “Jeep” word is shallow, raised BLACK-ON-BLACK lettering molded directly into the bumper’s horizontal TOP surface immediately ahead of the grille. It is part of the bumper itself, with no separate backing panel, border or frame. Its visibility follows perspective and natural cropping."
+    },
+    {
+      "kind": "text",
+      "text": "Keep the existing diagonal wipers and all lamps off. Only the camera moves; the vehicle and wheels remain stationary. One continuous shot, no zoom, cuts or fading."
+    }
+  ],
+  "providerTextDiscrepancy": "Owner quotation uses @yj_garden_v3; result UI shows an inline reference followed by literal n_v3. Both preserved separately."
+}

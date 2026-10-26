@@ -1,0 +1,35 @@
+{
+  "importDate": "2026-10-27",
+  "skills": [
+    {
+      "skill": "future-classic-before-after",
+      "importedFrom": "installed Codex skill"
+    },
+    {
+      "skill": "future-classic-home-films",
+      "importedFrom": "installed Codex skill"
+    },
+    {
+      "skill": "future-classic-instagram",
+      "importedFrom": "installed Codex skill"
+    },
+    {
+      "skill": "future-classic-kling-operator",
+      "importedFrom": "installed Codex skill"
+    },
+    {
+      "skill": "future-classic-kling-prompts",
+      "importedFrom": "installed Codex skill"
+    },
+    {
+      "skill": "future-classic-turbo-references",
+      "importedFrom": "installed Codex skill"
+    },
+    {
+      "skill": "future-classic-backgrounds",
+      "importedFrom": "project skill"
+    }
+  ],
+  "canonicalLocation": "This repository. Install copies into CODEX_HOME/skills after reviewed changes.",
+  "excluded": "Private source photos, generated project media, cookies, credentials, local run ledgers and dependency runtimes are not included."
+}
