@@ -1,0 +1,29 @@
+{
+  "caseId": "sl55-front-half-left-tracking-2026-10-27",
+  "providerResultUrl": "https://kling.ai/app/creations/grid?project=941889208187895860&ac=1&slotId=943718573326483467",
+  "vehicle": "Mercedes R230 SL55 AMG",
+  "shot": "frontal front-face half",
+  "ownerReport": [
+    "얘는 orbit이 아닌데",
+    "단순한 좌우이동이야",
+    "좌로 이동해"
+  ],
+  "failureCategory": "missing-orbit/lateral-tracking",
+  "evidenceStatus": "owner-reported; actual visible result prompt inspected; no downloaded frame or independent playback review",
+  "inspectionBoundary": "Owner explicitly said their motion report suffices; do not fetch/review media to repeat this diagnosis.",
+  "originalPrompt": "The camera makes a short orbit at a slow, steady pace around the existing front headlamp toward the frontal centerline over three seconds, revealing slightly more inner grille and less outer fender. Retain the tight frontal-half framing. Use @sl55_r230_A as the same single parked Mercedes R230 SL55 AMG shown in the starting frame. Keep camera height, focal length and distance steady, with natural scene parallax. Preserve the figure-eight headlamp, grille and existing emblems in their original positions, following natural cropping. Keep the wipers parked and all lamps off. Only the camera moves; the car and wheels remain stationary. One continuous shot, no zoom, cuts or fading.",
+  "observedSettings": {
+    "model": "Kling3.0",
+    "resolution": "1080p",
+    "aspectRatio": "9:16",
+    "nativeDuration": null
+  },
+  "referenceEvidence": "Visible start-frame and reference thumbnails; no unsupported missing-binding diagnosis.",
+  "baselineCase": "owner-selected-porsche-964-finished-front-half-left-orbit",
+  "change": "Reuse the selected964 circular camera path and continuous headlamp aiming; adapt direction to owner-requested RIGHT, revealing slightly more outer fender and less inner grille. Do not retain a contradictory frontal-centerline destination from the LEFT baseline.",
+  "proposedPrompt": "The camera ORBITS at a slow, steady pace around the car’s front corner to the RIGHT over three seconds. Follow a small circular arc to the RIGHT around the stationary car, continuously turning the camera to keep the same headlamp in view. Reveal slightly more outer fender and less inner grille, with natural perspective changes and background parallax. This is an orbit, not a sideways slide. Use @sl55_r230_A as the same single parked Mercedes R230 SL55 AMG. Keep camera height, focal length and distance steady. Maintain the tight frontal-half framing. Preserve the existing headlamp, grille and emblems, following natural cropping. Keep the wipers parked and all lamps off. Only the camera moves; the car and wheels remain stationary. One continuous shot, no zoom, cuts or fading.",
+  "candidateStatus": "prepared, untested, user-manual submission only",
+  "causalLimit": "Original prompt already requested orbit; this change is a specific candidate, not proof of the failure cause or a guarantee.",
+  "agentSubmittedRetry": false,
+  "ownerRequestedDirection": "RIGHT camera arc; owner correction 2026-10-27"
+}
