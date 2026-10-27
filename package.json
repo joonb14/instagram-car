@@ -3,13 +3,21 @@
   "private": true,
   "type": "module",
   "engines": {
-    "node": ">=22"
+    "node": ">=24",
+    "npm": ">=11"
   },
   "scripts": {
-    "test": "node --test skills/future-classic-instagram/scripts/*.test.mjs skills/future-classic-kling-operator/scripts/*.test.mjs skills/future-classic-before-after/scripts/*.test.mjs",
-    "check:skills": "node scripts/install-skills.mjs --check"
+    "test": "node --test scripts/skills/*.test.mjs scripts/instagram/*.test.mjs",
+    "test:home-films": "vitest run tests/integration/home-film-sync.test.ts",
+    "skills:check": "node scripts/skills/manage.mjs check",
+    "skills:install": "node scripts/skills/manage.mjs install",
+    "skills:test": "node --test scripts/skills/*.test.mjs scripts/instagram/*.test.mjs",
+    "check:skills": "node scripts/skills/manage.mjs check --installed"
   },
   "dependencies": {
-    "sharp": "^0.34.5"
+    "sharp": "^0.35.5"
+  },
+  "devDependencies": {
+    "vitest": "^4.1.11"
   }
 }

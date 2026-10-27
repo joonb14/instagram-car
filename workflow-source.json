@@ -1,0 +1,406 @@
+{
+  "schemaVersion": 1,
+  "sourceRepository": "https://github.com/joonb14/diy-cars",
+  "sourceCommit": "2ff69e953e7c1b9661535c82789de8ca913e6904",
+  "sourcePaths": [
+    "scripts/skills",
+    "scripts/instagram",
+    "scripts/home-films",
+    "skills/future-classic-instagram",
+    "skills/future-classic-before-after",
+    "skills/future-classic-kling-prompts",
+    "skills/future-classic-kling-operator",
+    "skills/future-classic-home-films",
+    "skills/future-classic-turbo-references",
+    "skills/future-classic-backgrounds"
+  ],
+  "files": [
+    {
+      "file": "scripts/home-films/sync.d.mts",
+      "sha256": "cfced75531abd70550bb0edb734a79f29cfbdd8b73483424368fe3c94b4b07b1"
+    },
+    {
+      "file": "scripts/home-films/sync.mjs",
+      "sha256": "5a19d7fea5b5299f2cba2608836c7741ada4c4c6703a0e4dc7542d1ef8aa17b4"
+    },
+    {
+      "file": "scripts/instagram/advertising-workflow-encode.test.mjs",
+      "sha256": "fa2ea5f889dca342952b3f5fe19ccac2e5ab4900ee4e7501d32a3d568e93b7de"
+    },
+    {
+      "file": "scripts/instagram/advertising-workflow.mjs",
+      "sha256": "4599ed4b47afc42165e394145c2fb4bc27dc4a2beb55053db8b37f974543e5a7"
+    },
+    {
+      "file": "scripts/instagram/advertising-workflow.test.mjs",
+      "sha256": "becfbf8d8807a0da3edeacecff9d76fc7e3a2959f8497b875365ac8dd0536b74"
+    },
+    {
+      "file": "scripts/instagram/before-after-encode.test.mjs",
+      "sha256": "6a38f0932807658cf1c92ffb9ca0319e7921f1a61d09fed3af28088c24ec15b1"
+    },
+    {
+      "file": "scripts/instagram/before-after-workflow.mjs",
+      "sha256": "dbc38bb233ea783e5459b6f66826ca59ce7858dee450989c5e97bfa9e6c6374e"
+    },
+    {
+      "file": "scripts/instagram/before-after-workflow.test.mjs",
+      "sha256": "67a5a7bf1b3d59fade111a76a0992f2fef8e30886fb062565d885eed46d32fed"
+    },
+    {
+      "file": "scripts/instagram/brand-plate.mjs",
+      "sha256": "72edce61f7a3eaf91b4fa8dfbff10283fab482c075902e000d6023a95bfa8e74"
+    },
+    {
+      "file": "scripts/instagram/comparison.test.mjs",
+      "sha256": "65cad7f50184d780cbd18f1e2e3c513460f88fd0a51f11489b9ad49deb56ae99"
+    },
+    {
+      "file": "scripts/instagram/composite-plate.py",
+      "sha256": "3bbb6943615827bcf6df868c2528205d26421eacc8af9932895b36becee083a0"
+    },
+    {
+      "file": "scripts/instagram/creative-plan.mjs",
+      "sha256": "2480b35c3bb4793cd5287b4875280adb8268838ab8d570079f73e963b7586297"
+    },
+    {
+      "file": "scripts/instagram/generation-spend-ledger.mjs",
+      "sha256": "d5e6c7c84e7430b7debe6a3ed08d9ffa107e2325534187bad650a757ff16ce73"
+    },
+    {
+      "file": "scripts/instagram/identity-map-reference-gate.test.mjs",
+      "sha256": "5343c07fbf78afd8a5a1c19985ecdfc3bf399fd093dcc57cc972170701f24220"
+    },
+    {
+      "file": "scripts/instagram/image-reference-gates.test.mjs",
+      "sha256": "2f3a6ebac9b5328a701a646f22384353a0c4805e14dd4283c33e40bbfc3674ee"
+    },
+    {
+      "file": "scripts/instagram/kling-prompt-workflow.mjs",
+      "sha256": "ff4c0efbaeb8739c10883fab5189f3b654c487448f71fe68e96a481a037e79b1"
+    },
+    {
+      "file": "scripts/instagram/kling-prompt-workflow.test.mjs",
+      "sha256": "63d0743f595231ed6fd7be340aef77307e4a92a999fd91b198ab6cbd871bdb83"
+    },
+    {
+      "file": "scripts/instagram/kling-run-state.mjs",
+      "sha256": "1405944897c7636fc4f1db9d035204c50c5c47f0d9b84085608cd533a62d8019"
+    },
+    {
+      "file": "scripts/instagram/kling-run-state.test.mjs",
+      "sha256": "3248bd54bce06ef3141cd845532288accdf21eba42454935a9aec6bf391fafe3"
+    },
+    {
+      "file": "scripts/instagram/package-post.mjs",
+      "sha256": "04752748cb81ef229c5fe89047617f784bc0dbe94ac665c69743434c1bfa84b7"
+    },
+    {
+      "file": "scripts/instagram/portrait-start.test.mjs",
+      "sha256": "1d516ba3eb4178c0b1aa4312705b7ba5bb6ab5218ce61ca7fb467f330808c680"
+    },
+    {
+      "file": "scripts/instagram/prepare-download-pack.mjs",
+      "sha256": "bb41051949f731a849b2371e4ac4b99c7df1b6f2d23261011c81dd31d9dcb924"
+    },
+    {
+      "file": "scripts/instagram/prepare-download-pack.test.mjs",
+      "sha256": "da2501922356c4243d07e9c01b3567fc0ad65f403203f39aa34f87efb9470b84"
+    },
+    {
+      "file": "scripts/instagram/reel.test.mjs",
+      "sha256": "25f20af5584ed57283db5fefc865763870353ad64be4fd16fcfac3ee50d94e27"
+    },
+    {
+      "file": "scripts/instagram/render-comparison.mjs",
+      "sha256": "44c6a8cbb4cb5c1cac6c9ba03eeb563e99a49d9e742c377f36c268c6f1c648fc"
+    },
+    {
+      "file": "scripts/instagram/render-cover.mjs",
+      "sha256": "ae4338626b9b5b8554899ef88b1fa2df68e8881f1cf9c7e4eefe2c6a08a68e76"
+    },
+    {
+      "file": "scripts/instagram/render-photo-slide.mjs",
+      "sha256": "b83b0a2aebbbd40f2b891c2a590625bd09b6e5e6d81f34596002430314c9b93e"
+    },
+    {
+      "file": "scripts/instagram/render-reel.mjs",
+      "sha256": "c1e6fe47fbe4502f8cf41218273b3cde7610f0528042c9f3da54828db3414c09"
+    },
+    {
+      "file": "scripts/instagram/restoration-sequence.mjs",
+      "sha256": "82e48aca53391a6df8df0f4955a582c896cd4ba4ee42332918c23e4147729fb6"
+    },
+    {
+      "file": "scripts/instagram/restoration-sequence.test.mjs",
+      "sha256": "280925b19d76e4c6860c5a037a780388c51816a14e15288d1cccfe0d9363688e"
+    },
+    {
+      "file": "scripts/instagram/retime-exterior.mjs",
+      "sha256": "69a0da676dbcaf6ae532d2a6d75b0464f4d04fc1634d545d49f24dce98e6c6a4"
+    },
+    {
+      "file": "scripts/instagram/retime-exterior.test.mjs",
+      "sha256": "6cbde14b1bcaf87b6df381d6c0fea0aa29e9d6fb81eaf6d7d721113ed28e6811"
+    },
+    {
+      "file": "scripts/instagram/review-advertising-plan.mjs",
+      "sha256": "bd9427b544d310aaf491750d5a10909821382780414779b51f92e2b01d40e5b3"
+    },
+    {
+      "file": "scripts/instagram/review-advertising-plan.test.mjs",
+      "sha256": "0dbef3ae93ecb801f836f21e911be207ac54de2276ba98a67116c376f3804eb6"
+    },
+    {
+      "file": "scripts/instagram/review-element-workflow.mjs",
+      "sha256": "861b7c83b8bf98f8e27f5d05033ad32b32982be7c1d27bc0f828c4f6b4878785"
+    },
+    {
+      "file": "scripts/instagram/review-element-workflow.test.mjs",
+      "sha256": "fbfa422c465cb6c383306240ae248a24db28bccb4d1dd42cbfc055ea88bcd702"
+    },
+    {
+      "file": "scripts/instagram/review-native-video.py",
+      "sha256": "16f6fbe14d352f414d0f840bfe8a94b5db0c2890650bb4c24d76a6be486e169b"
+    },
+    {
+      "file": "scripts/instagram/scene-options.test.mjs",
+      "sha256": "677c2514cd359e9b3ee784af7a635fbb33cef41ea65bc83cb0e6d6a133fc3580"
+    },
+    {
+      "file": "scripts/instagram/subpixel-pan.mjs",
+      "sha256": "0b7a02adfe0426ec2f1dc1d9b71b854e8a29d68a3483e421031c065b892bc567"
+    },
+    {
+      "file": "scripts/instagram/subpixel-pan.test.mjs",
+      "sha256": "80110e676831300967bb83e54285cfcb4d303c52f5bf16e10ee9666e84a1172a"
+    },
+    {
+      "file": "scripts/instagram/test_composite_plate.py",
+      "sha256": "c9283f01aa4d655eb14ad0d566d28af9ef1a78d51bfa667bfa22ff102518c5f3"
+    },
+    {
+      "file": "scripts/instagram/tools.test.mjs",
+      "sha256": "df68d3feb8a1a032392878504dc98dd4fb41a4bbb100523e28235f73a32f4760"
+    },
+    {
+      "file": "scripts/instagram/validate-image-references.mjs",
+      "sha256": "be5d6c54cad51fb9bfaadf44f4175d072ce590a4a09eb849159df58b9ac07a0c"
+    },
+    {
+      "file": "scripts/instagram/validate-video-inputs.mjs",
+      "sha256": "8a1558898453b9770dc940bd471e06b6d0993a376f7e1183fbc11c7966c02ba0"
+    },
+    {
+      "file": "scripts/instagram/vehicle-identity-map.mjs",
+      "sha256": "da3b1e63ffa048ae55578bcbae6765e100ad4a13afa862f08e9867e33cdde00c"
+    },
+    {
+      "file": "scripts/instagram/vehicle-identity-map.test.mjs",
+      "sha256": "58ed0ba11c45ca39020502cd818d012bdab0b8273ae92520ebe8b2e71be0410f"
+    },
+    {
+      "file": "scripts/instagram/video-quality-stage.test.mjs",
+      "sha256": "06ded2aa4356b2d0e40fc51e45d778f86ed1ccd520c1ae5bb6a493e6fdbda450"
+    },
+    {
+      "file": "scripts/instagram/wide-frame.mjs",
+      "sha256": "8879c33118425073f83289a16523873306db9c699ecec8ff1483865f77fe5611"
+    },
+    {
+      "file": "scripts/instagram/wide-frame.test.mjs",
+      "sha256": "171c5ba5df716fd026244e6180a0d85a1980bdc9fcf0353fbc4254b5bd6422f1"
+    },
+    {
+      "file": "scripts/skills/catalog.json",
+      "sha256": "f24319813e619f53e9d163d17f1388c3b8b8c24482389cf02cf8b69453d05446"
+    },
+    {
+      "file": "scripts/skills/manage.mjs",
+      "sha256": "2b4cb12cc71e3f0cf901a60b47fff3a387d7060f906b12beabeaf9986cd67067"
+    },
+    {
+      "file": "scripts/skills/manage.test.mjs",
+      "sha256": "1c0a57627a7ab37abd1f84ad84397bc7772975af7b0f3d9789cd52a14f8eff4b"
+    },
+    {
+      "file": "skills/future-classic-backgrounds/SKILL.md",
+      "sha256": "27ba152faaf36f979e796997346c6fc9aadb9b952d739a8c643e42b9da9bb42f"
+    },
+    {
+      "file": "skills/future-classic-backgrounds/agents/openai.yaml",
+      "sha256": "7767dc396bae56d49a2abfac39e83dcee88e35c317d6d252564af5a854989dce"
+    },
+    {
+      "file": "skills/future-classic-backgrounds/references/reference-catalog.md",
+      "sha256": "0a595897dad588818b2a9be98da096d0a96a9d01047d51863c076e1488cbe5e7"
+    },
+    {
+      "file": "skills/future-classic-before-after/SKILL.md",
+      "sha256": "8517179595ae663f1422495dfd64ef393bde3bfff4e6629092cc1f61836110b6"
+    },
+    {
+      "file": "skills/future-classic-before-after/references/workflow.md",
+      "sha256": "7bda5e7ce98488c0ba8b162c6357b67dc81ec68131d913af5aaea55f0293c1dd"
+    },
+    {
+      "file": "skills/future-classic-home-films/SKILL.md",
+      "sha256": "8915a5eca0c6dc6f1a93c483146685fc27a4871c8a7a5df0c8d292d0ebe8f36f"
+    },
+    {
+      "file": "skills/future-classic-home-films/agents/openai.yaml",
+      "sha256": "74f7ed1fc73f0e1b08492a4abd50c2cf9639028b08becbfeaea71d6955687b55"
+    },
+    {
+      "file": "skills/future-classic-home-films/references/pairing.md",
+      "sha256": "28b54e782507b5038ebc5c3395d79b4b1b3abc32702b99a3bd8341057ced359c"
+    },
+    {
+      "file": "skills/future-classic-home-films/references/published-link.md",
+      "sha256": "d745abffe232d48c3f5a61a587443482674157a74976240ee7685b5090ed90b8"
+    },
+    {
+      "file": "skills/future-classic-home-films/scripts/sync.mjs",
+      "sha256": "8b62cf87e5c8c949956ebb1c65a3e1756f7a4d6e6663c5c1db57b15cda3eaa32"
+    },
+    {
+      "file": "skills/future-classic-instagram/SKILL.md",
+      "sha256": "e12e01fb639d8202d78ff89a4a770e4d9e9a96433fa1cd963df82dfeaef2a51a"
+    },
+    {
+      "file": "skills/future-classic-instagram/assets/composition-templates/front-half.jpg",
+      "sha256": "aa14069d9ce5764b4c284d018b2d4f5e54c3672b0b8fbc614d144878e043f822"
+    },
+    {
+      "file": "skills/future-classic-instagram/assets/composition-templates/front-low.jpg",
+      "sha256": "15ce6e86402f5d95a2d68adc15de42490db4d4437fec2599e65a59b5ae009c95"
+    },
+    {
+      "file": "skills/future-classic-instagram/assets/composition-templates/headlamp-detail.jpg",
+      "sha256": "ffd634a0765f2200cb04892c4ba5cced3f0f5dd5f70771d52c5772ced5755123"
+    },
+    {
+      "file": "skills/future-classic-instagram/assets/composition-templates/index.json",
+      "sha256": "b35d307ef336ad33efebf6a477e5a0c13a23430c30f91741cce8e1e8dde80e8a"
+    },
+    {
+      "file": "skills/future-classic-instagram/assets/composition-templates/rear-half.jpg",
+      "sha256": "0ebecf0457c3eb5ac70606fb7d6dbc25e43109f3a299eacefaedf7bcd9cb78bc"
+    },
+    {
+      "file": "skills/future-classic-instagram/assets/composition-templates/rear-three-quarter.jpg",
+      "sha256": "ad91d6d93415542b2e869af8a9b836a0934cae31c597f637e41c6da802732a00"
+    },
+    {
+      "file": "skills/future-classic-instagram/assets/composition-templates/side-dominant.jpg",
+      "sha256": "92c5f6a89d85b670c4cc9ff7b15e2a5bffa858b1ca18a416692f237d56f9409e"
+    },
+    {
+      "file": "skills/future-classic-instagram/assets/composition-templates/wheel-partial.jpg",
+      "sha256": "69db60664aa8aa8939dc08205759962fdba0fa69ba63354413561bb6af104c85"
+    },
+    {
+      "file": "skills/future-classic-instagram/assets/composition-templates/whole-car.jpg",
+      "sha256": "aca7f19e0979d305b153f0476cf4bdbd8d9fa81e430e2d27245203b7bd490278"
+    },
+    {
+      "file": "skills/future-classic-instagram/assets/future-classic-plate-white.png",
+      "sha256": "beb255b670c02a80fd923bcb3aa89c374d97faf95c150cfbddbbdddfe4c3c714"
+    },
+    {
+      "file": "skills/future-classic-instagram/assets/future-classic-plate-white.svg",
+      "sha256": "a3af170b94cb2de6299088a26adc0ad5276bfdbd07c6d5f6514591b70eaac5f7"
+    },
+    {
+      "file": "skills/future-classic-instagram/references/advertising-reels.md",
+      "sha256": "f786eabd967d4141aa51947ed953f78bdc77f40acf25aad0b60729bbb337a978"
+    },
+    {
+      "file": "skills/future-classic-instagram/references/composition-templates.md",
+      "sha256": "7ddfdf3b584246d3ffadf0eed544dbea44ca548ccb7552c39923d9cf3261cdc8"
+    },
+    {
+      "file": "skills/future-classic-instagram/references/cross-platform-video.md",
+      "sha256": "acd10f730456e298b69119aadb9f19c7d52f95b1ae7c9050dd6d092d7c54cfe2"
+    },
+    {
+      "file": "skills/future-classic-instagram/references/drive-delivery.md",
+      "sha256": "9fee2f8f3dfd2950d0149ba734245c46a9274049b50da1e07395dfed32dc718c"
+    },
+    {
+      "file": "skills/future-classic-instagram/references/kling-reel-workflow.md",
+      "sha256": "87066d3be76757a377f208e34281b2f5111b1fa9cbfef563a0e76d329f87076d"
+    },
+    {
+      "file": "skills/future-classic-instagram/references/reels.md",
+      "sha256": "c6672a98d5485cfce0526c623d92e67ff2a2a8630cb9beba69fa7ea62e516911"
+    },
+    {
+      "file": "skills/future-classic-instagram/references/selected-source-element-workflow.md",
+      "sha256": "eb5a82a49a8fde31f7056ec8224495de3094b2eb57fa5df2c7ddbdf1f374b637"
+    },
+    {
+      "file": "skills/future-classic-instagram/references/tools.md",
+      "sha256": "4f457ed8d57ff06bcbf1b04a6ca9aeabab6b107ddf3238b2108da485f1895a30"
+    },
+    {
+      "file": "skills/future-classic-instagram/references/vehicle-identity-map.md",
+      "sha256": "06515644c857f9c29470ee11ef1d10c5f0a6e713e6f954fdca526340ce58b862"
+    },
+    {
+      "file": "skills/future-classic-instagram/references/vehicle-identity-qa.md",
+      "sha256": "c470aee8a5a826b1e3a1e7b9a1228e75d64d6a715333f572021905628481cb24"
+    },
+    {
+      "file": "skills/future-classic-instagram/references/workflow.md",
+      "sha256": "5833a79c803793c4be232c0527920077ac454837c9bdda11a14ea7bee0b07a82"
+    },
+    {
+      "file": "skills/future-classic-kling-operator/SKILL.md",
+      "sha256": "f34f8a93500a17367b0996c7010ccf2c878c304e4a90581c90e1c5a1c20d164c"
+    },
+    {
+      "file": "skills/future-classic-kling-operator/references/browser-runbook.md",
+      "sha256": "5c3ce6330d44be7b0edc763d7469ecb3313c148f15851af80c85c6f7e485282b"
+    },
+    {
+      "file": "skills/future-classic-kling-operator/references/jeep-garden-tests.md",
+      "sha256": "af8baf9188b9cc87bd9199a46d8307e19a0d8659dea712139e3683cd692ae00d"
+    },
+    {
+      "file": "skills/future-classic-kling-prompts/SKILL.md",
+      "sha256": "c5b62c98bbd37933f9259585a1e50a6ef569fcd53c988492c7bea4898178ae89"
+    },
+    {
+      "file": "skills/future-classic-kling-prompts/references/failure-cases/sl55-front-half-left-tracking.json",
+      "sha256": "524d2595e129f2cde939c48b36b17c13b12b4e1963d14064c7955abf4cc8732e"
+    },
+    {
+      "file": "skills/future-classic-kling-prompts/references/prompting.md",
+      "sha256": "5f885498898d6a2026a7f5d60ef1c789d18d3a2b253eed94e16311d7e971c474"
+    },
+    {
+      "file": "skills/future-classic-kling-prompts/references/success-cases/jeep-front-half-plate-free-raised-jeep.json",
+      "sha256": "faef1721bd9f297ddaae251805b4d1f7b908a85cca9c403be8421f8409724af6"
+    },
+    {
+      "file": "skills/future-classic-kling-prompts/references/success-cases/owner-selected-2026-10-25.json",
+      "sha256": "9a377943f20839da0216565d4d5cd55d63b0fda2fd6edb06f65fcbd1e41f9b93"
+    },
+    {
+      "file": "skills/future-classic-turbo-references/SKILL.md",
+      "sha256": "59f62adc714d17e0436e0ca0cec58f474c75eead1e60a79da0929ec5d64806f7"
+    },
+    {
+      "file": "skills/future-classic-turbo-references/agents/openai.yaml",
+      "sha256": "2d5640c4afe0398f50b150edfbb37f289b2230a96625ad317e5aedd62ebf9f2d"
+    },
+    {
+      "file": "skills/future-classic-turbo-references/references/scheduled-workflow.md",
+      "sha256": "e30cc270e290548fad6209b7087aa08c2070862b14d43b4faf8a8277f3af2605"
+    }
+  ],
+  "sourceRef": "main",
+  "hashFormat": "sha256-git-blob-bytes",
+  "hashDescription": "SHA-256 of source files as stored in the source Git commit; text files use LF according to .gitattributes. Distribution file bytes must be identical."
+}

@@ -4,7 +4,7 @@
 
 Current owner scope (2026-10-24 expansion): all993 and964 variants/body styles are eligible, including Carrera, Carrera4/4S, Targa, Cabriolet and Turbo. Only997 remains limited to997.1Turbo. Restoration/ownership story/interior remain optional. Confirm the actual generation and label modifications honestly; never apply the old Turbo-only identity veto to993/964. Preserve existing records, dedupe and budgets.
 
-Workspace: `C:/Users/joonb/OneDrive/바탕 화면/diy-cars`.
+Workspace: the actual diy-cars checkout provided by the current task. Resolve project-relative paths from that root.
 Read `docs/README.md`, `scripts/forum-editorial/crawl-config.json`, this skill, and garage-forum-editorial's workflow.md, recurring.md, parallel.md and publication.md. This campaign's vehicle/photo/Gallery criteria supersede the older broad repair/restoration brief; retain its ownership, attribution, access, budget, dedupe and publication safeguards.
 
 The owner explicitly resumed the existing `garage` heartbeat on2026-10-24: ACTIVE, every30minutes, 993/964-all-variants plus997.1Turbo. A skill update alone is never permission to change that state. Use the same `artifacts/forum-recurring` state and registry; preserve all previous vehicles and published records. Do not create a competing collector, reset discovery history, revisit published sources automatically, or restart an existing owner run to change its snapshot.

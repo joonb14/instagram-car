@@ -30,6 +30,9 @@
       "importedFrom": "project skill"
     }
   ],
-  "canonicalLocation": "This repository. Install copies into CODEX_HOME/skills after reviewed changes.",
-  "excluded": "Private source photos, generated project media, cookies, credentials, local run ledgers and dependency runtimes are not included."
+  "canonicalLocation": "Historical initial import location; superseded by workflow-source.json.",
+  "excluded": "Private source photos, generated project media, cookies, credentials, local run ledgers and dependency runtimes are not included.",
+  "historicalRecord": true,
+  "currentCanonicalRepository": "https://github.com/joonb14/diy-cars",
+  "supersededBy": "workflow-source.json"
 }

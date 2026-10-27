@@ -26,22 +26,27 @@ Future Classic의 자동차 이미지, Instagram Reels·캐러셀, YouTube Short
 
 차량별로 정면 front-half, 앞 사선 전체, 뒤 사선 전체, 엠블럼 확대, 휀더 또는 뒤쪽 디테일 확대가 필요합니다. 정면 front-half를 사선 사진 크롭으로 대체하지 않습니다. 두 차량을 다루면 각각의 필수 컷을 확인하고 함께 있는 컷은 추가 구성으로 사용합니다. 모든 영상 기반 이미지는9:16입니다.
 
+## 다른 계정에서 이어하기
+
+[이어하기 안내](docs/social/account-handoff.md)를 읽고 원본 차량·이번 작업 범위·접근 가능한 비공개 자료를 확인합니다. 로그인·Kling 주체·생성 결과·대화 맥락은 Git clone으로 복원되지 않습니다. 사이트 작업은 [diy-cars](https://github.com/joonb14/diy-cars) 프로젝트와 `garage-forum-editorial` 의존성이 필요합니다.
+
 ## 실행과 설치
 
-Node.js22 이상, 이미지 도구에는 Sharp가 필요합니다. 일부 Python 도구에는 Pillow와 NumPy, 영상 인코딩에는 별도 FFmpeg가 필요합니다.
+Node.js 24 이상과 npm 11 이상, 이미지 도구에는 Sharp가 필요합니다. 일부 Python 도구에는 Pillow와 NumPy, 영상 인코딩에는 별도 FFmpeg가 필요합니다.
 
 ```sh
 npm ci
 npm test
+npm run test:home-films
 python -m pip install -r requirements.txt
-node scripts/install-skills.mjs --list
-node scripts/install-skills.mjs --check future-classic-instagram future-classic-kling-operator
-node scripts/install-skills.mjs --install
+npm run skills:check
+npm run skills:install
+npm run skills:check -- --installed
 ```
 
-설치 경로는 `$CODEX_HOME/skills`이며, 환경 변수가 없으면 `~/.codex/skills`입니다. 설치는 명시적인 `--install`에서만 실행됩니다. `--check`는 파일 차이를 확인하며 변경하지 않습니다.
+설치 경로는 `$CODEX_HOME/skills`이며, 환경 변수가 없으면 `~/.codex/skills`입니다. 설치는 명시적인 `skills:install`에서만 실행됩니다. 설치본이 이미 있으면 차이를 검토한 뒤 `npm run skills:install -- --update`를 사용합니다. `skills:check -- --installed`는 실제 파일 해시를 비교하며 변경하지 않습니다. 이전 `scripts/install-skills.mjs` 대신 관리 도구 `scripts/skills/manage.mjs`를 사용합니다.
 
-앞으로 스킬 수정은 이 저장소를 기준으로 작성·검증·커밋한 뒤 설치 사본에 반영합니다. 다른 프로젝트나 설치된 사본에서 수정했다면 변경 내용을 이 저장소에 가져와 검증하고 커밋해야 백업이 완료됩니다. 자동 Git 동기화가 설정된 것은 아닙니다.
+이 저장소는 diy-cars 프로젝트에서 검수한 재사용 제작 스킬·도구의 배포 사본입니다. 구현 원본은 `joonb14/diy-cars`의 `skills/`, `scripts/instagram/`, `scripts/home-films/`입니다. 이곳에서 독립적으로 수정했다면 양쪽 차이를 검토해 원본에 반영한 뒤 다시 동기화합니다. 설치 사본만 바꾸거나 원격 push 전 백업 완료로 기록하지 않습니다. 자동 Git 동기화는 없습니다.
 
 ## 범위
 

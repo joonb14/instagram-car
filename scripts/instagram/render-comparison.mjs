@@ -57,3 +57,5 @@ export async function renderComparison(c){
  return {output:out,frames:c.duration*c.fps};
 }
 if(process.argv[1]&&import.meta.url===pathToFileURL(resolve(process.argv[1])).href)console.log(await renderComparison(JSON.parse(await readFile(process.argv[2],'utf8'))));
+
+

@@ -7,6 +7,15 @@ import {createRequire} from 'node:module';
 const sharp=createRequire(resolve(process.cwd(),'package.json'))('sharp');
 import {revealText,shotAt,renderReelFrame,reviewedReelSources} from './render-reel.mjs';
 
+test('covers are separate assets and cannot be inserted as opening video shots',async()=>{
+ const photo=id=>({file:id+'.png',sourceAssetId:id,sourceUrl:'https://example.com/build',plateReview:'no-readable-plate'});
+ const cover={file:'cover.png',thumbnailOnly:true,duration:.5,thumbnailSources:[photo('front'),photo('rear')]};
+ assert.throws(()=>reviewedReelSources([cover,photo('front')]),/thumbnail.*separate/i);
+ assert.throws(()=>reviewedReelSources([photo('ordinary'),cover]),/thumbnail/i);
+ assert.throws(()=>reviewedReelSources([photo('front'),{...photo('front'),allowThumbnailReuse:true}]),/repeat/i);
+ await assert.rejects(()=>renderReelFrame({selection:{status:'selected',candidateId:'test'},shots:[{...cover,duration:1}]},0,0),/thumbnail.*separate/i);
+});
+
 test('three reviewed cabin parts may reuse the same pair but accidental photo repetition is rejected',()=>{
  const photo=id=>({file:id+'.png',sourceAssetId:id,sourceUrl:'https://example.com/build',plateReview:'no-readable-plate'});
  const part=name=>({comparisonGroup:'same-cabin-pair',comparisonPart:name,comparison:{before:photo('before'),after:photo('after')}});

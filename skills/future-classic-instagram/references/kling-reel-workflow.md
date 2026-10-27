@@ -1,6 +1,6 @@
 # Reusable finished-car Reel / Shorts workflow
 
-For the owner's manual generation handoff, always prepare the numbered input/English prompt pairs, four-image Element kit, name/description-only TXT, Korean instructions and downloadable ZIP described in `drive-delivery.md`. Run `scripts/prepare-download-pack.mjs` to check integrity. Keep the actual reviewed per-shot wording via `source.videoPrompt`; preserve QA holds and do not automatically submit video requests.
+For the owner's manual generation handoff, prepare the numbered input/English prompt pairs, four-image Element kit, name/description-only TXT and Korean instructions as individual Drive files described in `drive-delivery.md`. Create a ZIP only when explicitly requested. Run `scripts/prepare-download-pack.mjs` to check integrity. Keep the actual reviewed per-shot wording via `source.videoPrompt`; preserve QA holds and do not automatically submit video requests.
 
 Current owner-selected flow, 2026-10-23. Use for an already curated Future Classic car. Source article, factual identity, original photos/marks, credits and publication gates remain in SKILL.md. This is an advertising beauty film, not proof that generated views are documentary photos.
 
@@ -65,7 +65,7 @@ Deliver versioned individual reviewMP4s to existing private Google Drive Review 
 
 ## Required five-shot coverage — owner2026-10-27
 
-For each vehicle, prepare these FIVE required9:16 shot categories before calling a finished film complete: (1) FRONTAL front-half: a straight-on view of ONE LATERAL HALF of the FRONT FACE (windshield/hood, one headlamp cluster, adjoining half grille and bumper stacked vertically), following the established E30 front-half template; not the forward half of a three-quarter car and not a whole-front wide view; (2) front three-quarter; (3) rear three-quarter; (4) emblem macro; (5) fender OR rear-body detail. Additional owner-selected shots, including both cars together, are supplemental and cannot replace a missing category. For a two-car film, track coverage independently for both cars.
+For each vehicle, prepare these FIVE required9:16 shot categories before calling a finished film complete: (1) FRONTAL front-half: a straight-on front view, not a diagonal crop; (2) front three-quarter; (3) rear three-quarter; (4) emblem macro; (5) fender OR rear-body detail. Additional owner-selected shots, including both cars together, are supplemental and cannot replace a missing category. For a two-car film, track coverage independently for both cars.
 
 `front-half` defines the close front coverage and, for this owner, must use the requested frontal camera position. Never satisfy it by cropping an existing front three-quarter photo or label that substituted shot as correct. Preserve angle and coverage as separate explicit fields in preparation/review records. Whole front/rear three-quarter shots retain the entire vehicle; detail shots have deliberate source-backed crops. Start Frames remain actual1080x1920 PNGs for ALL categories. Generating a landscape Element reference is not preparation of a video Start Frame.
 

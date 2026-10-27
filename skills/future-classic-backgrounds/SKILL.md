@@ -55,3 +55,4 @@ Deliver the requested images with short distinguishing labels; retain reference 
 ## Reusable generated image files
 
 When working in this project, read `assets/backgrounds/index.json` and the accompanying README to find the actual reusable PNG plates, prompts, dimensions and review status. Prefer owner-approved images when reusing a background; show candidate images for selection. An explicit request for new backgrounds still calls for generation. Keep original reference photographs separate from these generated plates. Store new reusable image bytes in that directory with a new versioned filename and update the index; never substitute local links for the image files themselves.
+

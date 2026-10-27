@@ -2,8 +2,31 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {createWorkflow,reviewStructure,buildPrompt,buildImagePrompt,buildEditPlan,validateAssets,main,reviewCameraPlans,reviewMarkLayouts} from './advertising-workflow.mjs';
 import fs from 'node:fs/promises';import os from 'node:os';import path from 'node:path';import crypto from 'node:crypto';
+test('parked wiper review rejects missing, detached, stale and unsampled video evidence',async()=>{
+ const {reviewWipers}=await import('./advertising-workflow.mjs');
+ const asset={id:'front',sha256:'current'};
+ assert.equal(reviewWipers([asset]).valid,false);
+ asset.wiperReview={status:'pass',visibility:'visible',posture:'detached',reviewedSha256:'current',originalReferences:['original-front.png'],notes:'Both blades checked against source-documented resting angles'};
+ assert.equal(reviewWipers([asset]).valid,false);
+ asset.wiperReview.posture='parked';assert.equal(reviewWipers([asset]).valid,true);
+ asset.wiperReview.reviewedSha256='old';assert.equal(reviewWipers([asset]).valid,false);
+ asset.wiperReview.reviewedSha256='current';assert.equal(reviewWipers([asset],{video:true}).valid,false);
+ asset.wiperReview.samples=[0,1,2].map(timeSeconds=>({timeSeconds,status:'pass',notes:'Blades remain at source-documented parked diagonal positions'}));
+ assert.equal(reviewWipers([asset],{video:true}).valid,true);
+ asset.wiperReview.samples[1].status='hold';assert.equal(reviewWipers([asset],{video:true}).valid,false);
+});
 test('front mark layout requires original mounting evidence and explicit crop accounting',()=>{const m={sources:[{id:'front-half',markLayout:{status:'pass'}}]};assert.equal(reviewMarkLayouts(m).valid,false);m.sources[0].markLayout={status:'pass',originalReferences:['original-front.png'],centerlineEvidence:'Grille midpoint and paired lamp centers compared with original',perspectiveNotes:'Oblique projection, not equal screen x',plate:{sourceMount:'original centered front bumper bracket',visibility:'partial',cropEvidence:'right portion enters left frame edge; no relocation'},hoodEmblem:{presence:'absent-in-original',placementEvidence:'Original Jeep hood has no hood crest'},grilleLogo:{presence:'absent-in-original',placementEvidence:'Do not invent a grille badge'},reviewNotes:'Checked source and rendered crop manually'};assert.equal(reviewMarkLayouts(m).valid,true);m.sources[0].markLayout.plate.visibility='outside-crop';m.sources[0].markLayout.plate.cropEvidence='';assert.equal(reviewMarkLayouts(m).valid,false);assert.ok(buildImagePrompt(createWorkflow('Car','Car'),{composition:'front half'}).includes('physical vehicle centerline'));});
 test('camera direction includes a reference frame, endpoint and excluded parts; custom prompt survives',()=>{const m=createWorkflow('Car','Car');assert.equal(reviewCameraPlans(m).valid,false);for(const s of m.sources)s.cameraPlan={referenceFrame:'starting camera viewpoint',direction:'left toward frontal centerline',startView:'front corner',endView:'frontal half',keepHidden:['wheel cap']};assert.equal(reviewCameraPlans(m).valid,true);m.sources[0].videoPrompt='The camera moves LEFT toward the frontal centerline.';assert.equal(buildPrompt(m,m.sources[0]),m.sources[0].videoPrompt);});
+test('new video workflow defaults to plate-free imagery and compatible motion text',()=>{
+ const m=createWorkflow('Jeep','YJ_Finished'),s=m.sources[0];
+ assert.equal(m.platePolicy.mode,'absent');
+ assert.match(buildImagePrompt(m,s),/Remove.*plates.*brackets/i);
+ assert.doesNotMatch(buildImagePrompt(m,s),/White Future Classic plate/);
+ assert.doesNotMatch(buildPrompt(m,s),/Future Classic plate/);
+ m.platePolicy={mode:'promotional',evidence:'Owner selected the branded version'};
+ assert.match(buildImagePrompt(m,s),/White Future Classic plate/);
+ assert.match(buildPrompt(m,s),/Future Classic plate/);
+});
 test('general profile supports optional pillar details and a non-side closing without fixed six roles',()=>{
  const ids=['front-half','front-low','rear-three-quarter','whole-car','wheel-detail','c-pillar','roofline'];
  const m=createWorkflow('Source verified car','Car',{sourceIds:ids});
@@ -55,7 +78,7 @@ test('asset validation checks actual hashes and review evidence; selection is no
  const m=createWorkflow('Vehicle','Vehicle');m.sources=[{id:'a',file:f,sha256:crypto.createHash('sha256').update('image bytes').digest('hex'),review:{status:'hold',notes:'not reviewed'}}];
  assert.equal((await validateAssets(m,dir,'images',{probe:async()=>({width:1080,height:1920})})).valid,false);
  m.sources[0].review={status:'pass',notes:'visual source comparison fixture'};
- m.sources[0].wiperReview={status:'pass',visibility:'outside-crop',originalReferences:[f],notes:'Synthetic validator fixture only; no actual vehicle image reviewed',reviewedSha256:m.sources[0].sha256};
+ m.sources[0].wiperReview={status:'pass',visibility:'outside-crop',reviewedSha256:m.sources[0].sha256,originalReferences:['source.png'],notes:'Fixture framing excludes windshield'};
  assert.equal((await validateAssets(m,dir,'images',{probe:async()=>({width:1080,height:1920})})).valid,true);
  await fs.writeFile(f,'changed');assert.equal((await validateAssets(m,dir,'images',{probe:async()=>({width:1080,height:1920})})).valid,false);
  }finally{await fs.rm(dir,{recursive:true,force:true});}

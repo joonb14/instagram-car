@@ -26,3 +26,4 @@ Use a JSON array with one entry per inspected image and these fields:
 Store an original photograph with its car intact. An edited vehicle-free plate is a separate entry linked to the original in notes; disclose synthesis of hidden ground and scenery. Generated outputs also remain separate from photographic references.
 
 Add an entry only after inspecting available original or preview pixels; identify which was inspected in notes. If neither is accessible, keep the known source and access limitation in a separate pending-sources record rather than the inspected catalog. Do not fill the catalog with invented examples or count pending sources as collected images. Report missing material without claiming inspection succeeded. Reference-only access is not permission to redistribute the original as a downloadable background.
+

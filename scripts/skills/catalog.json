@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "skills": [
+    { "name": "future-classic-instagram", "tools": ["scripts/instagram"] },
+    { "name": "future-classic-before-after", "tools": ["scripts/instagram"] },
+    { "name": "future-classic-kling-prompts", "tools": ["scripts/instagram"] },
+    { "name": "future-classic-kling-operator", "tools": ["scripts/instagram"] },
+    { "name": "future-classic-home-films", "tools": [] },
+    { "name": "future-classic-turbo-references", "tools": [] },
+    { "name": "future-classic-backgrounds", "tools": [] }
+  ]
+}

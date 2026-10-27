@@ -1,17 +1,17 @@
 {
   "schemaVersion": 1,
-  "caseId": "jeep-yj-front-half-plate-free-raised-jeep-2026-10-25",
+  "caseId": "owner-selected-jeep-after-front-half",
   "outcome": "owner-confirmed-success",
   "reportedDateAsiaSeoul": "2026-10-25",
   "ownerEvidenceQuote": "이 프롬프트로 성공했어!",
   "scope": "Finished copper/gold Jeep YJ; tight front-half garden shot; source-documented diagonal wipers; no plates; existing raised Jeep on bumper top.",
   "ownerVideoLabel": "01",
   "workspaceSourceFileName": "02-front-half.png",
-  "associatedSourceFile": "C:\\Users\\joonb\\OneDrive\\바탕 화면\\diy-cars\\artifacts\\social\\jeep-finished-reel-2026-10-25-v04-selection\\IMAGES_AND_PROMPTS\\02-front-half.png",
+  "associatedSourceFile": "artifacts/social/jeep-finished-reel-2026-10-25-v04-selection/IMAGES_AND_PROMPTS/02-front-half.png",
   "associatedSourceSha256": "d3ee3e8fd69b354b40264a0d4e67ec9cbfee286c9aa6e2b47650257eb67ab299",
   "inputProvenanceLimit": "Workspace source associated with this shot; exact provider-uploaded bytes have not been independently compared.",
   "elementName": "yj_garden_v3",
-  "elementSnapshotFile": "C:\\Users\\joonb\\OneDrive\\바탕 화면\\diy-cars\\artifacts\\social\\jeep-finished-reel-2026-10-25-v04-selection\\element-update.json",
+  "elementSnapshotFile": "artifacts/social/jeep-finished-reel-2026-10-25-v04-selection/element-update.json",
   "profile": {
     "model": "Kling3.0",
     "seconds": 3,
@@ -24,10 +24,8 @@
   "profileEvidence": "Current owner workflow and earlier UI checks; this result detail/native metadata will be recorded separately.",
   "exactOwnerQuotedPrompt": "The camera makes a short orbit at a slow, steady pace around the existing front headlamp toward the frontal centerline over three seconds, revealing slightly more grille and less outer fender. Retain the tight front-half framing without reaching a fully frontal view.\nUse @yj_garden_v3 as the same single parked vehicle. Its position, orientation and tire contact patches remain fixed relative to the driveway. Keep camera height, focal length and subject distance steady, with natural scene parallax.\nPreserve the original black bumper geometry, seams and bolts. Its vertical front face remains exposed black metal throughout: no license plate, plate holder, dealer plate or rectangular plaque.\nThe single original “Jeep” word is shallow, raised BLACK-ON-BLACK lettering molded directly into the bumper’s horizontal TOP surface immediately ahead of the grille. It is part of the bumper itself, with no separate backing panel, border or frame. Its visibility follows perspective and natural cropping.\nKeep the existing diagonal wipers and all lamps off. Only the camera moves; the vehicle and wheels remain stationary. One continuous shot, no zoom, cuts or fading.",
   "promptSha256": "d3d1431cae97acd4a813261cbeeb4eebd1fa14cf73352c6a11b9a62be0aacb3b",
-  "providerIdObservedOnRemainingGrid": "943289885593579579",
-  "providerResultUrl": "https://kling.ai/app/creations/grid?ac=12&project=941889208187895860&slotId=943289885593579579",
   "agentVideoReview": "Sampled frames at 0,.5,1,1.5,2,2.5,2.96 seconds inspected; plate absent and original bumper-top Jeep relief retained in those samples. Not a full optical-flow certification.",
-  "nativeClip": "C:\\Users\\joonb\\OneDrive\\바탕 화면\\diy-cars\\artifacts\\social\\kling-success-records-2026-10-25\\CLIPS\\943289885593579579.mp4",
+  "nativeClipEvidence": "Private archive; identify the retained clip by nativeMedia.sha256",
   "priorFailureObservations": [
     {
       "condition": "plate-free bumper unchanged",
@@ -75,9 +73,7 @@
       "text": "Use "
     },
     {
-      "images": [
-        "https://s15-kling.klingai.com/kimg/EMXN1y8qWAoGdXBsb2FkEg55bGFiLXN0dW50LXNncBo-YWlfcG9ydGFsLzE3OTI5MTE2OTcvTG1ybm5IWHk5VS9jaGF0Z3B0X19fX18yMDI2X18xMF9fMjVfXy5wbmc:240x240.webp?x-kcdn-pid=112372"
-      ],
+      "referenceImageCount": 1,
       "kind": "reference",
       "text": ""
     },
@@ -98,5 +94,7 @@
       "text": "Keep the existing diagonal wipers and all lamps off. Only the camera moves; the vehicle and wheels remain stationary. One continuous shot, no zoom, cuts or fading."
     }
   ],
-  "providerTextDiscrepancy": "Owner quotation uses @yj_garden_v3; result UI shows an inline reference followed by literal n_v3. Both preserved separately."
+  "providerTextDiscrepancy": "Owner quotation uses @yj_garden_v3; result UI shows an inline reference followed by literal n_v3. Both preserved separately.",
+  "pathBase": "repository-root; referenced private media is not included in Git",
+  "evidenceStorage": "Private Drive/provider IDs, account URLs and uploaded-image URLs are retained only in the private execution archive; omitted from this Git reference."
 }

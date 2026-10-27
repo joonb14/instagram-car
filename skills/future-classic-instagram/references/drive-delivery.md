@@ -24,6 +24,8 @@ Each phone-ready package exposes the MP4/JPGs individually, not only in a ZIP:
 - `04_YOUTUBE_DESCRIPTION.txt`
 - `00_READ_FIRST.txt` — short Korean handoff: vehicle/version, silent/music status, final media file, target accounts and next action
 
+For a newly completed film intended for Reels and Shorts, the final handoff includes the master AND all three upload-copy files plus the three copyable chat blocks. Preparing that draft copy is part of finishing the requested video package; do not leave it until the owner asks again. Record copy readiness independently from media readiness and publication. A later move-only request retains existing copy, as described below.
+
 For a carousel add `CAROUSEL` with zero-padded image order `01_COVER.jpg`, `02.jpg`, etc. The Reel/Short master and captions stay separate; no duplicate video for each platform. Keep optional ZIPs and technical provenance in local artifacts/review records so phone-ready folders stay uncluttered. Original source URLs remain in the internal ledger; public captions follow their own source-credit contract.
 
 ## Final-package promotion and findability
