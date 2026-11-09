@@ -10,3 +10,23 @@ Preserve original vehicle details when extending backgrounds. Store private medi
 
 Run meaningful tests for changed tools. Never fabricate visual approvals, exact costs, provider job IDs or publication results. No automatic paid retries or publication.
 
+## Blender MCP startup — required default
+
+For every new Blender MCP task, launch a fresh Blender instance from the CLI in the current session, enable the installed MCP add-on, and verify the live MCP connection before scene work. Do not assume a previous session's process or connection is usable. Reuse the verified instance for follow-up steps within that same task; do not launch another instance for each tool call.
+
+Before launch, inspect Blender processes and the MCP listener (currently localhost:9876). Preserve existing scenes and unsaved work. If the port is occupied, identify its owner and stop only the known MCP listener when safe, or configure an isolated port supported by the client. Never kill an unidentified Blender process or discard unsaved work merely to free the port. If safe isolation is unavailable, explain the conflict and ask for the needed decision.
+
+Verified installation at the time of writing: `C:\Program Files\Blender Foundation\Blender 5.2\blender.exe`; official add-on module: `bl_ext.user_default.mcp`. Check these paths and module availability before use. PowerShell launch:
+
+```powershell
+Start-Process -FilePath 'C:\Program Files\Blender Foundation\Blender 5.2\blender.exe' -ArgumentList '--online-mode','--addons','bl_ext.user_default.mcp' -WindowStyle Hidden -PassThru
+```
+
+Record the new PID and verify with an actual Blender MCP Python call returning `os.getpid()`, `bpy.app.version_string`, `bpy.data.filepath`, and enabled add-ons. The returned PID must match the launched instance. A running process or open port alone is not proof of connection. Keep launch/connection receipts under `.local/`, outside Git. Use a visible window when the owner requests interactive viewing.
+
+## Current previs direction
+
+The owner wants to follow “Use Case 5 — The Car Commercial” in the Higgsfield Blender workflow article. Read that section before claiming its exact procedure: https://higgsfield.ai/@adilinthewild/blogs/this-blender-higgsfield-ai-workflow-changes-how-you-make-ai-video
+
+Reference video: https://www.youtube.com/watch?v=fvlAGwLelT8. The assistant creates the Blender previs through MCP; do not require the owner to build it manually. Keep road, car, and people. Separate any interior-visible footage from exterior-only footage, and prepare independent scene outputs for later generation and assembly. Preserve selected framing while applying the owner's 9:16 production requirement. Previs creation does not authorize paid generation or publication.
+
