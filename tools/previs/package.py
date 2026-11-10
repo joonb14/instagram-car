@@ -21,10 +21,11 @@ def probe(p):
     assert 'Audio:' not in r.stderr,(p,'unexpected audio')
     return dict(frames=int(nums[-1])+1,dimensions=[1080,1920],fps=60,silent=True,full_decode=True,sha256=sha(p))
 def make_prompt(s):
+    simple_person=s.get('person_proxy_mode') in ['single_cuboid','control_only']
     if s['classification']=='mixed':
         bindings='Use @동영상1 strictly for camera and action. Use @이미지1 for exterior vehicle identity and @이미지2 for its open-door cockpit and door structure.'
     elif s['classification']=='interior':
-        bindings='Use @동영상1 strictly for camera and hand action. Use @이미지1 for the exact interior components, materials and placement.'
+        bindings='Use @동영상1 strictly for camera and '+('mechanical control motion' if simple_person else 'hand action')+'. Use @이미지1 for the exact interior components, materials and placement.'
     else:bindings='Use @동영상1 strictly for camera, framing and vehicle motion. Use @이미지1 for exact exterior vehicle identity.'
     cue=s['camera_prompt']
     if s.get('camera_motion'):
@@ -43,7 +44,10 @@ def make_prompt(s):
     text=f'{bindings}\nOne continuous {s["duration"]:.3f}-second shot, vertical 9:16. {cue}\n'
     if s['kind']=='driving':text+='The vehicle travels forward along its own lane. Wheels roll naturally with road contact. Preserve the original camera height, crop, direction and timing. Dark tinted glazing with no clearly visible cabin or face. '
     else:text+='Natural practical-car footage with restrained handheld movement. The vehicle stays parked. '
-    text+='Replace the blue/gray blocking geometry and orange action proxy with the referenced real car and a natural adult hand/person where present. Keep the mechanical action physically plausible. Preserve the real controls and body details. Do not invent a wing, change the wheels, mirror the cockpit, add extra fingers, extra actions, cuts, transitions, text or logos. Do not redesign the framing. '
+    if simple_person:
+        text+='The previs intentionally contains no arms, hands or fingers. Its orange rectangular column, where present, marks actor presence only, not anatomy or an exact hand-contact path. Use the real-car photo for appearance, and reconstruct only the natural human interaction required by the action above. Keep the person safely outside the door swing and within plausible reach of the control; never make the person intersect the door or car. '
+    else:text+='Replace the blue/gray blocking geometry and orange action proxy with the referenced real car and a natural adult hand/person where present. '
+    text+='Keep the mechanical action physically plausible. Preserve the real controls and body details. Do not invent a wing, change the wheels, mirror the cockpit, add extra fingers, extra actions, cuts, transitions, text or logos. Do not redesign the framing. '
     if s['classification']!='exterior':text+='If the reference photo has a different control type or position, adapt the previs before generation; do not fabricate the source BMW mechanism. '
     return text+'No music or narration; sound is added separately after picture selection.'
 def contacts(m):
@@ -78,6 +82,9 @@ function downloadRecipe(){const o={revision:data.revision,shots:order};const a=d
 document.querySelector('#filter').onchange=render;render();</script></html>'''.replace('__DATA__',payload)
     if m.get('camera_treatment'):
         doc=doc.replace('<a href="modular-car.blend">','<p>실내·문·정차 9컷에 전진·후진·옆 이동을 더한 버전입니다. 주행 컷과 바퀴·인물 동작은 기존 그대로입니다.</p><a href="modular-car.blend">',1)
+    if m.get('person_treatment'):
+        doc=doc.replace('주행 컷과 바퀴·인물 동작은 기존 그대로입니다.','주행 컷과 바퀴·조작부 동작은 유지하고, 사람은 사각기둥 하나로 단순화했습니다.')
+        doc=doc.replace('주황색은 손·사람 동작 표시입니다.','주황 사각기둥은 사람 위치 표시이며 팔·손은 생략했습니다. 문이 지나가는 범위와 최소 20cm 간격을 둡니다.')
     doc=doc.replace('<header><h1>','<header><a href="index.html">← 씬 플레이어</a><h1>',1)
     (P/'catalog.html').write_text(doc,encoding='utf-8')
     build_player(P,m)
@@ -112,6 +119,8 @@ C 전체는 20.7초 검토본이므로 20초 제한 생성 입력으로 한 번�
 
 카메라 위치·전진·프레이밍을 전하는 무음 블로킹입니다. 원본 음악/ASMR 소리를 복제하지 않았습니다. 실제 엔진음과 문·기어 효과음은 생성 결과 선택 후 맞춥니다.
 '''
+    if m.get('person_treatment'):
+        guide=guide.replace('## 생성 입력','현재 프리비즈는 팔·손·손가락 없이 외부 인물을 사각기둥 하나로 표시합니다. 실내는 조작부 움직임만 남깁니다. 기둥은 문이 지나가는 전체 범위 밖에 있으며, 실제 사람의 팔 길이·손 접촉 경로를 뜻하지 않습니다. 생성용 사람 동작은 실제 차량 사진과 조작부 구조에 맞춰 검토합니다.\n\n## 생성 입력',1)
     (P/'photo-guide.md').write_text(guide,encoding='utf-8')
     md=['# 컷별 카메라 및 생성 프롬프트','']
     for s in m['shots']:md += [f'## {s["id"]} · {s["title"]}',f'{s["duration"]:.3f}초 | {s["classification"]} | 사진: {s["photos"]}',s['compatibility'],'','```text',s['prompt'],'```','']

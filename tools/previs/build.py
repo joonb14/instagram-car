@@ -10,6 +10,7 @@ sys.path.insert(0,str(Path(__file__).parent))
 import shots as shot_library
 importlib.reload(shot_library)
 from shots import get_shots, SOURCES
+from person_proxy import add_person_block
 OUT=ROOT/'.local/previs/modular-car-v001'
 OUT.mkdir(parents=True,exist_ok=True)
 SOURCE=ROOT/'.local/previs/exterior-30s-v004/exterior-30s.blend'
@@ -20,8 +21,7 @@ def material(name,color):
 BLUE=material('Proxy_car_blue',(.30,.58,.80)); GRAY=material('Set_gray',(.49,.51,.53))
 DARK=material('Interior_dark_gray',(.105,.125,.15)); BLACK=material('Rubber_black',(.022,.028,.036))
 LIGHT=material('Warm_lens',(.94,.85,.6)); RED=material('Tail_lamp',(.65,.05,.035))
-METAL=material('Metal',(.55,.61,.66)); HAND=material('Action_hand_orange',(.96,.40,.13))
-PALE=material('Person_shirt',(.75,.76,.78)); WHITE=material('Road_marking',(.78,.79,.80))
+METAL=material('Metal',(.55,.61,.66)); WHITE=material('Road_marking',(.78,.79,.80))
 def link(o):
     bpy.context.scene.collection.objects.link(o);return o
 def empty(name,loc=(0,0,0),parent=None):
@@ -34,7 +34,7 @@ def cube(name,loc,dim,mat=GRAY,parent=None,bevel=.015):
         m=o.modifiers.new('Soft_edges','BEVEL');m.width=bevel;m.segments=2
         o.modifiers.new('Normals','WEIGHTED_NORMAL')
     return o
-def uv(name,loc,scale,mat=HAND,parent=None):
+def uv(name,loc,scale,mat=GRAY,parent=None):
     bpy.ops.mesh.primitive_uv_sphere_add(segments=16,ring_count=8,location=loc);o=bpy.context.object;o.name=name;o.scale=scale;o.data.materials.append(mat);o.parent=parent
     for p in o.data.polygons:p.use_smooth=True
     return o
@@ -61,17 +61,6 @@ def interp(t,points):
     for (ta,a),(tb,b) in zip(points,points[1:]):
         if t<=tb:return a+(b-a)*smooth(max(0,min(1,(t-ta)/(tb-ta))))
     return points[-1][1]
-def hand(name,loc=(0,0,0),parent=None):
-    """Articulated glove proxy, orange marks motion only; not human appearance."""
-    root=empty(name,loc,parent)
-    uv(name+'_palm',(0,0,0),(.047,.068,.027),HAND,root)
-    for i in range(4):
-        x=(i-1.5)*.025
-        rod(name+'_finger',(x,-.035,0),(x,-.09,-.025),.012,HAND,root)
-        rod(name+'_tip',(x,-.09,-.025),(x,-.078,-.055),.011,HAND,root)
-    rod(name+'_thumb',(-.041,.015,0),(-.064,-.035,-.025),.017,HAND,root)
-    rod(name+'_forearm',(0,.04,0),(0,.42,.02),.038,HAND,root)
-    return root
 def camera(scene,loc,aim,lens):
     dat=bpy.data.cameras.new(scene.name+'_Camera');o=link(bpy.data.objects.new(scene.name+'_Camera',dat));dat.lens=lens;dat.clip_start=.02;dat.clip_end=1000
     o.location=loc;o.rotation_euler=(Vector(aim)-o.location).to_track_quat('-Z','Y').to_euler();scene.camera=o;return o
@@ -205,44 +194,26 @@ def hollow_car(mapping,root):
     cube('Exterior_handle',(-.052,1.31,.17),(.03,.18,.045),BLACK,door)
     cube('Interior_pull',(.1,.95,.12),(.06,.3,.035),METAL,door)
     return door
-def actor_at_door(door):
-    person=empty('Adult_proxy',(-1.85,.70,0))
-    cube('Torso',(0,0,1.18),(.32,.4,.56),PALE,person,.09)
-    uv('Head',(0,0,1.71),(.13,.12,.16),HAND,person)
-    cube('Shorts',(0,0,.81),(.32,.37,.23),DARK,person,.045)
-    for y in [-.12,.12]:
-        rod('Leg',(0,y,.77),(0,y,.16),.065,HAND,person)
-        cube('Shoe',(.06,y,.08),(.28,.12,.12),BLACK,person,.04)
-    palm=hand('Door_hand',(-.11,1.31,.17),door);palm.rotation_euler=(0,math.pi/2,math.pi/2)
-    for o in list(palm.children):
-        if o.name.startswith('Door_hand_forearm'):bpy.data.objects.remove(o,do_unlink=True)
-    # Main arm is an evaluated link between fixed shoulder and handle contact.
-    arm=rod('Upper_arm',(-1.85,.50,1.37),(-1.2,.7,1),.055,PALE)
-    lower=rod('Forearm',(-1.2,.7,1),(-1,.7,.9),.04,HAND)
-    return person,palm,arm,lower
 def interactions(s,shot):
     sid=shot['id'];n=shot['frames'];objs=[];action=None
     if sid in ['C01','C09']:
-        parked_set();root,_,mp=car();door=hollow_car(mp,root);person,palm,arm,lower=actor_at_door(door)
+        parked_set();root,_,mp=car();door=hollow_car(mp,root)
         cam=camera(s,(-3.6,-.15,1.65),(-.65,.12,.88),30);base=cam.location.copy();aim=Vector((-.65,.12,.88))
         action='door'
     elif sid in ['C02','C08']:
         panel,latch=panel_set();aim=Vector((.08,0,.77)) if sid=='C02' else Vector((-.28,0,.81))
         cam=camera(s,(aim.x,-1.55,.96),aim,38 if sid=='C02' else 44);base=cam.location.copy()
-        if sid=='C02':palm=hand('Door_pull_hand',(1.02,-.19,.02),panel)
-        else:palm=hand('Latch_hand',(.12,-.05,0),latch)
-        palm.rotation_euler=Vector((-.8,-.3,-.5)).to_track_quat('Y','Z').to_euler()
         action='panel'
     elif sid in ['C03','C04']:
         gear,brake=interior_console()
         if sid=='C03':
-            cam=camera(s,(.38,.20,1.40),(0,-.23,.74),45);aim=Vector((0,-.23,.74));palm=hand('Shifter_hand',(.025,.015,.25),gear);palm.rotation_euler=(.55,-.25,-.4)
+            cam=camera(s,(.38,.20,1.40),(0,-.23,.74),45);aim=Vector((0,-.23,.74))
         else:
-            cam=camera(s,(.12,.50,1.28),(.06,.04,.65),33);aim=Vector((.06,.04,.65));palm=hand('Brake_hand',(.045,-.28,.13),brake);palm.rotation_euler=(.1,0,-.95)
+            cam=camera(s,(.12,.50,1.28),(.06,.04,.65),33);aim=Vector((.06,.04,.65))
         base=cam.location.copy();action='console'
     elif sid in ['C05','C07']:
         k=ignition_set();cam=camera(s,(.25,-.85,1.04),(.11,-.04,1.0),35);base=cam.location.copy();aim=Vector((.11,-.04,1.0))
-        palm=hand('Key_hand',(.025,-.05,.015),k);palm.rotation_euler=Vector((.7,-.3,-.6)).to_track_quat('Y','Z').to_euler();action='key'
+        action='key'
     else:
         parked_set();car();cam=camera(s,(-3.5,5.0,1.05),(0,1.1,.82),45);base=cam.location.copy();aim=Vector((0,1.1,.82));action='idle'
     for f in range(1,n+1):
@@ -251,12 +222,6 @@ def interactions(s,shot):
             a=interp(t,[(0,0),(.18,0),(.8,1.12),(1,1.12)])
             if sid=='C09':a=1.12-a
             door.rotation_euler.z=a;key(door,'rotation_euler',f)
-            person.location=(-1.85-.20*a,.70-.42*a,0);key(person,'location',f)
-            bpy.context.view_layer.update();p=palm.matrix_world.translation
-            shoulder=person.location+Vector((0,-.2,1.38));elbow=(shoulder+p)/2+Vector((-.16,.05,-.08))
-            for bone,start,end in [(arm,shoulder,elbow),(lower,elbow,p)]:
-                delta=end-start;bone.location=(end+start)/2;bone.rotation_euler=delta.to_track_quat('Z','Y').to_euler();bone.scale.z=delta.length/bone['base_length']
-                for prop in ['location','rotation_euler','scale']:key(bone,prop,f)
         elif action=='panel':
             if sid=='C02':panel.rotation_euler.z=interp(t,[(0,-.22),(.2,-.22),(.85,0),(1,0)])
             else:
@@ -279,9 +244,15 @@ def interactions(s,shot):
         jitter=Vector((math.sin(sec*2.3)*.0025,math.sin(sec*1.7+.8)*.002,math.sin(sec*2.9)*.002))
         cam.location=base+jitter;cam.rotation_euler=(aim+jitter*.3-cam.location).to_track_quat('-Z','Y').to_euler();key(cam,'location',f);key(cam,'rotation_euler',f)
     shot['photo_adaptation_pending']=shot['classification']!='exterior'
-    shot['contact_method']='Parented hand contact proxy on moving control; orange is action marker.'
+    shot['contact_method']='No anatomical/contact proxy. Controls retain motion; person is one cuboid only.'
     s['vehicle_speed_m_s']=0;s['interaction_proxy_only']=True
     for o in s.objects:linear(o)
+    shot['person_proxy_mode']='none' if action=='idle' else 'control_only'
+    if action=='door':
+        _,proof=add_person_block(s,door)
+        shot['person_proxy_mode']='single_cuboid';shot['door_clearance_m']=proof['minimum_x_separation_m']
+        s.display.shading.show_shadows=False
+    s['person_proxy_mode']=shot['person_proxy_mode']
 
 shots=get_shots()
 for shot in shots:
@@ -298,6 +269,7 @@ bpy.context.window.scene=bpy.data.scenes['C01']
 for s in list(bpy.data.scenes):
     if s.name not in [a['id'] for a in shots]:bpy.data.scenes.remove(s)
 blend=OUT/'modular-car.blend';bpy.ops.wm.save_as_mainfile(filepath=str(blend))
-manifest={'revision':'modular-car-v001','fps':FPS,'width':1080,'height':1920,'silent':True,'authorship':'Existing directly authored generic car proxy adapted; new camera paths and simplified interior/hand geometry directly authored. No exact vehicle-identity claim.','source_model_sha256':hashlib.sha256(SOURCE.read_bytes()).hexdigest(),'blend_sha256':hashlib.sha256(blend.read_bytes()).hexdigest(),'sources':SOURCES,'source_rights':'Not established. Private reference analysis only. Source footage not included in generated clips.','user_visual_approval':False,'shots':shots}
+manifest={'revision':'modular-car-v001','fps':FPS,'width':1080,'height':1920,'silent':True,'authorship':'Existing directly authored generic car proxy adapted; new camera paths, simplified interior and single-cuboid person markers directly authored. No exact vehicle-identity claim.','source_model_sha256':hashlib.sha256(SOURCE.read_bytes()).hexdigest(),'blend_sha256':hashlib.sha256(blend.read_bytes()).hexdigest(),'sources':SOURCES,'source_rights':'Not established. Private reference analysis only. Source footage not included in generated clips.','user_visual_approval':False,'shots':shots}
+manifest['person_treatment']='One rectangular person column per visible person; no anatomy. Door columns stay at least 20 cm outside the full door sweep.'
 (OUT/'manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2),encoding='utf-8')
 result={'path':str(blend),'scenes':len(shots),'frames':sum(s['frames'] for s in shots),'manifest':str(OUT/'manifest.json')}

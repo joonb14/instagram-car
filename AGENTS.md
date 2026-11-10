@@ -36,3 +36,5 @@ Use the maintained skill at `skills/car-shot-previs/SKILL.md` and `docs/modular-
 
 The owner accepted reference-consistent wheel rotation; retain it for driving shots. The camera-motion variant is `.local/previs/modular-car-v002/`, with added slides and push/pull moves on ASMR shots C01–C09. Keep v001 available for comparison. Added camera treatment is distinct from the source camera reconstruction.
 
+People in previs must be represented by one rectangular column per visible person. Do not model arms, hands, fingers, a separate head or anatomical parts. Interior close-ups may show only the moving controls, without adding a person column that obscures the selected framing. Keep the column outside the entire moving door sweep, with positive clearance through all frames and subframes; never let the door intersect it. Current implementation uses at least 0.20 m separation. The current simplified-person revision is `.local/previs/modular-car-v003/`; retain earlier revisions for comparison.
+

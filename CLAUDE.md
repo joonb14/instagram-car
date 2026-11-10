@@ -11,3 +11,5 @@ Check existing processes and listener ports first. Preserve open scenes and unsa
 The assistant builds the scene-by-scene Blender previs; the owner reviews framing and movement. Current reference direction: Higgsfield “Use Case 5 — The Car Commercial,” with road, car, and people retained and interior-visible shots separated from exterior-only shots.
 
 For the reusable driving/interior cut library, read `skills/car-shot-previs/SKILL.md` and `docs/modular-previs.md`. Source tools are under `tools/previs/`; private clips, photos and receipts stay under `.local/`.
+
+Represent a person in previs with one rectangular column only: no arms, hands, fingers or separate anatomy. Interior detail shots retain control motion without hand meshes. The person column must remain clear of the full door-opening/closing sweep (current implementation: at least 0.20 m). Current simplified-person library: `.local/previs/modular-car-v003/`.

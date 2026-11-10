@@ -53,6 +53,17 @@ PHOTO_NAMES = {
     'handbrake_console': '핸드브레이크·좌석 사이', 'ignition_cluster': '키 구멍·스티어링·계기판',
 }
 
+SIMPLE_PERSON_NOTES = {
+    'C01': '사람은 주황 사각기둥 하나로 표시합니다. 팔·손 없이 문이 열리는 동작을 보여주며, 카메라는 문을 따라 옆으로 이동하면서 조금 다가갑니다. 기둥은 문이 지나가는 전체 범위 밖에 있습니다.',
+    'C02': '팔·손 없이 큰 실내 도어풀과 문이 안쪽으로 닫히는 동작을 보여줍니다. 카메라는 도어패널을 따라 조금 이동하며 손잡이에 다가갑니다.',
+    'C03': '팔·손 없이 수동 기어 레버의 움직임만 보여줍니다. 카메라는 센터콘솔 위에서 기어 노브를 향해 대각선으로 천천히 다가갑니다.',
+    'C04': '팔·손 없이 기계식 핸드브레이크의 움직임만 보여줍니다. 카메라는 옆으로 이동하며 조금 낮아져 레버와 회전축을 함께 담습니다.',
+    'C05': '팔·손 없이 물리 키가 꽂히고 돌아가는 동작을 보여줍니다. 카메라는 스티어링과 계기판에서 키 쪽으로 천천히 다가갑니다.',
+    'C07': '팔·손 없이 키가 돌아가고 빠지는 동작을 보여줍니다. 카메라는 조금 물러나 주변 실내를 더 담습니다.',
+    'C08': '팔·손 없이 작은 실내 도어 릴리스가 움직이고 문이 열리는 동작을 보여줍니다. 카메라는 릴리스 쪽으로 짧게 다가가며 옆으로 이동합니다.',
+    'C09': '사람은 주황 사각기둥 하나로 표시합니다. 팔·손 없이 문이 닫히는 동작을 보여주며, 카메라는 문을 따라 뒤로 이동하면서 조금 물러납니다. 기둥은 문이 지나가는 전체 범위 밖에 있습니다.',
+}
+
 
 def build_player(library, manifest=None):
     library = Path(library).resolve()
@@ -62,6 +73,11 @@ def build_player(library, manifest=None):
         shot = dict(s)
         # C notes describe the additional v002 camera moves only.
         note = NOTES.get(s['id']) if s['id'][0] != 'C' or s.get('camera_motion') else None
+        if s.get('person_proxy_mode') in ['single_cuboid', 'control_only']:
+            if s.get('camera_motion'):
+                note = SIMPLE_PERSON_NOTES.get(s['id'], note)
+            else:
+                note = ('사람은 팔·손 없는 사각기둥 하나로 표시합니다. ' if s['person_proxy_mode'] == 'single_cuboid' else '팔·손 없이 조작부 움직임만 보여줍니다. ') + s['camera_prompt']
         shot['description_ko'] = note or s['camera_prompt']
         shot['photo_label'] = PHOTO_NAMES.get(s['photos'], s['photos'])
         for field in ('clip', 'mid_frame', 'start_frame'):

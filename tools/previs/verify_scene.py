@@ -1,8 +1,10 @@
 """Meaningful evaluated-scene checks, run in Blender without modifying the file."""
-import bpy,math,json,hashlib
+import bpy,math,json,hashlib,sys
 from pathlib import Path
 from mathutils import Vector
 from bpy_extras.object_utils import world_to_camera_view
+sys.path.insert(0,str(Path(__file__).parent))
+from person_proxy import actor_objects,door_sweep_min_x
 P=Path(bpy.data.filepath).parent
 m=json.loads((P/'manifest.json').read_text(encoding='utf-8'))
 checks=[]
@@ -13,6 +15,22 @@ for shot in m['shots']:
     roots=[o for o in s.objects if o.name.startswith('Car_travel')]
     wheels=[o for o in s.objects if o.name.startswith('Wheel.')]
     row={'id':shot['id'],'frames':s.frame_end,'samples':[]}
+    mode=shot.get('person_proxy_mode')
+    if mode:
+        assert not actor_objects(s),('Anatomical proxy remains',shot['id'])
+        blocks=[o for o in s.objects if o.get('role')=='person_position_only']
+        assert len(blocks)==(1 if mode=='single_cuboid' else 0)
+        if blocks:
+            block=blocks[0]
+            assert block.type=='MESH' and len(block.data.vertices)==8 and len(block.data.polygons)==6
+            assert not block.modifiers and not block.animation_data and not block.parent
+            hinge=next(o for o in s.objects if o.name.startswith('Driver_door_hinge'))
+            proof=door_sweep_min_x(s,hinge)
+            block_right=max((block.matrix_world@v.co).x for v in block.data.vertices)
+            gap=proof['min_x']-block_right
+            assert gap>=.20,('Door/person gap below 20 cm',shot['id'],gap)
+            row['continuous_door_x_separation_m']=gap
+            row['door_sweep_method']=proof['method']
     for f in [1,round(s.frame_end*.25),round(s.frame_end*.5),round(s.frame_end*.75),s.frame_end]:
         s.frame_set(max(1,f));dg=bpy.context.evaluated_depsgraph_get();sample={'frame':s.frame_current}
         if roots:
@@ -31,11 +49,11 @@ for shot in m['shots']:
                 bounds=[min(p.x for p in pts),max(p.x for p in pts),min(p.y for p in pts),max(p.y for p in pts)]
                 sample['whole_car_bounds']=bounds
                 assert bounds[0]>.015 and bounds[1]<.985 and bounds[2]>.02 and bounds[3]<.98,(shot['id'],f,bounds)
-        if shot['id'] in ['C01','C09']:
+        if not mode and shot['id'] in ['C01','C09']:
             hand=next(o for o in s.objects if o.name.startswith('Door_hand') and o.type=='EMPTY')
             assert hand.parent.name.startswith('Driver_door_hinge')
-        if shot['id']=='C03':assert next(o for o in s.objects if o.name.startswith('Shifter_hand') and o.type=='EMPTY').parent.name.startswith('Gear_pivot')
-        if shot['id']=='C04':assert next(o for o in s.objects if o.name.startswith('Brake_hand') and o.type=='EMPTY').parent.name.startswith('Handbrake_pivot')
+        if not mode and shot['id']=='C03':assert next(o for o in s.objects if o.name.startswith('Shifter_hand') and o.type=='EMPTY').parent.name.startswith('Gear_pivot')
+        if not mode and shot['id']=='C04':assert next(o for o in s.objects if o.name.startswith('Brake_hand') and o.type=='EMPTY').parent.name.startswith('Handbrake_pivot')
         row['samples'].append(sample)
     checks.append(row)
 report={'blend_sha256':hashlib.sha256(Path(bpy.data.filepath).read_bytes()).hexdigest(),'checks':checks,'pass':True,'limits':'Evaluated geometric checks do not certify anatomy, exact reference match or perceptual wheel direction.'}
