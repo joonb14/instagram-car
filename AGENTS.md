@@ -30,3 +30,7 @@ The owner wants to follow “Use Case 5 — The Car Commercial” in the Higgsfi
 
 Reference video: https://www.youtube.com/watch?v=fvlAGwLelT8. The assistant creates the Blender previs through MCP; do not require the owner to build it manually. Keep road, car, and people. Separate any interior-visible footage from exterior-only footage, and prepare independent scene outputs for later generation and assembly. Preserve selected framing while applying the owner's 9:16 production requirement. Previs creation does not authorize paid generation or publication.
 
+## Reusable cut library
+
+Use the maintained skill at `skills/car-shot-previs/SKILL.md` and `docs/modular-previs.md` for modular car shots. Current additional references: `eaq0oFtTaQs`, `NHWZKfeyJII`, and `xPlXE8XQi0Y`. The local library is `.local/previs/modular-car-v001/`; source tools are `tools/previs/`. Classify open-door shots with visible cabins as mixed, even when the camera is outside. Interior photos must match the actual gear, brake, key and latch layout; generic blocking does not establish target-vehicle fidelity. Maintain per-cut camera prompts, photo slots and duration-limited assembly recipes.
+

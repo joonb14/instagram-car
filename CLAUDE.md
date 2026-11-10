@@ -9,3 +9,5 @@ For each new Blender MCP task, launch a fresh Blender instance through the CLI i
 Check existing processes and listener ports first. Preserve open scenes and unsaved work; never kill an unidentified process to free a port. Follow the launch command, collision handling, and verification procedure in AGENTS.md. Do not assume a prior session's Blender connection remains valid.
 
 The assistant builds the scene-by-scene Blender previs; the owner reviews framing and movement. Current reference direction: Higgsfield “Use Case 5 — The Car Commercial,” with road, car, and people retained and interior-visible shots separated from exterior-only shots.
+
+For the reusable driving/interior cut library, read `skills/car-shot-previs/SKILL.md` and `docs/modular-previs.md`. Source tools are under `tools/previs/`; private clips, photos and receipts stay under `.local/`.

@@ -8,9 +8,11 @@
 기존 결과물은 artifacts/에 보존합니다. 원본·실행 기록·로컬 도구는 .local/에 두며 Git에서 제외합니다.
 
 현재 원본 YouTube fvlAGwLelT8을 .local/references/fvlAGwLelT8/source.mp4로 다운로드했습니다.
-현재 외관 하이라이트 10컷, 30.36초의 Blender 프리비즈 검토본을 제작했습니다. 전체 원본의 모든 외관 컷을 재현한 것은 아니며 실내 컷은 별도 작업입니다. 실제 확인한 절차를 새 스킬로 정리할 예정이고, 새 스킬은 아직 미제작입니다.
+초기 외관 하이라이트 10컷, 30.36초의 Blender 프리비즈 검토본을 제작했습니다. 전체 원본의 모든 외관 컷을 재현한 것은 아닙니다. 이후 컷별 재사용 도구와 새 [car-shot-previs 스킬](skills/car-shot-previs/SKILL.md)을 추가했습니다.
 Higgsfield 플러그인 설치 요구사항: https://higgsfield.ai/blog/higgsfield-blender-plugin
 원격 저장소: https://github.com/joonb14/instagram-car.git
+
+새 컷 라이브러리는 `.local/previs/modular-car-v001/index.html`에서 확인합니다. 레퍼런스 `eaq0oFtTaQs` 12컷, `NHWZKfeyJII` 10컷, `xPlXE8XQi0Y` 9컷을 독립 Blender 씬과 1080×1920·60fps 무음 영상으로 준비합니다. 카메라 프롬프트, 실내/외관 사진 슬롯, 컷 선택·조합 방법은 [도구 안내](docs/modular-previs.md)에 있습니다. 실내는 실제 차량 사진 적용 전 일반 동작 프록시이며 사용자 시각 승인은 별도입니다.
 
 작업 규칙은 [AGENTS.md](AGENTS.md), Claude용 진입 안내는 [CLAUDE.md](CLAUDE.md)에 있습니다. 새 Blender MCP 작업은 현재 세션에서 CLI로 새 Blender 인스턴스를 실행하고 실제 MCP 연결과 PID를 검증하는 것으로 시작합니다.
 
