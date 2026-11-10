@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>프리비즈 · 씬 플레이어</title>
+  <style>/*__CSS__*/</style>
+</head>
+<body>
+<div class="app">
+  <header class="header">
+    <div class="brand"><span class="brand-mark" aria-hidden="true">P<span>▶</span></span><div><div class="eyebrow">CAR SHOT LIBRARY</div><h1>프리비즈 씬 플레이어</h1></div></div>
+    <div class="header-meta"><span class="format">9:16 <i></i> 1080 × 1920 <i></i> 60fps</span><a href="catalog.html">컷 조합하기 <span aria-hidden="true">↗</span></a></div>
+  </header>
+  <nav class="collections" aria-label="영상 모음 선택">
+    <div class="tabs" id="groups"><button data-group="all" aria-pressed="true">전체 <span>31</span></button><button data-group="A" aria-pressed="false">A <span>주행 · 12</span></button><button data-group="B" aria-pressed="false">B <span>주행 · 10</span></button><button data-group="C" aria-pressed="false">C <span>실내·ASMR · 9</span></button></div>
+    <div class="collection-count" id="collectionCount"></div>
+  </nav>
+  <main class="workbench">
+    <section class="preview-panel" aria-label="프리비즈 영상">
+      <div class="stage" id="stage">
+        <video id="video" playsinline muted preload="auto" aria-label="현재 씬 영상"></video>
+        <div class="stage-top"><span id="stageId">A01</span><span class="silent">무음 프리비즈</span></div>
+        <button id="stagePlay" class="stage-play" aria-label="영상 재생">▶</button>
+        <div id="mediaError" class="media-error" role="alert" hidden><p id="errorText"></p><button id="retry">다시 불러오기</button></div>
+      </div>
+      <div class="transport">
+        <div class="transport-buttons"><button id="previous" class="icon-button" aria-label="이전 컷" title="이전 컷 (←)">❮</button><button id="play" class="play-button" aria-label="재생" title="재생 / 일시정지 (Space)">▶</button><button id="next" class="icon-button" aria-label="다음 컷" title="다음 컷 (→)">❯</button></div>
+        <span class="clip-clock"><b id="clipElapsed">00:00.0</b><span>/</span><span id="clipDuration">00:00.0</span></span>
+        <label class="speed-label"><span class="sr-only">재생 속도</span><select id="speed" aria-label="재생 속도"><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="1.5">1.5×</option><option value="2">2×</option></select></label>
+        <button id="fullscreen" class="icon-button" aria-label="영상 전체 화면" title="전체 화면">⛶</button>
+      </div>
+    </section>
+    <section class="details-panel" aria-label="현재 씬 설명">
+      <div class="scene-heading"><div><div class="eyebrow" id="scenePosition"></div><div class="title-line"><span id="sceneId" class="scene-id"></span><h2 id="sceneTitle"></h2></div></div><span id="kind" class="kind"></span></div>
+      <div class="facts"><span id="duration"></span><span id="motion"></span><span id="loopNote" hidden>A01로 돌아오는 루프 컷</span></div>
+      <div class="description-block"><h3>장면 & 카메라</h3><p id="description"></p></div>
+      <details class="camera-original"><summary>영문 카메라 지시 보기</summary><p id="cameraPrompt" lang="en"></p></details>
+      <div class="prompt-block"><div class="section-heading"><h3>생성 프롬프트 <span>EN</span></h3><button id="copyPrompt" class="copy-button">프롬프트 복사 <span aria-hidden="true">⧉</span></button></div><textarea id="prompt" readonly spellcheck="false" lang="en" aria-label="현재 씬 생성 프롬프트"></textarea></div>
+      <div class="photo-note"><span>준비할 사진</span><b id="photo"></b><p id="compatibility"></p></div>
+      <div class="asset-links"><a id="clipLink" download>이 컷 MP4 ↓</a><a id="startLink" target="_blank" rel="noopener">시작 프레임 ↗</a><a id="promptLink" download>프롬프트 TXT ↓</a></div>
+    </section>
+  </main>
+  <section class="timeline-panel" aria-label="컷 타임라인">
+    <div class="timeline-heading"><div><h2>타임라인</h2><span class="timeline-hint">컷을 선택하면 바로 재생됩니다</span></div><div class="playback-options"><label class="toggle"><input id="continuous" type="checkbox" checked><span class="switch"></span>연속 재생</label><label class="toggle"><input id="repeat" type="checkbox"><span class="switch"></span>전체 반복</label><span id="totalClock" class="total-clock"></span></div></div>
+    <div class="scrub-row"><input id="scrubber" type="range" min="0" max="1" step="0.001" value="0" aria-label="전체 타임라인 위치"><span id="timelineDuration"></span></div>
+    <div class="filmstrip" id="filmstrip" aria-label="씬 목록"></div>
+  </section>
+  <footer><span id="status" role="status">재생을 준비하고 있습니다.</span><span>Space 재생·정지 <i>·</i> ← → 컷 이동 <i>·</i> 사진 적용 전의 동작 블로킹</span></footer>
+</div>
+<script id="manifest" type="application/json">__MANIFEST_JSON__</script>
+<script>/*__JS__*/</script>
+</body>
+</html>

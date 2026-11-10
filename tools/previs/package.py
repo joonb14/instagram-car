@@ -2,6 +2,7 @@
 from pathlib import Path
 import argparse,subprocess,json,hashlib,re,shutil,html
 from PIL import Image,ImageDraw
+from player import build_player
 ROOT=Path(__file__).resolve().parents[2]
 P=ROOT/'.local/previs/modular-car-v001'
 FF=ROOT/'.local/runtime/imageio_ffmpeg/binaries/ffmpeg-win-x86_64-v9.0.2.exe'
@@ -77,7 +78,9 @@ function downloadRecipe(){const o={revision:data.revision,shots:order};const a=d
 document.querySelector('#filter').onchange=render;render();</script></html>'''.replace('__DATA__',payload)
     if m.get('camera_treatment'):
         doc=doc.replace('<a href="modular-car.blend">','<p>실내·문·정차 9컷에 전진·후진·옆 이동을 더한 버전입니다. 주행 컷과 바퀴·인물 동작은 기존 그대로입니다.</p><a href="modular-car.blend">',1)
-    (P/'index.html').write_text(doc,encoding='utf-8')
+    doc=doc.replace('<header><h1>','<header><a href="index.html">← 씬 플레이어</a><h1>',1)
+    (P/'catalog.html').write_text(doc,encoding='utf-8')
+    build_player(P,m)
     guide='''# 사진을 받아 각 컷을 맞추는 순서
 
 현재 파일은 일반 차량 블로킹이며 실제 964/BMW 실내를 복제한 모델이 아닙니다. 사진을 받은 뒤 조작부 위치와 카메라 구도를 맞춥니다. 사진만 바꾸고 다른 차의 키 위치나 레버를 유지하지 않습니다.
@@ -103,7 +106,7 @@ document.querySelector('#filter').onchange=render;render();</script></html>'''.r
 
 ## 조합
 
-index.html에서 원하는 컷을 순서대로 추가하고 선택 순서를 복사합니다. 예: C01,C02,C05,C06,A01,A09,A03,C07,C09. 선택 목록은 순서와 합계 시간을 보여줍니다.
+index.html에서 컷을 선택하거나 연속 재생하며 설명과 프롬프트를 확인합니다. '컷 조합하기'로 catalog.html을 열어 원하는 컷을 순서대로 추가하고 선택 순서를 복사합니다. 예: C01,C02,C05,C06,A01,A09,A03,C07,C09. 선택 목록은 순서와 합계 시간을 보여줍니다.
 동일 ID의 중복 선택은 막았습니다. A12는 A01로 돌아오는 루프 컷이므로 일반 조합에서 제외하는 것이 좋습니다. A/B의 비슷한 앵글도 모두 넣기보다 하나씩 골라 사용합니다.
 C 전체는 20.7초 검토본이므로 20초 제한 생성 입력으로 한 번에 제출하지 않습니다. C01–C05 11.667초 / C06–C09 9.033초 분할본 또는 개별 컷을 사용합니다.
 

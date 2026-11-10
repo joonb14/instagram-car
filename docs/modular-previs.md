@@ -40,7 +40,9 @@ $env:PYTHONPATH = Join-Path (Get-Location) '.local/runtime'
 
 Python은 Pillow와 로컬 imageio_ffmpeg 바이너리를 사용한다. 이번 설치 경로는 코드에 명시되어 있다. 다른 환경에서는 경로를 먼저 확인한다. Blender 5.2 Action은 `layers -> strips -> channelbags -> fcurves`를 사용한다.
 
-4. `index.html`의 컷을 선택 순서대로 추가한다. 예를 들어:
+4. `index.html` 씬 플레이어에서 왼쪽 영상과 오른쪽 씬 번호·제목·한국어 설명·영문 프롬프트를 확인한다. 썸네일을 클릭하면 해당 컷으로 이동해 재생한다. 전체 시간 막대로 컷 안의 시점까지 이동할 수 있다. A/B/C 모음 선택, 연속 재생, 전체 반복, 재생 속도, 프롬프트 복사를 지원한다. 연속 재생을 끄면 해당 컷에서 멈추며, 전체 반복이 꺼져 있으면 마지막 컷에서 끝난다. 브라우저가 자동 재생을 막으면 재생 버튼을 누른다.
+
+페이지는 CSS·JS·씬 데이터를 포함한 독립 HTML이며 영상·프레임은 같은 폴더의 상대경로로 읽는다. `player.html`도 같은 플레이어다. 기존 조합 목록은 `catalog.html`로 유지하며, 플레이어 상단의 **컷 조합하기**에서 접근한다. 조합 목록에서 컷을 선택 순서대로 추가한다. 예를 들어:
 
 ```powershell
 & 'C:/Users/joonb/.local/bin/python3.11.exe' 'tools/previs/assemble.py' --library '.local/previs/modular-car-v001' --ids 'C01,C02,C05,C06,A01,A09,A03,C07,C09' --max-seconds 20 --name 'door-drive-idle'
@@ -49,6 +51,15 @@ Python은 Pillow와 로컬 imageio_ffmpeg 바이너리를 사용한다. 이번 �
 `--recipe`는 목록에서 저장한 JSON도 받는다. 20초를 넘으면 컷 경계에서 파트로 나누며, 개별 컷이 제한보다 길면 오류로 멈춘다. 기존 출력 덮어쓰기와 우발적 중복은 막는다. 동일 컷을 의도적으로 반복할 때만 `--allow-repeat`를 사용한다. A12는 A01의 루프 복귀 컷이다.
 
 레시피 예시: `{"revision":"modular-car-v001","shots":["C02","C05"]}`. `shots` 배열의 순서가 편집 순서다. 위 20초는 이 프로젝트에서 사용자가 확인한 입력 제한이며, 다른 서비스에 그대로 적용하지 않는다.
+
+플레이어만 다시 만들 때는 Blender나 재인코딩이 필요 없다. 원본은 `tools/previs/player.py`, `player.html`, `player.css`, `player.js`다. 한국어 컷 설명과 필요한 사진 이름은 `player.py`에서 관리한다. C의 추가 카메라 설명은 `camera_motion`이 있는 변형에만 적용한다. `package.py --catalog-only`는 조합 목록과 플레이어를 함께 갱신한다.
+
+```powershell
+& 'C:/Users/joonb/.local/bin/python3.11.exe' -X utf8 tools/previs/player.py --library .local/previs/modular-car-v002
+node tools/previs/test_player.cjs .local/previs/modular-car-v002
+```
+
+플레이어 검사는 실제 31컷의 경계 탐색, 모음별 순서·총시간, 연속/반복 분기, 파일과 프롬프트 연결을 확인한다. 실제 브라우저 영상 재생·레이아웃 검토 여부는 별도 기록한다. 표시용 폴더를 복사할 때 HTML뿐 아니라 연결된 컷 폴더와 `catalog.html`도 유지한다.
 
 ## 검수와 사진 적용
 
