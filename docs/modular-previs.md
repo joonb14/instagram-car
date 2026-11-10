@@ -6,6 +6,10 @@
 
 `.local/previs/modular-car-v001/`에 `index.html`, `manifest.json`, `modular-car.blend`, `photo-guide.md`, `all-prompts.md`가 있다. 컷별 폴더에 `preview.mp4`, `start.png`, `mid.png`, `end.png`, `prompt.txt`를 둔다. 모든 출력은 1080×1920, 60fps, 무음이다. 최종 사용자 시각 승인은 별도다.
 
+사용자 요청으로 카메라 움직임을 추가한 변형은 `.local/previs/modular-car-v002/`다. ASMR C01–C09에 짧은 전진·후진·옆 이동을 넣었다. A/B 주행 22컷과 휠·인물·조작부 애니메이션은 유지한다. 사용자는 원본 주행의 바퀴 회전을 유지하기로 했으므로 정지 휠 버전으로 바꾸지 않는다. v001은 비교용으로 보존한다. 새 C 카메라는 원본의 정확한 재현이 아닌 추가 연출이다.
+
+`camera_motion.py`는 v001을 열어 둔 검증된 MCP 인스턴스에서 실행하며 새 v002를 만든다. 기존 v002가 있으면 덮어쓰지 않고 멈춘다. 기존 컷을 복사한 새 버전을 패키징할 때는 `python tools/previs/package.py --library .local/previs/modular-car-v002 --encode-ids C01,C02,C03,C04,C05,C06,C07,C08,C09`를 쓴다. 지정하지 않은 컷도 파일 존재·전체 디코딩·형식을 검증한다.
+
 차체는 기존 직접 제작한 일반 차량 프록시를 재사용한다. 새 카메라, 도로, 실내 조작부, 주황색 손/사람 프록시는 직접 제작했다. BMW/964 정밀 모델이 아니다. 사진을 받으면 실제 구조에 맞춰 변경한다. 이전 요청대로 윙은 생략했다.
 
 원본과 생성물·Blender 파일·검수 기록은 Git에 넣지 않는다. 분석용 다운로드는 공개 재사용 권한을 뜻하지 않는다.

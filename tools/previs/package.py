@@ -25,7 +25,21 @@ def make_prompt(s):
     elif s['classification']=='interior':
         bindings='Use @동영상1 strictly for camera and hand action. Use @이미지1 for the exact interior components, materials and placement.'
     else:bindings='Use @동영상1 strictly for camera, framing and vehicle motion. Use @이미지1 for exact exterior vehicle identity.'
-    text=f'{bindings}\nOne continuous {s["duration"]:.3f}-second shot, vertical 9:16. {s["camera_prompt"]}\n'
+    cue=s['camera_prompt']
+    if s.get('camera_motion'):
+        actions={
+            'C01':'An adult opens the driver door once. Preserve the visible cockpit and keep the hand on the exterior handle.',
+            'C02':'The hand grips the large interior door pull and draws the door inward to close it once.',
+            'C03':'The hand grips the manual gear knob and moves it through a short deliberate shift pattern, then rests.',
+            'C04':'The hand grips and operates the mechanical handbrake once, keeping contact with the lever.',
+            'C05':'The hand inserts the ignition key, turns it to start, then releases it to the running position.',
+            'C06':'The parked car idles in place. Every wheel stays still. Preserve the actual exhaust and do not invent smoke.',
+            'C07':'The hand turns the ignition key off, removes it and withdraws from the control.',
+            'C08':'Fingers pull the small interior release latch once and the door begins to open.',
+            'C09':'An adult pushes the open driver door closed once, maintaining hand contact until closure.',
+        }
+        cue=actions[s['id']]+' '+s['camera_motion']['note']
+    text=f'{bindings}\nOne continuous {s["duration"]:.3f}-second shot, vertical 9:16. {cue}\n'
     if s['kind']=='driving':text+='The vehicle travels forward along its own lane. Wheels roll naturally with road contact. Preserve the original camera height, crop, direction and timing. Dark tinted glazing with no clearly visible cabin or face. '
     else:text+='Natural practical-car footage with restrained handheld movement. The vehicle stays parked. '
     text+='Replace the blue/gray blocking geometry and orange action proxy with the referenced real car and a natural adult hand/person where present. Keep the mechanical action physically plausible. Preserve the real controls and body details. Do not invent a wing, change the wheels, mirror the cockpit, add extra fingers, extra actions, cuts, transitions, text or logos. Do not redesign the framing. '
@@ -41,6 +55,7 @@ def contacts(m):
         sheet.save(P/(group+'-contact.jpg'),quality=90)
 def catalog(m):
     for s in m['shots']:
+        if s.get('camera_motion'):s['camera_prompt']=s['camera_motion']['note']
         s['prompt']=make_prompt(s);(P/s['id']/'prompt.txt').write_text(s['prompt'],encoding='utf-8')
     (P/'manifest.json').write_text(json.dumps(m,ensure_ascii=False,indent=2),encoding='utf-8')
     payload=json.dumps(m,ensure_ascii=False).replace('</','<\\/')
@@ -60,6 +75,8 @@ function copyOrder(){copyText(order.join(','))}
 async function copyPrompt(id,b){await copyText(byId[id].prompt);b.textContent='복사됨'}
 function downloadRecipe(){const o={revision:data.revision,shots:order};const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(o,null,2)],{type:'application/json'}));a.download='previs-recipe.json';a.click();URL.revokeObjectURL(a.href)}
 document.querySelector('#filter').onchange=render;render();</script></html>'''.replace('__DATA__',payload)
+    if m.get('camera_treatment'):
+        doc=doc.replace('<a href="modular-car.blend">','<p>실내·문·정차 9컷에 전진·후진·옆 이동을 더한 버전입니다. 주행 컷과 바퀴·인물 동작은 기존 그대로입니다.</p><a href="modular-car.blend">',1)
     (P/'index.html').write_text(doc,encoding='utf-8')
     guide='''# 사진을 받아 각 컷을 맞추는 순서
 
@@ -97,16 +114,24 @@ C 전체는 20.7초 검토본이므로 20초 제한 생성 입력으로 한 번�
     for s in m['shots']:md += [f'## {s["id"]} · {s["title"]}',f'{s["duration"]:.3f}초 | {s["classification"]} | 사진: {s["photos"]}',s['compatibility'],'','```text',s['prompt'],'```','']
     (P/'all-prompts.md').write_text('\n'.join(md),encoding='utf-8')
 def main():
-    ap=argparse.ArgumentParser();ap.add_argument('--catalog-only',action='store_true');ap.add_argument('--contacts-only',action='store_true');args=ap.parse_args()
+    global P
+    ap=argparse.ArgumentParser();ap.add_argument('--catalog-only',action='store_true');ap.add_argument('--contacts-only',action='store_true');ap.add_argument('--library',type=Path,default=P);ap.add_argument('--encode-ids',help='Comma-separated changed cuts; other clips must already exist and are verified unchanged');args=ap.parse_args()
+    P=args.library.resolve()
     m=json.loads((P/'manifest.json').read_text(encoding='utf-8'))
+    selected=set(args.encode_ids.split(',')) if args.encode_ids else {s['id'] for s in m['shots']}
+    unknown=selected-{s['id'] for s in m['shots']}
+    if unknown:ap.error('Unknown shot IDs: '+','.join(sorted(unknown)))
     if args.contacts_only:contacts(m);return
     if not args.catalog_only:
         checks=[]
         for s in m['shots']:
-            d=P/s['id'];files=list((d/'frames').glob('*.png'));assert len(files)==s['frames'],(s['id'],len(files),s['frames'])
+            d=P/s['id']
             out=d/'preview.mp4'
-            run(['-v','error','-framerate','60','-i',d/'frames/%04d.png','-frames:v',s['frames'],'-c:v','libx264','-crf','18','-pix_fmt','yuv420p','-movflags','+faststart','-y',out])
-            for label,f in [('start',1),('mid',(s['frames']+1)//2),('end',s['frames'])]:shutil.copy2(d/'frames'/f'{f:04d}.png',d/(label+'.png'))
+            if s['id'] in selected:
+                files=list((d/'frames').glob('*.png'));assert len(files)==s['frames'],(s['id'],len(files),s['frames'])
+                run(['-v','error','-framerate','60','-i',d/'frames/%04d.png','-frames:v',s['frames'],'-c:v','libx264','-crf','18','-pix_fmt','yuv420p','-movflags','+faststart','-y',out])
+                for label,f in [('start',1),('mid',(s['frames']+1)//2),('end',s['frames'])]:shutil.copy2(d/'frames'/f'{f:04d}.png',d/(label+'.png'))
+            else:assert out.exists(),('Missing reusable clip',s['id'])
             check=probe(out);assert check['frames']==s['frames'];check['id']=s['id']
             if (d/'render-source.json').exists():check['render_source']=json.loads((d/'render-source.json').read_text())
             checks.append(check);print('VERIFIED',s['id'],flush=True)

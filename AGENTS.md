@@ -34,3 +34,5 @@ Reference video: https://www.youtube.com/watch?v=fvlAGwLelT8. The assistant crea
 
 Use the maintained skill at `skills/car-shot-previs/SKILL.md` and `docs/modular-previs.md` for modular car shots. Current additional references: `eaq0oFtTaQs`, `NHWZKfeyJII`, and `xPlXE8XQi0Y`. The local library is `.local/previs/modular-car-v001/`; source tools are `tools/previs/`. Classify open-door shots with visible cabins as mixed, even when the camera is outside. Interior photos must match the actual gear, brake, key and latch layout; generic blocking does not establish target-vehicle fidelity. Maintain per-cut camera prompts, photo slots and duration-limited assembly recipes.
 
+The owner accepted reference-consistent wheel rotation; retain it for driving shots. The camera-motion variant is `.local/previs/modular-car-v002/`, with added slides and push/pull moves on ASMR shots C01–C09. Keep v001 available for comparison. Added camera treatment is distinct from the source camera reconstruction.
+

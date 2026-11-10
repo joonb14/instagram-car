@@ -14,6 +14,8 @@ Higgsfield 플러그인 설치 요구사항: https://higgsfield.ai/blog/higgsfie
 
 새 컷 라이브러리는 `.local/previs/modular-car-v001/index.html`에서 확인합니다. 레퍼런스 `eaq0oFtTaQs` 12컷, `NHWZKfeyJII` 10컷, `xPlXE8XQi0Y` 9컷을 독립 Blender 씬과 1080×1920·60fps 무음 영상으로 준비합니다. 카메라 프롬프트, 실내/외관 사진 슬롯, 컷 선택·조합 방법은 [도구 안내](docs/modular-previs.md)에 있습니다. 실내는 실제 차량 사진 적용 전 일반 동작 프록시이며 사용자 시각 승인은 별도입니다.
 
+카메라워크 추가 버전은 `.local/previs/modular-car-v002/index.html`입니다. 실내·문·정차 9컷에 카메라 이동을 더했으며 주행 영상과 바퀴·인물 동작은 유지했습니다. 원래 v001도 비교용으로 남겨둡니다.
+
 작업 규칙은 [AGENTS.md](AGENTS.md), Claude용 진입 안내는 [CLAUDE.md](CLAUDE.md)에 있습니다. 새 Blender MCP 작업은 현재 세션에서 CLI로 새 Blender 인스턴스를 실행하고 실제 MCP 연결과 PID를 검증하는 것으로 시작합니다.
 
 현재 따라 할 사례는 Higgsfield 글의 **Use Case 5 — The Car Commercial**입니다. Blender 프리비즈는 에이전트가 MCP로 제작하고 사용자가 구도·움직임을 검토합니다. 실내가 보이는 컷과 외관만 보이는 컷을 나누어 씬별로 생성한 뒤 합칩니다.
