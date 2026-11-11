@@ -41,3 +41,5 @@ Higgsfield 플러그인 설치 요구사항: https://higgsfield.ai/blog/higgsfie
 [선택한 13컷 v4](presets/selected-cuts-v4/README.md): B08 원경·A02 수직 아크 수정, 실내 전체→디테일 묶음, 외관 디테일→전체차. 26초 전체본과 20초·6초 분할본.
 
 [길이를 달리한 30초 시안 v5](presets/rhythm-study-v5/README.md): 1~4초짜리 16컷, 새로운 휠·테일램프·실내 중간 거리 컷, 20초+10초 분할본.
+
+[리빌·상승·감속 시안 v6](presets/reveal-study-v6/README.md): 실내 시트 뒤 리빌, 휠 상승 풀백, 전체차 감속 아크. 세 컷만 변경한 30초 시안과 20초+10초 분할본.

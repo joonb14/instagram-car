@@ -1,0 +1,57 @@
+{
+  "id": "PART2",
+  "title": "생성 입력 2 · 10초",
+  "category": ".",
+  "seconds": 10.0,
+  "video": "PART2/previs.mp4",
+  "clean": "PART2/previs.mp4",
+  "prompt": "PART2/prompt.txt",
+  "shots": [
+    {
+      "id": "A02",
+      "title": "전면 사선 · 보닛 하강 수직 아크",
+      "start": 0.0,
+      "end": 2.8,
+      "start_frame": 0,
+      "end_frame": 168,
+      "camera_prompt": "Start from the accepted elevated front-quarter composition and descend on a twenty-degree vertical camera arc around the hood region, using the same camera technique as the rear-deck shot. Retain the hood, windshield and front-wheel context. Keep the vehicle, wheels, environment and all cabin objects stationary. No digital zoom.",
+      "transition": "cut",
+      "transition_after": "직접 컷"
+    },
+    {
+      "id": "A03",
+      "title": "후면 전체 · 수평 아크",
+      "start": 2.8,
+      "end": 6.0,
+      "start_frame": 168,
+      "end_frame": 360,
+      "camera_prompt": "Orbit twelve degrees toward the rear, retaining the full vehicle and revealing the rear-quarter depth. Keep the vehicle, wheels, environment and every interior object stationary. Use fixed focal length; no digital zoom.",
+      "transition": "cut",
+      "transition_after": "직접 컷"
+    },
+    {
+      "id": "A11",
+      "title": "전체차 피날레 · 감속 수평 아크",
+      "start": 6.0,
+      "end": 10.0,
+      "start_frame": 360,
+      "end_frame": 600,
+      "camera_prompt": "Make a twenty-degree horizontal camera orbit around the stationary full vehicle. Begin briskly, then continuously decelerate, gently settling into the final rear composition. Preserve the full silhouette, fixed focal length and level horizon. Keep all physical objects, wheels, doors and controls stationary. No hands or gear operation.",
+      "transition": null,
+      "transition_after": "종료"
+    }
+  ],
+  "checks": {
+    "previs.mp4": {
+      "frames": 600,
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "fps": 60,
+      "silent": true,
+      "full_decode": true,
+      "sha256": "b746c02546c0d4a2789623d39cfb4b9dd83009f38a34681a2201fc85a843b7c3"
+    }
+  }
+}

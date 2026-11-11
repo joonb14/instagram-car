@@ -1,0 +1,1 @@
+Make a short slide along the blank console, maintaining it in frame. No gear lever movement or invented control action. Keep the vehicle, wheels, environment and every interior object stationary. Use fixed focal length; no digital zoom.

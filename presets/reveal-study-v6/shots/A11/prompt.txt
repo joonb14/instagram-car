@@ -1,0 +1,1 @@
+Make a twenty-degree horizontal camera orbit around the stationary full vehicle. Begin briskly, then continuously decelerate, gently settling into the final rear composition. Preserve the full silhouette, fixed focal length and level horizon. Keep all physical objects, wheels, doors and controls stationary. No hands or gear operation.

@@ -1,0 +1,167 @@
+{
+  "id": "PART1",
+  "title": "생성 입력 1 · 20초",
+  "category": ".",
+  "seconds": 20.0,
+  "video": "PART1/previs.mp4",
+  "clean": "PART1/previs.mp4",
+  "prompt": "PART1/prompt.txt",
+  "shots": [
+    {
+      "id": "A06",
+      "title": "헤드라이트 · 라인 따라 슬라이드",
+      "start": 0.0,
+      "end": 1.2,
+      "start_frame": 0,
+      "end_frame": 72,
+      "camera_prompt": "Slide gently along the lamp and bumper line while maintaining the selected headlight at its original screen position. Keep the vehicle, wheels, environment and every interior object stationary. Use fixed focal length; no digital zoom.",
+      "transition": "cut",
+      "transition_after": "직접 컷"
+    },
+    {
+      "id": "W01",
+      "title": "앞 휠 · 짧은 접근",
+      "start": 1.2,
+      "end": 2.2,
+      "start_frame": 72,
+      "end_frame": 132,
+      "camera_prompt": "A short physical push toward the stationary front wheel, followed by a shape-matched cut to the rear-wheel pullback reveal. Keep the vehicle, wheels, cabin and environment stationary; camera movement only. Fixed focal length.",
+      "transition": "cut",
+      "transition_after": "직접 컷"
+    },
+    {
+      "id": "A07",
+      "title": "뒤 휠 · 풀백하며 상승 리빌",
+      "start": 2.2,
+      "end": 5.0,
+      "start_frame": 132,
+      "end_frame": 300,
+      "camera_prompt": "Start close to the stationary rear wheel. Pull back while raising the physical camera by about 45 cm, revealing the fender and more bodywork. Keep the wheel in frame; no wheel rotation or digital zoom. Keep all physical objects, wheels, doors and controls stationary. No hands or gear operation.",
+      "transition": "cut",
+      "transition_after": "직접 컷"
+    },
+    {
+      "id": "I01",
+      "title": "실내 전체 · 시트 뒤에서 드러나는 리빌",
+      "start": 5.0,
+      "end": 7.4,
+      "start_frame": 300,
+      "end_frame": 444,
+      "camera_prompt": "Begin behind the stationary seat back, which partially occludes the cabin. Move the camera laterally and slightly upward, clearing the seat to reveal the dashboard and steering wheel. The seat stays fixed; only the camera moves. End on the established wide cabin composition. Keep all physical objects, wheels, doors and controls stationary. No hands or gear operation.",
+      "transition": "cut",
+      "transition_after": "직접 컷"
+    },
+    {
+      "id": "I05",
+      "title": "스티어링 · 짧은 접근",
+      "start": 7.4,
+      "end": 8.6,
+      "start_frame": 444,
+      "end_frame": 516,
+      "camera_prompt": "Push gently toward the stationary steering ring, maintaining its original screen position and surrounding dashboard. Keep the vehicle, wheels, environment and every interior object stationary. Use fixed focal length; no digital zoom.",
+      "transition": "cut",
+      "transition_after": "직접 컷"
+    },
+    {
+      "id": "I07",
+      "title": "실내 중간 거리 · 시트와 콘솔",
+      "start": 8.6,
+      "end": 10.4,
+      "start_frame": 516,
+      "end_frame": 624,
+      "camera_prompt": "A medium cabin view showing the seat and console together. Slide a few centimeters to reveal their spatial separation before returning to close details. Keep the vehicle, wheels, cabin and environment stationary; camera movement only. Fixed focal length.",
+      "transition": "cut",
+      "transition_after": "직접 컷"
+    },
+    {
+      "id": "I02",
+      "title": "센터콘솔 · 형태 따라 슬라이드",
+      "start": 10.4,
+      "end": 11.4,
+      "start_frame": 624,
+      "end_frame": 684,
+      "camera_prompt": "Make a short slide along the blank console, maintaining it in frame. No gear lever movement or invented control action. Keep the vehicle, wheels, environment and every interior object stationary. Use fixed focal length; no digital zoom.",
+      "transition": "cut",
+      "transition_after": "직접 컷"
+    },
+    {
+      "id": "I03",
+      "title": "도어패널 · 깊이를 보여주는 슬라이드",
+      "start": 11.4,
+      "end": 12.4,
+      "start_frame": 684,
+      "end_frame": 744,
+      "camera_prompt": "Move the camera a few centimeters along the static door panel while maintaining the selected panel area. Do not sweep into empty space or operate the door. Keep the vehicle, wheels, environment and every interior object stationary. Use fixed focal length; no digital zoom.",
+      "transition": "cut",
+      "transition_after": "직접 컷"
+    },
+    {
+      "id": "I04",
+      "title": "시트 · 시트와 콘솔 사이 슬라이드",
+      "start": 12.4,
+      "end": 13.6,
+      "start_frame": 744,
+      "end_frame": 816,
+      "camera_prompt": "Make a small lateral camera move to reveal the separation between seat and console while keeping both in the accepted composition. Keep the vehicle, wheels, environment and every interior object stationary. Use fixed focal length; no digital zoom.",
+      "transition": "cut",
+      "transition_after": "직접 컷"
+    },
+    {
+      "id": "I06",
+      "title": "대시보드 · 라인 따라 슬라이드",
+      "start": 13.6,
+      "end": 15.0,
+      "start_frame": 816,
+      "end_frame": 900,
+      "camera_prompt": "Slide gently along the dashboard line, tracking the selected passenger-side volume rather than tilting away from it. Keep the vehicle, wheels, environment and every interior object stationary. Use fixed focal length; no digital zoom.",
+      "transition": "cut",
+      "transition_after": "직접 컷"
+    },
+    {
+      "id": "T01",
+      "title": "테일램프 · 후면 디테일",
+      "start": 15.0,
+      "end": 16.0,
+      "start_frame": 900,
+      "end_frame": 960,
+      "camera_prompt": "A short close rear-corner camera slide along the stationary taillamp and bumper, introducing the rear bodywork before the wider rear-deck view. Keep the vehicle, wheels, cabin and environment stationary; camera movement only. Fixed focal length.",
+      "transition": "cut",
+      "transition_after": "직접 컷"
+    },
+    {
+      "id": "A08",
+      "title": "상부 · 위에서 아래로 수직 아크",
+      "start": 16.0,
+      "end": 18.0,
+      "start_frame": 960,
+      "end_frame": 1080,
+      "camera_prompt": "Descend on a twenty-four-degree curved camera orbit from the accepted overhead view, revealing hood, glass and side depth. The camera position moves, not just its tilt. Keep the vehicle, wheels, environment and every interior object stationary. Use fixed focal length; no digital zoom.",
+      "transition": "cut",
+      "transition_after": "직접 컷"
+    },
+    {
+      "id": "B08",
+      "title": "뒤 데크 · 원경 하강 수직 아크",
+      "start": 18.0,
+      "end": 20.0,
+      "start_frame": 1080,
+      "end_frame": 1200,
+      "camera_prompt": "From a wider rear-deck view, descend on a twenty-degree vertical camera arc. Keep the rear glass and deck readable and reveal more surrounding rear bodywork. Use the same focal length; the camera is physically farther away. Keep the vehicle, wheels, environment and all cabin objects stationary. No digital zoom.",
+      "transition": null,
+      "transition_after": "종료"
+    }
+  ],
+  "checks": {
+    "previs.mp4": {
+      "frames": 1200,
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "fps": 60,
+      "silent": true,
+      "full_decode": true,
+      "sha256": "916520a87fc6965f80622ef2fd2021f822e8052968f0468edac837eff3b05da0"
+    }
+  }
+}

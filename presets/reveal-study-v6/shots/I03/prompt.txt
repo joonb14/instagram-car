@@ -1,0 +1,1 @@
+Move the camera a few centimeters along the static door panel while maintaining the selected panel area. Do not sweep into empty space or operate the door. Keep the vehicle, wheels, environment and every interior object stationary. Use fixed focal length; no digital zoom.
