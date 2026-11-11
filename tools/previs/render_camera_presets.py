@@ -8,7 +8,9 @@ for row in m['shots']:
     if selected and row['id'] not in selected:continue
     s=bpy.data.scenes[row['id']];bpy.context.window.scene=s
     if stills:
-        s.frame_set(60);s.render.filepath=str(P/row['id']/'mid.png');bpy.ops.render.render(write_still=True)
+        handle=round(m.get('handles_seconds',0)*s.render.fps)
+        for label,frame in [('start',s.frame_start+handle),('mid',(s.frame_start+s.frame_end)//2),('end',s.frame_end-handle)]:
+            s.frame_set(frame);s.render.filepath=str(P/row['id']/(label+'.png'));bpy.ops.render.render(write_still=True)
     else:
         s.render.filepath=str(P/row['id']/'frames')+'/'
         bpy.ops.render.render(animation=True)

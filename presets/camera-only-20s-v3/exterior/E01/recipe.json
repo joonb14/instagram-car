@@ -1,0 +1,181 @@
+{
+  "id": "E01",
+  "title": "외관 · 디테일에서 전체로",
+  "category": "exterior",
+  "seconds": 20,
+  "video": "exterior/E01/previs.mp4",
+  "clean": "exterior/E01/clean.mp4",
+  "prompt": "exterior/E01/prompt.txt",
+  "shots": [
+    {
+      "id": "A06",
+      "title": "헤드라이트 · 라인 따라 슬라이드",
+      "start": 0,
+      "end": 2,
+      "camera_prompt": "Slide gently along the lamp and bumper line while maintaining the selected headlight at its original screen position. Keep the vehicle, wheels, environment and every interior object stationary. Use fixed focal length; no digital zoom.",
+      "transition_after": "직접 컷",
+      "transition": "cut"
+    },
+    {
+      "id": "A09",
+      "title": "앞 휠 · 차체 풀백 리빌",
+      "start": 2,
+      "end": 4,
+      "camera_prompt": "Start on the stationary front wheel. Physically pull back with slight sideways parallax to reveal the fender and adjoining bodywork. Do not rotate the wheel. Keep the vehicle, wheels, environment and every interior object stationary. Use fixed focal length; no digital zoom.",
+      "transition_after": "직접 컷",
+      "transition": "cut"
+    },
+    {
+      "id": "A07",
+      "title": "뒤 휠 · 펜더 풀백 리빌",
+      "start": 4,
+      "end": 6,
+      "camera_prompt": "Start on the stationary rear wheel. Pull the camera back diagonally to reveal more fender and rear-quarter bodywork while retaining the wheel in frame. Keep the vehicle, wheels, environment and every interior object stationary. Use fixed focal length; no digital zoom.",
+      "transition_after": "직접 컷",
+      "transition": "cut"
+    },
+    {
+      "id": "B08",
+      "title": "뒤 데크 · 하강 수직 아크",
+      "start": 6,
+      "end": 8,
+      "camera_prompt": "Descend on a twenty-degree curved camera orbit around the rear deck, revealing its depth below the rear window without panning off the selected body section. Keep the vehicle, wheels, environment and every interior object stationary. Use fixed focal length; no digital zoom.",
+      "transition_after": "직접 컷",
+      "transition": "cut"
+    },
+    {
+      "id": "A08",
+      "title": "상부 · 위에서 아래로 수직 아크",
+      "start": 8,
+      "end": 10,
+      "camera_prompt": "Descend on a twenty-four-degree curved camera orbit from the accepted overhead view, revealing hood, glass and side depth. The camera position moves, not just its tilt. Keep the vehicle, wheels, environment and every interior object stationary. Use fixed focal length; no digital zoom.",
+      "transition_after": "직접 컷",
+      "transition": "cut"
+    },
+    {
+      "id": "A02",
+      "title": "전면 사선 · 보닛·라이트 접근",
+      "start": 10,
+      "end": 12,
+      "camera_prompt": "Make a short physical push toward the hood and front lamps, keeping the selected front-quarter composition. Keep the vehicle, wheels, environment and every interior object stationary. Use fixed focal length; no digital zoom.",
+      "transition_after": "직접 컷",
+      "transition": "cut"
+    },
+    {
+      "id": "A10",
+      "title": "측면 · 내려오는 수직 아크",
+      "start": 12,
+      "end": 14,
+      "camera_prompt": "Begin above the accepted front-half side view and descend on an eighteen-degree curved orbit, arriving at the accepted side composition. Keep the nose and front wheel visible. Keep the vehicle, wheels, environment and every interior object stationary. Use fixed focal length; no digital zoom.",
+      "transition_after": "직접 컷",
+      "transition": "cut"
+    },
+    {
+      "id": "A03",
+      "title": "후면 전체 · 수평 아크",
+      "start": 14,
+      "end": 16,
+      "camera_prompt": "Orbit twelve degrees toward the rear, retaining the full vehicle and revealing the rear-quarter depth. Keep the vehicle, wheels, environment and every interior object stationary. Use fixed focal length; no digital zoom.",
+      "transition_after": "직접 컷",
+      "transition": "cut"
+    },
+    {
+      "id": "A11",
+      "title": "로우 후면 · 수평 아크",
+      "start": 16,
+      "end": 18,
+      "camera_prompt": "Make an eight-degree low horizontal orbit around the rear, keeping the full silhouette within the frame. Keep the vehicle, wheels, environment and every interior object stationary. Use fixed focal length; no digital zoom.",
+      "transition_after": "직접 컷",
+      "transition": "cut"
+    },
+    {
+      "id": "A01",
+      "title": "전면 전체 · 수평 아크",
+      "start": 18,
+      "end": 20,
+      "camera_prompt": "Orbit horizontally around the parked vehicle by twelve degrees, keeping its complete silhouette visible. Keep the vehicle, wheels, environment and every interior object stationary. Use fixed focal length; no digital zoom.",
+      "transition_after": "종료",
+      "transition": null
+    }
+  ],
+  "transitions": [
+    {
+      "at": 2,
+      "type": "cut",
+      "label": "직접 컷",
+      "duration": 0
+    },
+    {
+      "at": 4,
+      "type": "cut",
+      "label": "직접 컷",
+      "duration": 0
+    },
+    {
+      "at": 6,
+      "type": "cut",
+      "label": "직접 컷",
+      "duration": 0
+    },
+    {
+      "at": 8,
+      "type": "cut",
+      "label": "직접 컷",
+      "duration": 0
+    },
+    {
+      "at": 10,
+      "type": "cut",
+      "label": "직접 컷",
+      "duration": 0
+    },
+    {
+      "at": 12,
+      "type": "cut",
+      "label": "직접 컷",
+      "duration": 0
+    },
+    {
+      "at": 14,
+      "type": "cut",
+      "label": "직접 컷",
+      "duration": 0
+    },
+    {
+      "at": 16,
+      "type": "cut",
+      "label": "직접 컷",
+      "duration": 0
+    },
+    {
+      "at": 18,
+      "type": "cut",
+      "label": "직접 컷",
+      "duration": 0
+    }
+  ],
+  "checks": {
+    "previs.mp4": {
+      "frames": 1200,
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "fps": 60,
+      "silent": true,
+      "full_decode": true,
+      "sha256": "e87ff4e055de840b4bc3778a46b066513dd632cc67ede5d71296009266912d4d"
+    },
+    "clean.mp4": {
+      "frames": 1200,
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "fps": 60,
+      "silent": true,
+      "full_decode": true,
+      "sha256": "3c7ee9bd7ac954863f89e71576fe5f118215134227f0075b090b37463492b63a"
+    }
+  }
+}

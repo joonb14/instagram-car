@@ -1,0 +1,181 @@
+{
+  "id": "I04",
+  "title": "실내 포함 · 실내 디테일 중심",
+  "category": "interior",
+  "seconds": 20,
+  "video": "interior/I04/previs.mp4",
+  "clean": "interior/I04/clean.mp4",
+  "prompt": "interior/I04/prompt.txt",
+  "shots": [
+    {
+      "id": "A02",
+      "title": "전면 사선 · 보닛·라이트 접근",
+      "start": 0,
+      "end": 2,
+      "camera_prompt": "Make a short physical push toward the hood and front lamps, keeping the selected front-quarter composition. Keep the vehicle, wheels, environment and every interior object stationary. Use fixed focal length; no digital zoom.",
+      "transition_after": "짧은 암전",
+      "transition": "fadeblack"
+    },
+    {
+      "id": "I06",
+      "title": "대시보드 · 라인 따라 슬라이드",
+      "start": 2,
+      "end": 4,
+      "camera_prompt": "Slide gently along the dashboard line, tracking the selected passenger-side volume rather than tilting away from it. Keep the vehicle, wheels, environment and every interior object stationary. Use fixed focal length; no digital zoom.",
+      "transition_after": "직접 컷",
+      "transition": "cut"
+    },
+    {
+      "id": "I03",
+      "title": "도어패널 · 깊이를 보여주는 슬라이드",
+      "start": 4,
+      "end": 6,
+      "camera_prompt": "Move the camera a few centimeters along the static door panel while maintaining the selected panel area. Do not sweep into empty space or operate the door. Keep the vehicle, wheels, environment and every interior object stationary. Use fixed focal length; no digital zoom.",
+      "transition_after": "직접 컷",
+      "transition": "cut"
+    },
+    {
+      "id": "I04",
+      "title": "시트 · 시트와 콘솔 사이 슬라이드",
+      "start": 6,
+      "end": 8,
+      "camera_prompt": "Make a small lateral camera move to reveal the separation between seat and console while keeping both in the accepted composition. Keep the vehicle, wheels, environment and every interior object stationary. Use fixed focal length; no digital zoom.",
+      "transition_after": "직접 컷",
+      "transition": "cut"
+    },
+    {
+      "id": "I02",
+      "title": "센터콘솔 · 형태 따라 슬라이드",
+      "start": 8,
+      "end": 10,
+      "camera_prompt": "Make a short slide along the blank console, maintaining it in frame. No gear lever movement or invented control action. Keep the vehicle, wheels, environment and every interior object stationary. Use fixed focal length; no digital zoom.",
+      "transition_after": "직접 컷",
+      "transition": "cut"
+    },
+    {
+      "id": "I05",
+      "title": "스티어링 · 짧은 접근",
+      "start": 10,
+      "end": 12,
+      "camera_prompt": "Push gently toward the stationary steering ring, maintaining its original screen position and surrounding dashboard. Keep the vehicle, wheels, environment and every interior object stationary. Use fixed focal length; no digital zoom.",
+      "transition_after": "직접 컷",
+      "transition": "cut"
+    },
+    {
+      "id": "I01",
+      "title": "실내 전체 · 짧은 풀백",
+      "start": 12,
+      "end": 14,
+      "camera_prompt": "Gently pull back from the accepted cabin composition to reveal its spatial depth. Keep the dashboard, steering ring and console composition readable. Keep the vehicle, wheels, environment and every interior object stationary. Use fixed focal length; no digital zoom.",
+      "transition_after": "짧은 암전",
+      "transition": "fadeblack"
+    },
+    {
+      "id": "B08",
+      "title": "뒤 데크 · 하강 수직 아크",
+      "start": 14,
+      "end": 16,
+      "camera_prompt": "Descend on a twenty-degree curved camera orbit around the rear deck, revealing its depth below the rear window without panning off the selected body section. Keep the vehicle, wheels, environment and every interior object stationary. Use fixed focal length; no digital zoom.",
+      "transition_after": "직접 컷",
+      "transition": "cut"
+    },
+    {
+      "id": "A03",
+      "title": "후면 전체 · 수평 아크",
+      "start": 16,
+      "end": 18,
+      "camera_prompt": "Orbit twelve degrees toward the rear, retaining the full vehicle and revealing the rear-quarter depth. Keep the vehicle, wheels, environment and every interior object stationary. Use fixed focal length; no digital zoom.",
+      "transition_after": "짧은 디졸브",
+      "transition": "fade"
+    },
+    {
+      "id": "A01",
+      "title": "전면 전체 · 수평 아크",
+      "start": 18,
+      "end": 20,
+      "camera_prompt": "Orbit horizontally around the parked vehicle by twelve degrees, keeping its complete silhouette visible. Keep the vehicle, wheels, environment and every interior object stationary. Use fixed focal length; no digital zoom.",
+      "transition_after": "종료",
+      "transition": null
+    }
+  ],
+  "transitions": [
+    {
+      "at": 2,
+      "type": "fadeblack",
+      "label": "짧은 암전",
+      "duration": 0.2
+    },
+    {
+      "at": 4,
+      "type": "cut",
+      "label": "직접 컷",
+      "duration": 0
+    },
+    {
+      "at": 6,
+      "type": "cut",
+      "label": "직접 컷",
+      "duration": 0
+    },
+    {
+      "at": 8,
+      "type": "cut",
+      "label": "직접 컷",
+      "duration": 0
+    },
+    {
+      "at": 10,
+      "type": "cut",
+      "label": "직접 컷",
+      "duration": 0
+    },
+    {
+      "at": 12,
+      "type": "cut",
+      "label": "직접 컷",
+      "duration": 0
+    },
+    {
+      "at": 14,
+      "type": "fadeblack",
+      "label": "짧은 암전",
+      "duration": 0.2
+    },
+    {
+      "at": 16,
+      "type": "cut",
+      "label": "직접 컷",
+      "duration": 0
+    },
+    {
+      "at": 18,
+      "type": "fade",
+      "label": "짧은 디졸브",
+      "duration": 0.2
+    }
+  ],
+  "checks": {
+    "previs.mp4": {
+      "frames": 1200,
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "fps": 60,
+      "silent": true,
+      "full_decode": true,
+      "sha256": "d5e2b19939bd970d7f121ee81275c5bb15e2dccbe173036666f70844113f30fa"
+    },
+    "clean.mp4": {
+      "frames": 1200,
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "fps": 60,
+      "silent": true,
+      "full_decode": true,
+      "sha256": "11f93b8a0f5756b484eab0b7c9ce85d5288f0a5b11610a7cb062de4e63ce2506"
+    }
+  }
+}

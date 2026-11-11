@@ -1,0 +1,181 @@
+{
+  "id": "I02",
+  "title": "실내 포함 · 실내에서 외관으로",
+  "category": "interior",
+  "seconds": 20,
+  "video": "interior/I02/previs.mp4",
+  "clean": "interior/I02/clean.mp4",
+  "prompt": "interior/I02/prompt.txt",
+  "shots": [
+    {
+      "id": "I01",
+      "title": "실내 전체 · 짧은 풀백",
+      "start": 0,
+      "end": 2,
+      "camera_prompt": "Gently pull back from the accepted cabin composition to reveal its spatial depth. Keep the dashboard, steering ring and console composition readable. Keep the vehicle, wheels, environment and every interior object stationary. Use fixed focal length; no digital zoom.",
+      "transition_after": "직접 컷",
+      "transition": "cut"
+    },
+    {
+      "id": "I06",
+      "title": "대시보드 · 라인 따라 슬라이드",
+      "start": 2,
+      "end": 4,
+      "camera_prompt": "Slide gently along the dashboard line, tracking the selected passenger-side volume rather than tilting away from it. Keep the vehicle, wheels, environment and every interior object stationary. Use fixed focal length; no digital zoom.",
+      "transition_after": "직접 컷",
+      "transition": "cut"
+    },
+    {
+      "id": "I05",
+      "title": "스티어링 · 짧은 접근",
+      "start": 4,
+      "end": 6,
+      "camera_prompt": "Push gently toward the stationary steering ring, maintaining its original screen position and surrounding dashboard. Keep the vehicle, wheels, environment and every interior object stationary. Use fixed focal length; no digital zoom.",
+      "transition_after": "직접 컷",
+      "transition": "cut"
+    },
+    {
+      "id": "I02",
+      "title": "센터콘솔 · 형태 따라 슬라이드",
+      "start": 6,
+      "end": 8,
+      "camera_prompt": "Make a short slide along the blank console, maintaining it in frame. No gear lever movement or invented control action. Keep the vehicle, wheels, environment and every interior object stationary. Use fixed focal length; no digital zoom.",
+      "transition_after": "직접 컷",
+      "transition": "cut"
+    },
+    {
+      "id": "I04",
+      "title": "시트 · 시트와 콘솔 사이 슬라이드",
+      "start": 8,
+      "end": 10,
+      "camera_prompt": "Make a small lateral camera move to reveal the separation between seat and console while keeping both in the accepted composition. Keep the vehicle, wheels, environment and every interior object stationary. Use fixed focal length; no digital zoom.",
+      "transition_after": "짧은 암전",
+      "transition": "fadeblack"
+    },
+    {
+      "id": "A09",
+      "title": "앞 휠 · 차체 풀백 리빌",
+      "start": 10,
+      "end": 12,
+      "camera_prompt": "Start on the stationary front wheel. Physically pull back with slight sideways parallax to reveal the fender and adjoining bodywork. Do not rotate the wheel. Keep the vehicle, wheels, environment and every interior object stationary. Use fixed focal length; no digital zoom.",
+      "transition_after": "직접 컷",
+      "transition": "cut"
+    },
+    {
+      "id": "A06",
+      "title": "헤드라이트 · 라인 따라 슬라이드",
+      "start": 12,
+      "end": 14,
+      "camera_prompt": "Slide gently along the lamp and bumper line while maintaining the selected headlight at its original screen position. Keep the vehicle, wheels, environment and every interior object stationary. Use fixed focal length; no digital zoom.",
+      "transition_after": "직접 컷",
+      "transition": "cut"
+    },
+    {
+      "id": "A02",
+      "title": "전면 사선 · 보닛·라이트 접근",
+      "start": 14,
+      "end": 16,
+      "camera_prompt": "Make a short physical push toward the hood and front lamps, keeping the selected front-quarter composition. Keep the vehicle, wheels, environment and every interior object stationary. Use fixed focal length; no digital zoom.",
+      "transition_after": "직접 컷",
+      "transition": "cut"
+    },
+    {
+      "id": "A03",
+      "title": "후면 전체 · 수평 아크",
+      "start": 16,
+      "end": 18,
+      "camera_prompt": "Orbit twelve degrees toward the rear, retaining the full vehicle and revealing the rear-quarter depth. Keep the vehicle, wheels, environment and every interior object stationary. Use fixed focal length; no digital zoom.",
+      "transition_after": "짧은 디졸브",
+      "transition": "fade"
+    },
+    {
+      "id": "A01",
+      "title": "전면 전체 · 수평 아크",
+      "start": 18,
+      "end": 20,
+      "camera_prompt": "Orbit horizontally around the parked vehicle by twelve degrees, keeping its complete silhouette visible. Keep the vehicle, wheels, environment and every interior object stationary. Use fixed focal length; no digital zoom.",
+      "transition_after": "종료",
+      "transition": null
+    }
+  ],
+  "transitions": [
+    {
+      "at": 2,
+      "type": "cut",
+      "label": "직접 컷",
+      "duration": 0
+    },
+    {
+      "at": 4,
+      "type": "cut",
+      "label": "직접 컷",
+      "duration": 0
+    },
+    {
+      "at": 6,
+      "type": "cut",
+      "label": "직접 컷",
+      "duration": 0
+    },
+    {
+      "at": 8,
+      "type": "cut",
+      "label": "직접 컷",
+      "duration": 0
+    },
+    {
+      "at": 10,
+      "type": "fadeblack",
+      "label": "짧은 암전",
+      "duration": 0.2
+    },
+    {
+      "at": 12,
+      "type": "cut",
+      "label": "직접 컷",
+      "duration": 0
+    },
+    {
+      "at": 14,
+      "type": "cut",
+      "label": "직접 컷",
+      "duration": 0
+    },
+    {
+      "at": 16,
+      "type": "cut",
+      "label": "직접 컷",
+      "duration": 0
+    },
+    {
+      "at": 18,
+      "type": "fade",
+      "label": "짧은 디졸브",
+      "duration": 0.2
+    }
+  ],
+  "checks": {
+    "previs.mp4": {
+      "frames": 1200,
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "fps": 60,
+      "silent": true,
+      "full_decode": true,
+      "sha256": "a6e89b5a5a8647020a7fb5ef0e3e17c261877aa0fdb94c3ac449b77be8728368"
+    },
+    "clean.mp4": {
+      "frames": 1200,
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "fps": 60,
+      "silent": true,
+      "full_decode": true,
+      "sha256": "bf745341572ca228ee572cc9b1f1125c43acb72f8ad5e6a89601cca01aed7c2d"
+    }
+  }
+}
