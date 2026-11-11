@@ -1,0 +1,63 @@
+{
+  "id": "PART2",
+  "title": "생성 입력 2 · 6초",
+  "category": ".",
+  "seconds": 6,
+  "video": "PART2/previs.mp4",
+  "clean": "PART2/previs.mp4",
+  "prompt": "PART2/prompt.txt",
+  "shots": [
+    {
+      "id": "A02",
+      "title": "전면 사선 · 보닛 하강 수직 아크",
+      "start": 0,
+      "end": 2,
+      "camera_prompt": "Start from the accepted elevated front-quarter composition and descend on a twenty-degree vertical camera arc around the hood region, using the same camera technique as the rear-deck shot. Retain the hood, windshield and front-wheel context. Keep the vehicle, wheels, environment and all cabin objects stationary. No digital zoom.",
+      "transition": "cut",
+      "transition_after": "직접 컷"
+    },
+    {
+      "id": "A03",
+      "title": "후면 전체 · 수평 아크",
+      "start": 2,
+      "end": 4,
+      "camera_prompt": "Orbit twelve degrees toward the rear, retaining the full vehicle and revealing the rear-quarter depth. Keep the vehicle, wheels, environment and every interior object stationary. Use fixed focal length; no digital zoom.",
+      "transition": "cut",
+      "transition_after": "직접 컷"
+    },
+    {
+      "id": "A11",
+      "title": "로우 후면 · 수평 아크",
+      "start": 4,
+      "end": 6,
+      "camera_prompt": "Make an eight-degree low horizontal orbit around the rear, keeping the full silhouette within the frame. Keep the vehicle, wheels, environment and every interior object stationary. Use fixed focal length; no digital zoom.",
+      "transition": null,
+      "transition_after": "종료"
+    }
+  ],
+  "checks": {
+    "previs.mp4": {
+      "frames": 360,
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "fps": 60,
+      "silent": true,
+      "full_decode": true,
+      "sha256": "6fa20d609061bd7c6533dd433cb11c3af6a8d45f409181e7e7501d79c0678644"
+    }
+  },
+  "transitions": [
+    {
+      "at": 2,
+      "type": "cut",
+      "duration": 0
+    },
+    {
+      "at": 4,
+      "type": "cut",
+      "duration": 0
+    }
+  ]
+}

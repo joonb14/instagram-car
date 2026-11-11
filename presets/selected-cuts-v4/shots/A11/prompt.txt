@@ -1,0 +1,1 @@
+Make an eight-degree low horizontal orbit around the rear, keeping the full silhouette within the frame. Keep the vehicle, wheels, environment and every interior object stationary. Use fixed focal length; no digital zoom.
