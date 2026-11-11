@@ -1,0 +1,1 @@
+Descend on a twenty-four-degree curved camera orbit from the accepted overhead view, revealing hood, glass and side depth. The camera position moves, not just its tilt. Keep the vehicle, wheels, environment and every interior object stationary. Use fixed focal length; no digital zoom.

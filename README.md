@@ -39,3 +39,5 @@ Higgsfield 플러그인 설치 요구사항: https://higgsfield.ai/blog/higgsfie
 [장면에 맞춘 카메라 v3](presets/camera-only-20s-v3/README.md): 전체차 수평 아크, 상부·측면 하강 수직 아크, 휠 풀백 리빌. 기존 구도를 기준으로 주목 대상을 유지합니다.
 
 [선택한 13컷 v4](presets/selected-cuts-v4/README.md): B08 원경·A02 수직 아크 수정, 실내 전체→디테일 묶음, 외관 디테일→전체차. 26초 전체본과 20초·6초 분할본.
+
+[길이를 달리한 30초 시안 v5](presets/rhythm-study-v5/README.md): 1~4초짜리 16컷, 새로운 휠·테일램프·실내 중간 거리 컷, 20초+10초 분할본.

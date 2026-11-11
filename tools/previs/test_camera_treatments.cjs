@@ -12,9 +12,12 @@ for(let p=0;p<catalog.length;p++){
  element('preset').value=String(p);element('preset').onchange();
  assert.equal(element('timeline').children.length,catalog[p].shots.length);
  for(let i=0;i<catalog[p].shots.length;i++){
-  element('timeline').children[i].onclick();assert.equal(element('video').currentTime,2*i);
-  element('video').ontimeupdate();assert.ok(element('shot').textContent.startsWith(`${2*i}–${2*i+2}`));
+  const shot=catalog[p].shots[i];
+  element('timeline').children[i].onclick();assert.equal(element('video').currentTime,shot.start);
+  element('video').ontimeupdate();assert.ok(element('shot').textContent.startsWith(`${shot.start}–${shot.end}`));
+  element('video').currentTime=shot.end-1/120;element('video').ontimeupdate();assert.ok(element('shot').textContent.startsWith(`${shot.start}–${shot.end}`));
  }
+ element('video').currentTime=catalog[p].seconds;element('video').ontimeupdate();assert.ok(element('shot').textContent.includes(catalog[p].shots.at(-1).id));
  assert.ok(fs.existsSync(path.join(root,element('video').src)));
 }
 element('preset').value='0';element('edition').value='clean';element('edition').onchange();assert.equal(element('video').src,catalog[0].clean);

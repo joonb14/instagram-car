@@ -1,0 +1,1 @@
+A medium cabin view showing the seat and console together. Slide a few centimeters to reveal their spatial separation before returning to close details. Keep the vehicle, wheels, cabin and environment stationary; camera movement only. Fixed focal length.
