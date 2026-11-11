@@ -1,0 +1,1 @@
+Short camera truck right with fixed orientation; gentle parallax. Keep the vehicle, wheels, doors, controls and environment completely stationary.

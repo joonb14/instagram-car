@@ -1,0 +1,1 @@
+Slow physical dolly out along the existing optical axis, fixed focal length. Keep the vehicle, wheels, doors, controls and environment completely stationary.

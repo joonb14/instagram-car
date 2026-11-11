@@ -1,0 +1,181 @@
+{
+  "id": "I01",
+  "title": "실내 포함 · 외관에서 실내로",
+  "category": "interior",
+  "seconds": 20,
+  "video": "interior/I01/previs.mp4",
+  "clean": "interior/I01/clean.mp4",
+  "prompt": "interior/I01/prompt.txt",
+  "shots": [
+    {
+      "id": "A01",
+      "title": "전체차 · 돌리 인",
+      "start": 0,
+      "end": 2,
+      "camera_prompt": "Slow physical dolly in along the existing optical axis, fixed focal length. Keep the vehicle, wheels, doors, controls and environment completely stationary.",
+      "transition_after": "직접 컷",
+      "transition": "cut"
+    },
+    {
+      "id": "A06",
+      "title": "전면 디테일 · 우측 슬라이드",
+      "start": 2,
+      "end": 4,
+      "camera_prompt": "Short camera truck right with fixed orientation; gentle parallax. Keep the vehicle, wheels, doors, controls and environment completely stationary.",
+      "transition_after": "직접 컷",
+      "transition": "cut"
+    },
+    {
+      "id": "A09",
+      "title": "휠 · 상승",
+      "start": 4,
+      "end": 6,
+      "camera_prompt": "Gentle vertical camera pedestal up, preserving the viewing direction. Keep the vehicle, wheels, doors, controls and environment completely stationary.",
+      "transition_after": "짧은 암전",
+      "transition": "fadeblack"
+    },
+    {
+      "id": "I01",
+      "title": "실내 전체 · 돌리 인",
+      "start": 6,
+      "end": 8,
+      "camera_prompt": "Slow physical dolly in along the existing optical axis, fixed focal length. Keep the vehicle, wheels, doors, controls and environment completely stationary.",
+      "transition_after": "직접 컷",
+      "transition": "cut"
+    },
+    {
+      "id": "I05",
+      "title": "스티어링 · 돌리 아웃",
+      "start": 8,
+      "end": 10,
+      "camera_prompt": "Slow physical dolly out along the existing optical axis, fixed focal length. Keep the vehicle, wheels, doors, controls and environment completely stationary.",
+      "transition_after": "짧은 디졸브",
+      "transition": "fade"
+    },
+    {
+      "id": "I02",
+      "title": "센터콘솔 · 우측 슬라이드",
+      "start": 10,
+      "end": 12,
+      "camera_prompt": "Short camera truck right with fixed orientation; gentle parallax. Keep the vehicle, wheels, doors, controls and environment completely stationary.",
+      "transition_after": "직접 컷",
+      "transition": "cut"
+    },
+    {
+      "id": "I03",
+      "title": "도어패널 · 팬",
+      "start": 12,
+      "end": 14,
+      "camera_prompt": "Small horizontal camera pan from a fixed camera position. Keep the vehicle, wheels, doors, controls and environment completely stationary.",
+      "transition_after": "직접 컷",
+      "transition": "cut"
+    },
+    {
+      "id": "I04",
+      "title": "시트 · 하강",
+      "start": 14,
+      "end": 16,
+      "camera_prompt": "Gentle vertical camera pedestal down, preserving the viewing direction. Keep the vehicle, wheels, doors, controls and environment completely stationary.",
+      "transition_after": "짧은 암전",
+      "transition": "fadeblack"
+    },
+    {
+      "id": "A03",
+      "title": "후면 사선 · 짧은 아크",
+      "start": 16,
+      "end": 18,
+      "camera_prompt": "A restrained six-degree arc around the existing rear three-quarter composition. Keep the vehicle, wheels, doors, controls and environment completely stationary.",
+      "transition_after": "짧은 디졸브",
+      "transition": "fade"
+    },
+    {
+      "id": "A11",
+      "title": "후면 전체 · 돌리 아웃",
+      "start": 18,
+      "end": 20,
+      "camera_prompt": "Slow physical dolly out along the existing optical axis, fixed focal length. Keep the vehicle, wheels, doors, controls and environment completely stationary.",
+      "transition_after": "종료",
+      "transition": null
+    }
+  ],
+  "transitions": [
+    {
+      "at": 2,
+      "type": "cut",
+      "label": "직접 컷",
+      "duration": 0
+    },
+    {
+      "at": 4,
+      "type": "cut",
+      "label": "직접 컷",
+      "duration": 0
+    },
+    {
+      "at": 6,
+      "type": "fadeblack",
+      "label": "짧은 암전",
+      "duration": 0.2
+    },
+    {
+      "at": 8,
+      "type": "cut",
+      "label": "직접 컷",
+      "duration": 0
+    },
+    {
+      "at": 10,
+      "type": "fade",
+      "label": "짧은 디졸브",
+      "duration": 0.2
+    },
+    {
+      "at": 12,
+      "type": "cut",
+      "label": "직접 컷",
+      "duration": 0
+    },
+    {
+      "at": 14,
+      "type": "cut",
+      "label": "직접 컷",
+      "duration": 0
+    },
+    {
+      "at": 16,
+      "type": "fadeblack",
+      "label": "짧은 암전",
+      "duration": 0.2
+    },
+    {
+      "at": 18,
+      "type": "fade",
+      "label": "짧은 디졸브",
+      "duration": 0.2
+    }
+  ],
+  "checks": {
+    "previs.mp4": {
+      "frames": 1200,
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "fps": 60,
+      "silent": true,
+      "full_decode": true,
+      "sha256": "b27391562ffe46c1463d56c3f4be9280cf68062fd3977f3d692a35196f1559d4"
+    },
+    "clean.mp4": {
+      "frames": 1200,
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "fps": 60,
+      "silent": true,
+      "full_decode": true,
+      "sha256": "f0ab623273bed91eaa716f71b4a858edc8ff1d046524df237ed6cff642d07fda"
+    }
+  }
+}

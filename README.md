@@ -33,3 +33,5 @@ Higgsfield 플러그인 설치 요구사항: https://higgsfield.ai/blog/higgsfie
 [프리셋 8종과 사용 안내](presets/camera-only-20s-v1/README.md) · [로컬 HTML 목록](presets/camera-only-20s-v1/index.html)
 
 실내 미포함 4종, 범용 실내 포함 4종입니다. 차량·휠·배경·실내 조작부는 정지하고 카메라만 움직입니다. 각각 1080×1920·60fps·무음·정확히 20초이며, 10컷을 2초씩 조합합니다. 완성 MP4와 프롬프트·조합 JSON·구도용 Start PNG를 저장소에서 바로 받을 수 있습니다. 실제 차량 외관·실내 사진은 별도 입력입니다.
+
+[카메라 기법·컷별 전환 v2](presets/camera-only-20s-v2/README.md): 기존 구도를 유지하는 9종 움직임, 16개 개별 컷, 8개 20초 조합. 전환 시안과 생성용 클린 영상을 함께 제공합니다.

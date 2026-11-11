@@ -1,0 +1,1 @@
+Gentle vertical camera pedestal up, preserving the viewing direction. Keep the vehicle, wheels, doors, controls and environment completely stationary.

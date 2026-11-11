@@ -1,0 +1,1 @@
+Small horizontal camera pan from a fixed camera position. Keep the vehicle, wheels, doors, controls and environment completely stationary.
