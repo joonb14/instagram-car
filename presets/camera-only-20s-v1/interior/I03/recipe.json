@@ -1,0 +1,94 @@
+{
+  "id": "I03",
+  "title": "실내 포함 · 외관·실내 교차",
+  "category": "interior",
+  "shots": [
+    {
+      "id": "A01",
+      "title": "외관 A01",
+      "start": 0,
+      "end": 2,
+      "classification": "exterior"
+    },
+    {
+      "id": "I01",
+      "title": "실내 전체 덩어리",
+      "start": 2,
+      "end": 4,
+      "classification": "interior"
+    },
+    {
+      "id": "A09",
+      "title": "외관 A09",
+      "start": 4,
+      "end": 6,
+      "classification": "exterior"
+    },
+    {
+      "id": "I02",
+      "title": "빈 센터콘솔",
+      "start": 6,
+      "end": 8,
+      "classification": "interior"
+    },
+    {
+      "id": "A06",
+      "title": "외관 A06",
+      "start": 8,
+      "end": 10,
+      "classification": "exterior"
+    },
+    {
+      "id": "I05",
+      "title": "단순 스티어링·대시",
+      "start": 10,
+      "end": 12,
+      "classification": "interior"
+    },
+    {
+      "id": "A07",
+      "title": "외관 A07",
+      "start": 12,
+      "end": 14,
+      "classification": "exterior"
+    },
+    {
+      "id": "I04",
+      "title": "시트와 콘솔",
+      "start": 14,
+      "end": 16,
+      "classification": "interior"
+    },
+    {
+      "id": "I06",
+      "title": "조수석 대시보드",
+      "start": 16,
+      "end": 18,
+      "classification": "interior"
+    },
+    {
+      "id": "A11",
+      "title": "외관 A11",
+      "start": 18,
+      "end": 20,
+      "classification": "exterior"
+    }
+  ],
+  "seconds": 20,
+  "frames": 1200,
+  "dimensions": [
+    1080,
+    1920
+  ],
+  "fps": 60,
+  "silent": true,
+  "full_decode": true,
+  "sha256": "91e2b34260540967ce70532f78bd75da0e4168fbceb8a8e00af4a6b0427a6289",
+  "video": "interior/I03/previs.mp4",
+  "poster": "interior/I03/start.png",
+  "prompt": "interior/I03/prompt.txt",
+  "required_photos": [
+    "target exterior angles",
+    "target dashboard, door panel, console, seats and steering views"
+  ]
+}

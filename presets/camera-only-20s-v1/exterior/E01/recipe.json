@@ -1,0 +1,93 @@
+{
+  "id": "E01",
+  "title": "외관 · 디테일에서 전체로",
+  "category": "exterior",
+  "shots": [
+    {
+      "id": "A06",
+      "title": "외관 A06",
+      "start": 0,
+      "end": 2,
+      "classification": "exterior"
+    },
+    {
+      "id": "A09",
+      "title": "외관 A09",
+      "start": 2,
+      "end": 4,
+      "classification": "exterior"
+    },
+    {
+      "id": "A07",
+      "title": "외관 A07",
+      "start": 4,
+      "end": 6,
+      "classification": "exterior"
+    },
+    {
+      "id": "B08",
+      "title": "외관 B08",
+      "start": 6,
+      "end": 8,
+      "classification": "exterior"
+    },
+    {
+      "id": "A08",
+      "title": "외관 A08",
+      "start": 8,
+      "end": 10,
+      "classification": "exterior"
+    },
+    {
+      "id": "A02",
+      "title": "외관 A02",
+      "start": 10,
+      "end": 12,
+      "classification": "exterior"
+    },
+    {
+      "id": "A10",
+      "title": "외관 A10",
+      "start": 12,
+      "end": 14,
+      "classification": "exterior"
+    },
+    {
+      "id": "A03",
+      "title": "외관 A03",
+      "start": 14,
+      "end": 16,
+      "classification": "exterior"
+    },
+    {
+      "id": "A11",
+      "title": "외관 A11",
+      "start": 16,
+      "end": 18,
+      "classification": "exterior"
+    },
+    {
+      "id": "A01",
+      "title": "외관 A01",
+      "start": 18,
+      "end": 20,
+      "classification": "exterior"
+    }
+  ],
+  "seconds": 20,
+  "frames": 1200,
+  "dimensions": [
+    1080,
+    1920
+  ],
+  "fps": 60,
+  "silent": true,
+  "full_decode": true,
+  "sha256": "7ff49c16a330dbf8858b817f73b12454e1ae131db322ef54b2d4bfc2015e9545",
+  "video": "exterior/E01/previs.mp4",
+  "poster": "exterior/E01/start.png",
+  "prompt": "exterior/E01/prompt.txt",
+  "required_photos": [
+    "target exterior angles"
+  ]
+}

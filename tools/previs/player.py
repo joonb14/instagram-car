@@ -78,7 +78,7 @@ def build_player(library, manifest=None):
                 note = SIMPLE_PERSON_NOTES.get(s['id'], note)
             else:
                 note = ('사람은 팔·손 없는 사각기둥 하나로 표시합니다. ' if s['person_proxy_mode'] == 'single_cuboid' else '팔·손 없이 조작부 움직임만 보여줍니다. ') + s['camera_prompt']
-        shot['description_ko'] = note or s['camera_prompt']
+        shot['description_ko'] = s['description_ko'] if s.get('motion_mode') == 'still' else (note or s['camera_prompt'])
         shot['photo_label'] = PHOTO_NAMES.get(s['photos'], s['photos'])
         for field in ('clip', 'mid_frame', 'start_frame'):
             asset = (library / s[field]).resolve()
