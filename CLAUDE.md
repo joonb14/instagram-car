@@ -1,5 +1,7 @@
 # Project instructions
 
+Current cabin default: left-hand drive. Use `presets/interior-lhd-v1/` for I01–I06 instead of the older RHD proxy clips. The cabin points toward -Y, so driver-left is +X. See the 2026-11-13 entry in AGENTS.md for rebuild and verification tools. G500's revised private package is `output/g500-omni-10s-v002-lhd/`.
+
 Read and follow [AGENTS.md](AGENTS.md) before working in this repository. It is the maintained source of project rules, including video format, source preservation, generation authorization, and the current Car Commercial direction.
 
 ## Required Blender MCP default

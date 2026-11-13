@@ -54,7 +54,8 @@ for row in m['shots']:
         wheel=min((o for o in s.objects if o.name.startswith('Wheel.')),key=lambda o:(o.location-origin).length)
         target=wheel.location.copy()
     if mode=='lamp_slide':target=min((o for o in s.objects if o.name.startswith('Flush_rectangular_light.')),key=lambda o:(o.location-origin).length).location.copy()
-    if mode=='door_slide':target=next(o.location.copy() for o in s.objects if o.name.startswith('Plain_door_volume') and o.location.x<0)
+    driver_sign=1 if s.get('driving_side')=='left_hand_drive' else -1
+    if mode=='door_slide':target=next(o.location.copy() for o in s.objects if o.name.startswith('Plain_door_volume') and o.location.x*driver_sign>0)
     if mode=='steering_push':target=find(s,'Plain_steering_ring').location.copy()
     correction=look(origin,target).inverted()@rot
     c.animation_data_clear();c.rotation_mode='QUATERNION';s.frame_end=132
@@ -74,7 +75,7 @@ for row in m['shots']:
             delta={'front_push':forward,'lamp_slide':Vector((1,0,0)),
                    'cabin_reveal':-forward,'console_slide':Vector((0,-1,0)),
                    'door_slide':Vector((0,-1,0)),'seat_slide':right,
-                   'steering_push':forward,'dash_slide':Vector((1,0,0))}[mode]
+                   'steering_push':forward,'dash_slide':Vector((-driver_sign,0,0))}[mode]
             pos+=delta*amount*u;q=look(pos,target)@correction
         c.location=pos;c.rotation_quaternion=q
         c.keyframe_insert(data_path='location',frame=f);c.keyframe_insert(data_path='rotation_quaternion',frame=f)

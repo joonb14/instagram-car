@@ -21,7 +21,8 @@ for(let p=0;p<catalog.length;p++){
  assert.ok(fs.existsSync(path.join(root,element('video').src)));
 }
 element('preset').value='0';element('edition').value='clean';element('edition').onchange();assert.equal(element('video').src,catalog[0].clean);
-element('video').onended();assert.equal(+element('preset').value,1);
-element('continuous').checked=false;element('video').onended();assert.equal(+element('preset').value,1);
+const nextPreset=Math.min(1,catalog.length-1);
+element('video').onended();assert.equal(+element('preset').value,nextPreset);
+element('continuous').checked=false;element('video').onended();assert.equal(+element('preset').value,nextPreset);
 element('continuous').checked=true;element('preset').value=String(catalog.length-1);element('video').onended();assert.equal(+element('preset').value,catalog.length-1);
 console.log(`PASS: ${catalog.length} presets, ${catalog.reduce((n,p)=>n+p.shots.length,0)} timeline seeks, clean source, automatic progression and final stop`);

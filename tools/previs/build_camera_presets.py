@@ -60,7 +60,11 @@ VIEWS=[
  ('I06','조수석 대시보드',(.10,.80,1.42),(.23,.72,1.40),(.47,-.65,1.10),38),
 ]
 for sid,title,start,end,aim,lens in VIEWS:
+    # The cabin faces -Y: driver-left is +X, not -X. Reflect the original
+    # right-hand-drive camera anchors along with the steering layout.
+    start=(-start[0],*start[1:]);end=(-end[0],*end[1:]);aim=(-aim[0],*aim[1:])
     s=bpy.data.scenes.new(sid);WINDOW.scene=s;setup(s)
+    s['driving_side']='left_hand_drive';s['vehicle_forward_axis']='-Y'
     s.world=bpy.data.worlds.new(sid+'_World');s.world.color=(.35,.35,.35)
     cube('Floor',(0,0,.13),(1.9,2.6,.16),DARK)
     cube('Dashboard_volume',(0,-.85,.97),(1.65,.50,.30))
@@ -71,7 +75,7 @@ for sid,title,start,end,aim,lens in VIEWS:
         cube('Plain_door_volume',(x/abs(x)*.91,.0,.83),(.12,1.9,.65),LIGHT)
     # No vents, displays, radio, key cylinder, door pull, buttons, gaiter or gear lever.
     with bpy.context.temp_override(window=WINDOW,scene=s,view_layer=WINDOW.view_layer):
-        bpy.ops.mesh.primitive_torus_add(major_radius=.20,minor_radius=.025,major_segments=32,minor_segments=8,location=(-.43,-.42,1.04),rotation=(math.radians(72),0,0))
+        bpy.ops.mesh.primitive_torus_add(major_radius=.20,minor_radius=.025,major_segments=32,minor_segments=8,location=(.43,-.42,1.04),rotation=(math.radians(72),0,0))
         ring=WINDOW.view_layer.objects.active
     ring.name='Plain_steering_ring';ring.data.materials.append(DARK)
     dat=bpy.data.cameras.new(sid+'_Camera');dat.lens=lens;dat.clip_start=.02
