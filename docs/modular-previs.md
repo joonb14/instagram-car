@@ -2,9 +2,13 @@
 
 ## 현재 실내 방향 — 2026-11-13
 
-실내 기본값은 좌핸들입니다. 차량 전방이 -Y이므로 운전자 왼쪽은 +X입니다. 이전 I01–I06의 핸들은 -X에 있어 실제로 우핸들이었습니다. 프롬프트만 좌핸들로 쓰지 말고 `presets/interior-lhd-v1/`의 새 컷을 사용하세요. 원본과 카메라 경로를 Blender에서 함께 수정했으며 부품은 계속 고정입니다. 이전 라이브러리는 비교용으로 보존합니다.
+실내 기본값은 좌핸들입니다. 차량 전방이 -Y이므로 운전자 왼쪽은 +X입니다. 이전 I01–I06의 핸들은 -X에 있어 실제로 우핸들이었습니다. 현재는 `presets/interior-lhd-v2/`를 사용하세요. 원본과 카메라 경로를 Blender에서 함께 수정했으며 부품은 계속 고정입니다. 이전 라이브러리는 비교용으로 보존합니다.
 
-소스: `.local/previs/interior-lhd-v001/camera-presets.blend`. 검증된 MCP에서 `convert_interior_lhd.py` 실행 → `render_camera_presets.py --stills` 및 전체 렌더 → `package_interior_lhd.py` 순서입니다. `verify_interior_lhd.py`는 차량 방향을 기준으로 좌우를 검사하고, `test_interior_builder.py`는 새 실내 생성도 좌핸들인지 검사합니다. 10초 조합은 I01→I05→I02→I04→I06이며 I03도 독립 파일로 제공합니다. G500 적용본은 Git 제외 `output/g500-omni-10s-v002-lhd/`에 있습니다.
+좌핸들 변환 소스: `.local/previs/interior-lhd-v001/camera-presets.blend`. 검증된 MCP에서 `convert_interior_lhd.py` 실행 → `render_camera_presets.py --stills` 및 전체 렌더 → `package_interior_lhd.py`로 v1을 만들었습니다. `verify_interior_lhd.py`는 차량 방향을 기준으로 좌우를 검사하고, `test_interior_builder.py`는 새 실내 생성도 좌핸들인지 검사합니다.
+
+생성 결과에서 실내 첫 컷이 뒤로 빠질 때 불필요한 시트·내장 형태가 추가되어, v2는 기존 시작 구도에서 4cm만 전진하도록 바꿨습니다. 렌즈와 방향은 고정하며 I02–I06 영상·PNG는 v1과 동일합니다. 검증된 MCP에서 `revise_cabin_push.py` → 저장 파일을 다시 열어 `verify_cabin_push.py` → `render_camera_presets.py --ids I01 --stills` 및 `--ids I01` 렌더 → `package_cabin_push.py` 순서입니다. 새 소스·검증은 `.local/previs/interior-lhd-v002-push/`에 있습니다. 10초 조합은 I01→I05→I02→I04→I06이며 I03도 독립 파일로 제공합니다. 실내의 새 영역을 드러내는 풀백을 피하고 실제 차량 구조는 사진으로 지정합니다. 기존에 채택된 실외 휠 풀백까지 제거하지는 않습니다.
+
+G500 적용본은 Git 제외 `output/g500-omni-10s-v003-push-recut/`입니다. 실외는 A06→A07→A03→A08→A11: 비슷한 두 후면 컷 사이에 상부/전면 컷을 넣어 별개 장면으로 읽히도록 배치했습니다. 실외·실내 각각 10초, 1080×1920/60fps/무음이며 합본은 20초입니다. 기존 생성 실외 영상의 로컬 재편집은 `output/g500-generated-recut-v001/`에 원래 해상도 720×1280/24fps로 보관합니다. 기존 생성 실내 영상은 수정하지 않았으므로 새 카메라를 반영하려면 재생성이 필요합니다. 새 버전의 사용자 시각 승인은 아직 받지 않았습니다.
 
 세 레퍼런스의 31컷을 독립 씬으로 관리한다. A/B는 GT7 주행 레퍼런스, C는 실제 차량 문·실내·정차 ASMR 레퍼런스다. 소스 ID와 실측 컷 경계는 `tools/previs/shots.py`에 있다. 카메라 수치는 원본의 정확한 복원값이 아닌 직접 만든 블로킹이다.
 
