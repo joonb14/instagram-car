@@ -1,45 +1,48 @@
-# 자동차 씬별 Blender 프리비즈
+# 자동차 컷별 Blender 프리비즈
 
-원본 영상을 분석해 길·차·사람만 남기는 Blender MCP 프리비즈 작업 공간입니다.
-실내가 보이는 컷과 외관만 보이는 컷을 분리하고, 씬별로 생성한 뒤 편집에서 합칩니다.
-원본 카메라 구도와 동선을 보존하며 제작 영상은 9:16입니다.
+실제 차량 사진으로 영상을 생성하기 전에 **구도·카메라 이동·컷 순서**를 검토하는 3D 프리비즈 저장소입니다. Blender MCP로 단순 차량과 실내를 만들고, 각 컷을 독립 영상으로 렌더한 뒤 조합합니다. 실제 차종의 외형과 실내 디자인은 생성 단계에서 해당 차량 사진으로 지정합니다.
 
-기존 프로젝트 스킬 7개와 도구·의존성을 제거하고 로컬 Git을 새로 초기화했습니다.
-기존 결과물은 artifacts/에 보존합니다. 원본·실행 기록·로컬 도구는 .local/에 두며 Git에서 제외합니다.
+현재 기본 방향은 **주차된 차량 + 고정 휠·배경·실내 부품 + 카메라 이동만**입니다. 모든 현재 입력은 9:16, 1080×1920, 60fps, 무음입니다.
 
-현재 원본 YouTube fvlAGwLelT8을 .local/references/fvlAGwLelT8/source.mp4로 다운로드했습니다.
-초기 외관 하이라이트 10컷, 30.36초의 Blender 프리비즈 검토본을 제작했습니다. 전체 원본의 모든 외관 컷을 재현한 것은 아닙니다. 이후 컷별 재사용 도구와 새 [car-shot-previs 스킬](skills/car-shot-previs/SKILL.md)을 추가했습니다.
-Higgsfield 플러그인 설치 요구사항: https://higgsfield.ai/blog/higgsfield-blender-plugin
-원격 저장소: https://github.com/joonb14/instagram-car.git
+## 바로 사용할 현재 버전
 
-새 컷 라이브러리는 `.local/previs/modular-car-v001/index.html`에서 확인합니다. 레퍼런스 `eaq0oFtTaQs` 12컷, `NHWZKfeyJII` 10컷, `xPlXE8XQi0Y` 9컷을 독립 Blender 씬과 1080×1920·60fps 무음 영상으로 준비합니다. 카메라 프롬프트, 실내/외관 사진 슬롯, 컷 선택·조합 방법은 [도구 안내](docs/modular-previs.md)에 있습니다. 실내는 실제 차량 사진 적용 전 일반 동작 프록시이며 사용자 시각 승인은 별도입니다.
+| 자료 | 위치 |
+|---|---|
+| 현재 실외·실내 10초 묶음 | [사용 안내](presets/current-10s/README.md) · [로컬 플레이어](presets/current-10s/index.html) |
+| 실외 10초 | [MP4](presets/current-10s/EXTERIOR/previs.mp4) · [프롬프트](presets/current-10s/EXTERIOR/prompt.txt) · [컷 순서](presets/current-10s/EXTERIOR/recipe.json) |
+| 좌핸들 실내 10초 | [MP4](presets/current-10s/INTERIOR/previs.mp4) · [프롬프트](presets/current-10s/INTERIOR/prompt.txt) · [컷 순서](presets/current-10s/INTERIOR/recipe.json) |
+| 두 편을 연결한 20초 검토본 | [MP4](presets/current-10s/REVIEW/combined-20s.mp4) |
+| 전체 프리셋·이전 버전 | [프리셋 목록](presets/README.md) |
+| 어떻게 만들었는지 | [제작 과정과 재조합·재렌더 안내](docs/previs-production.md) |
+| 제작 코드 | [도구별 역할](tools/previs/README.md) |
 
-카메라워크 추가 버전은 `.local/previs/modular-car-v002/index.html`입니다. 실내·문·정차 9컷에 카메라 이동을 더했으며 주행 영상과 바퀴·인물 동작은 유지했습니다. 원래 v001도 비교용으로 남겨둡니다.
+실외는 **라이트 → 휠 → 뒤 사선 전체 → 상부 → 후면 전체**입니다. 비슷한 두 후면 구도 사이에 상부 컷을 넣었습니다. 실내는 **전체 → 핸들 → 콘솔 → 시트 → 조수석 대시보드**이며, 첫 컷은 뒤로 빠지는 대신 조금만 앞으로 들어갑니다. 이 수정본은 검토용으로 준비한 상태이며 사용자의 최종 시각 승인과 생성 결과는 별도입니다.
 
-현재 사람 단순화 버전은 `.local/previs/modular-car-v003/index.html`입니다. 외부 인물은 사각기둥 하나로 표시하고 팔·손·손가락 등은 제거했습니다. 문이 움직이는 전 범위와 기둥 사이에 최소 20cm 여유를 두며, 실내 컷은 조작부 움직임만 남깁니다. 카메라와 차량·휠 동작은 v002를 유지합니다. 씬 플레이어에서 영상·설명·프롬프트를 함께 보고 타임라인 선택이나 자동 연속 재생으로 검토할 수 있습니다.
+저장소를 클론하거나 전체 ZIP을 풀고 `presets/current-10s/index.html`을 브라우저에서 열면 됩니다. GitHub 파일 화면에서는 HTML 플레이어가 실행되지 않습니다. 개별 컷은 이웃한 버전 폴더를 상대 경로로 참조하므로 폴더 구조를 유지하세요. 완성 MP4는 단독으로 사용할 수 있습니다.
 
-작업 규칙은 [AGENTS.md](AGENTS.md), Claude용 진입 안내는 [CLAUDE.md](CLAUDE.md)에 있습니다. 새 Blender MCP 작업은 현재 세션에서 CLI로 새 Blender 인스턴스를 실행하고 실제 MCP 연결과 PID를 검증하는 것으로 시작합니다.
+## 파일 구조
 
-현재 따라 할 사례는 Higgsfield 글의 **Use Case 5 — The Car Commercial**입니다. Blender 프리비즈는 에이전트가 MCP로 제작하고 사용자가 구도·움직임을 검토합니다. 실내가 보이는 컷과 외관만 보이는 컷을 나누어 씬별로 생성한 뒤 합칩니다.
+```text
+presets/                     완성 프록시 MP4, 시작 PNG, 프롬프트, 컷 조합, 플레이어
+  current-10s/               현재 실외 10초 / 실내 10초 / 검토용 20초
+  interior-lhd-v2/           현재 좌핸들 실내 6개 독립 컷
+  camera-only-20s-v3/        현재 실외 컷의 원본 라이브러리
+docs/previs-production.md    제작 방식, 의존 파일, 실행 순서, 검증 기준
+docs/modular-previs.md       기존 컷 라이브러리와 작업 방향 기록
+tools/previs/               Blender 제작·렌더·패키징·검증 코드
+skills/car-shot-previs/      유지보수하는 에이전트 스킬
+.local/                     로컬 Blender 원본·렌더 PNG·레퍼런스·실행 기록 (Git 제외)
+output/                     실제 차량 사진·생성 결과·차량별 전달 자료 (Git 제외)
+```
 
-현재 로컬 검토본은 `.local/previs/exterior-30s-v004/`에 있습니다. `raised964-30s.mp4`는 돌출 원형 라이트·앞휀더, `flush-30s.mp4`는 평평한 라이트를 사용하는 버전입니다. 두 버전 모두 단순 프록시 차량이며 정확한 차종 모델이 아닙니다. 윙을 제거하고 바퀴 위치를 유지한 채 차체를 반원으로 파낸 휠 아치를 적용했습니다. 보닛 중앙은 낮고 평평하게 유지하며, 964형 돌출은 헤드라이트 주변 양쪽 짧은 부분에만 적용합니다. 사용자는 이 단순화 스타일을 선호한다고 밝혔지만, 새 30초 편집본의 구도·움직임 승인은 아직 별도입니다.
+## 재사용 원칙
 
-개별 씬의 원본 시간대·길이·Blender 씬 이름은 `manifest.json`, 영상 전체 디코딩·프레임 수·해시는 `verification.json`에 기록했습니다. 각 연결본은 540×960·50fps·1518프레임·30.36초·무음입니다. 생성용 최종 입력이나 1080×1920 Start Frame으로 검수한 결과는 아닙니다. 원본 카메라·동선의 정확한 일치와 휠 움직임은 추가 검토가 필요합니다. 영상·Blend 파일과 개인 실행 기록은 Git에 포함하지 않습니다.
+- 컷 단위로 사진과 카메라 프롬프트를 맞춥니다. 실내가 보이는 문 열림 컷은 실내/외관 혼합 컷입니다.
+- 범용 실내는 시트·대시보드·도어·빈 콘솔 덩어리입니다. 특정 차의 기어봉이나 도어 구조를 강제하지 않습니다. 현재는 부품 조작도 없습니다.
+- 프록시 Start PNG는 구도 참고 자료입니다. 사진 기반 생성용 Start Frame은 실제 차량 사진으로 별도 준비합니다.
+- 생성에는 클린 컷을 사용합니다. 디졸브 등 전환 실험은 이전 버전에 보존하고, 필요한 전환은 완성 영상 편집 단계에서 적용합니다.
+- 직접 제작한 프록시 MP4와 레시피는 Git에 있습니다. 실제 차량 사진, 원본 레퍼런스 영상, 생성 영상, `.blend` 원본과 실행 영수증은 로컬에 있습니다.
 
-차로 수정(v004): 중앙선 위에 놓였던 차량을 진행 방향 오른쪽 차로에 배치하도록 도로와 표시선을 옮겼습니다. 기존 차량 경로와 카메라 구도는 유지했습니다. 20개 씬의 시작·중간·끝 등 5개 시점에서 중앙선과 차량 중심 간 거리는 약 1.7~2m입니다(`lane-verification.json`). 이는 중앙선 겹침 수정이며 원본의 모든 커브 궤적을 정밀 복원했다는 의미는 아닙니다. 휠은 5개 스포크·림·허브·타이어 측면 디테일을 추가했습니다. 실제 이동 거리 기반 회전을 유지한 채 출력은 50fps로 변경했으며, 연속 재생에서의 회전 가독성은 별도 확인이 필요합니다.
+Git 파일만으로 현재 영상을 재조합할 수 있습니다. **3D 장면을 처음부터 전부 다시 만드는 것은 별개**이며, 기존 제작 도구 일부가 로컬 `.blend` 원본에 의존합니다. 구체적인 재현 범위는 [제작 안내](docs/previs-production.md)에 적었습니다.
 
-## 카메라만 움직이는 20초 프리셋
-
-[프리셋 8종과 사용 안내](presets/camera-only-20s-v1/README.md) · [로컬 HTML 목록](presets/camera-only-20s-v1/index.html)
-
-실내 미포함 4종, 범용 실내 포함 4종입니다. 차량·휠·배경·실내 조작부는 정지하고 카메라만 움직입니다. 각각 1080×1920·60fps·무음·정확히 20초이며, 10컷을 2초씩 조합합니다. 완성 MP4와 프롬프트·조합 JSON·구도용 Start PNG를 저장소에서 바로 받을 수 있습니다. 실제 차량 외관·실내 사진은 별도 입력입니다.
-
-[카메라 기법·컷별 전환 v2](presets/camera-only-20s-v2/README.md): 기존 구도를 유지하는 9종 움직임, 16개 개별 컷, 8개 20초 조합. 전환 시안과 생성용 클린 영상을 함께 제공합니다.
-
-[장면에 맞춘 카메라 v3](presets/camera-only-20s-v3/README.md): 전체차 수평 아크, 상부·측면 하강 수직 아크, 휠 풀백 리빌. 기존 구도를 기준으로 주목 대상을 유지합니다.
-
-[선택한 13컷 v4](presets/selected-cuts-v4/README.md): B08 원경·A02 수직 아크 수정, 실내 전체→디테일 묶음, 외관 디테일→전체차. 26초 전체본과 20초·6초 분할본.
-
-[길이를 달리한 30초 시안 v5](presets/rhythm-study-v5/README.md): 1~4초짜리 16컷, 새로운 휠·테일램프·실내 중간 거리 컷, 20초+10초 분할본.
-
-[리빌·상승·감속 시안 v6](presets/reveal-study-v6/README.md): 실내 시트 뒤 리빌, 휠 상승 풀백, 전체차 감속 아크. 세 컷만 변경한 30초 시안과 20초+10초 분할본.
+작업 규칙: [AGENTS.md](AGENTS.md) · [CLAUDE.md](CLAUDE.md) · [car-shot-previs 스킬](skills/car-shot-previs/SKILL.md). 새 Blender MCP 작업은 CLI로 새 인스턴스를 띄우고 실제 MCP 응답의 PID를 확인한 뒤 시작합니다. 이미 렌더된 컷을 조합하거나 문서를 수정할 때는 Blender 실행이 필요하지 않습니다.

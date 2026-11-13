@@ -1,5 +1,7 @@
 # Project instructions
 
+For current deliverables start with `README.md` and `presets/current-10s/README.md`. The production explanation is `docs/previs-production.md`; code entry points are in `tools/previs/README.md`. Existing clips can be reassembled without Blender using `package_current_pair.py`. Full scene reconstruction additionally depends on the local source blends listed in the production guide.
+
 Current cabin default: left-hand drive. Use `presets/interior-lhd-v2/` for I01–I06; I01 now makes a 4 cm forward dolly at fixed lens/orientation, avoiding the rejected cabin pullback. Other five clips are unchanged from LHD v1. The cabin points toward -Y, so driver-left is +X. See the 2026-11-13 entries in AGENTS.md for rebuild and verification tools. G500's revised private package is `output/g500-omni-10s-v003-push-recut/`. Exterior order A06,A07,A03,A08,A11 separates the two similar rear views with the high/front view. Keep accepted exterior wheel pullbacks.
 
 Read and follow [AGENTS.md](AGENTS.md) before working in this repository. It is the maintained source of project rules, including video format, source preservation, generation authorization, and the current Car Commercial direction.

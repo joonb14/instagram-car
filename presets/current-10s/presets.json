@@ -1,0 +1,443 @@
+{
+  "version": "current-10s-2026-11-13",
+  "preferred_edition": "clean",
+  "shots": [
+    {
+      "id": "A06",
+      "title": "헤드라이트 · 라인 따라 슬라이드",
+      "classification": "exterior",
+      "frames": 120,
+      "clip": "../camera-only-20s-v3/shots/A06/preview.mp4",
+      "start_frame": "../camera-only-20s-v3/shots/A06/start.png",
+      "camera_prompt": "Slide gently along the lamp and bumper line while maintaining the selected headlight at its original screen position.",
+      "duration": 2,
+      "motion_mode": "camera_only",
+      "photos": "target_exterior",
+      "prompt": "Slide gently along the lamp and bumper line while maintaining the selected headlight at its original screen position. Keep the vehicle, wheels, environment and every interior object stationary. Use fixed focal length; no digital zoom.",
+      "description_ko": "헤드라이트 · 라인 따라 슬라이드",
+      "core_duration": 2,
+      "camera_technique": "lamp_slide",
+      "anchor_frame": 60,
+      "anchor_source": "preset-camera-v001",
+      "anchor_at": "start",
+      "target": [
+        0.550000011920929,
+        -7.727999687194824,
+        0.8799999952316284
+      ],
+      "amount": 0.18,
+      "source_package": "camera-only-20s-v3"
+    },
+    {
+      "id": "A07",
+      "title": "뒤 휠 · 펜더 풀백 리빌",
+      "classification": "exterior",
+      "frames": 120,
+      "clip": "../camera-only-20s-v3/shots/A07/preview.mp4",
+      "start_frame": "../camera-only-20s-v3/shots/A07/start.png",
+      "camera_prompt": "Start on the stationary rear wheel. Pull the camera back diagonally to reveal more fender and rear-quarter bodywork while retaining the wheel in frame.",
+      "duration": 2,
+      "motion_mode": "camera_only",
+      "photos": "target_exterior",
+      "prompt": "Start on the stationary rear wheel. Pull the camera back diagonally to reveal more fender and rear-quarter bodywork while retaining the wheel in frame. Keep the vehicle, wheels, environment and every interior object stationary. Use fixed focal length; no digital zoom.",
+      "description_ko": "뒤 휠 · 펜더 풀백 리빌",
+      "core_duration": 2,
+      "camera_technique": "wheel_reveal",
+      "anchor_frame": 60,
+      "anchor_source": "preset-camera-v001",
+      "anchor_at": "start",
+      "target": [
+        -0.7400000095367432,
+        -3.9499998092651367,
+        0.3199999928474426
+      ],
+      "amount": 0.85,
+      "source_package": "camera-only-20s-v3"
+    },
+    {
+      "id": "A03",
+      "title": "후면 전체 · 수평 아크",
+      "classification": "exterior",
+      "frames": 120,
+      "clip": "../camera-only-20s-v3/shots/A03/preview.mp4",
+      "start_frame": "../camera-only-20s-v3/shots/A03/start.png",
+      "camera_prompt": "Orbit twelve degrees toward the rear, retaining the full vehicle and revealing the rear-quarter depth.",
+      "duration": 2,
+      "motion_mode": "camera_only",
+      "photos": "target_exterior",
+      "prompt": "Orbit twelve degrees toward the rear, retaining the full vehicle and revealing the rear-quarter depth. Keep the vehicle, wheels, environment and every interior object stationary. Use fixed focal length; no digital zoom.",
+      "description_ko": "후면 전체 · 수평 아크",
+      "core_duration": 2,
+      "camera_technique": "orbit",
+      "anchor_frame": 60,
+      "anchor_source": "preset-camera-v001",
+      "anchor_at": "start",
+      "target": [
+        0.0,
+        -4.266666889190674,
+        0.800000011920929
+      ],
+      "amount": 12,
+      "source_package": "camera-only-20s-v3"
+    },
+    {
+      "id": "A08",
+      "title": "상부 · 위에서 아래로 수직 아크",
+      "classification": "exterior",
+      "frames": 120,
+      "clip": "../camera-only-20s-v3/shots/A08/preview.mp4",
+      "start_frame": "../camera-only-20s-v3/shots/A08/start.png",
+      "camera_prompt": "Descend on a twenty-four-degree curved camera orbit from the accepted overhead view, revealing hood, glass and side depth. The camera position moves, not just its tilt.",
+      "duration": 2,
+      "motion_mode": "camera_only",
+      "photos": "target_exterior",
+      "prompt": "Descend on a twenty-four-degree curved camera orbit from the accepted overhead view, revealing hood, glass and side depth. The camera position moves, not just its tilt. Keep the vehicle, wheels, environment and every interior object stationary. Use fixed focal length; no digital zoom.",
+      "description_ko": "상부 · 위에서 아래로 수직 아크",
+      "core_duration": 2,
+      "camera_technique": "vertical_arc",
+      "anchor_frame": 60,
+      "anchor_source": "preset-camera-v001",
+      "anchor_at": "start",
+      "target": [
+        -0.03032827377319336,
+        -5.206496715545654,
+        0.9000000953674316
+      ],
+      "amount": 24,
+      "source_package": "camera-only-20s-v3"
+    },
+    {
+      "id": "A11",
+      "title": "로우 후면 · 수평 아크",
+      "classification": "exterior",
+      "frames": 120,
+      "clip": "../camera-only-20s-v3/shots/A11/preview.mp4",
+      "start_frame": "../camera-only-20s-v3/shots/A11/start.png",
+      "camera_prompt": "Make an eight-degree low horizontal orbit around the rear, keeping the full silhouette within the frame.",
+      "duration": 2,
+      "motion_mode": "camera_only",
+      "photos": "target_exterior",
+      "prompt": "Make an eight-degree low horizontal orbit around the rear, keeping the full silhouette within the frame. Keep the vehicle, wheels, environment and every interior object stationary. Use fixed focal length; no digital zoom.",
+      "description_ko": "로우 후면 · 수평 아크",
+      "core_duration": 2,
+      "camera_technique": "orbit",
+      "anchor_frame": 60,
+      "anchor_source": "preset-camera-v001",
+      "anchor_at": "start",
+      "target": [
+        0.0,
+        -5.866666793823242,
+        0.800000011920929
+      ],
+      "amount": 8,
+      "source_package": "camera-only-20s-v3"
+    },
+    {
+      "id": "I01",
+      "title": "실내 전체 · 짧은 돌리 인",
+      "classification": "interior",
+      "frames": 120,
+      "clip": "../interior-lhd-v2/shots/I01/preview.mp4",
+      "start_frame": "../interior-lhd-v2/shots/I01/start.png",
+      "mid_frame": "../interior-lhd-v2/shots/I01/mid.png",
+      "end_frame": "../interior-lhd-v2/shots/I01/end.png",
+      "camera_prompt": "Begin with the established wide left-hand-drive cabin composition. Make a very short, slow physical dolly in toward the visible dashboard. Use a fixed lens and fixed orientation; retain the visible steering, dashboard and console. No pullback, zoom out, widening field of view, newly revealed rear seats, additional roof structure or newly invented interior parts.",
+      "duration": 2,
+      "motion_mode": "camera_only",
+      "photos": "target_interior",
+      "prompt": "Begin with the established wide left-hand-drive cabin composition. Make a very short, slow physical dolly in toward the visible dashboard. Use a fixed lens and fixed orientation; retain the visible steering, dashboard and console. No pullback, zoom out, widening field of view, newly revealed rear seats, additional roof structure or newly invented interior parts. All vehicle parts remain stationary. Camera movement only. Preserve the left-hand-drive layout.",
+      "description_ko": "실내 전체 구도에서 4cm만 전진합니다. 뒤로 빠지거나 새로운 실내 영역을 드러내지 않습니다.",
+      "core_duration": 2,
+      "camera_technique": "cabin_push",
+      "anchor_frame": 60,
+      "anchor_source": "preset-camera-v001",
+      "anchor_at": "start",
+      "target": [
+        -0.0049676597118377686,
+        -0.6413931250572205,
+        1.0047930479049683
+      ],
+      "amount": 0.04,
+      "driving_side": "left_hand_drive",
+      "source_package": "interior-lhd-v2"
+    },
+    {
+      "id": "I05",
+      "title": "스티어링 · 짧은 접근",
+      "classification": "interior",
+      "frames": 120,
+      "clip": "../interior-lhd-v2/shots/I05/preview.mp4",
+      "start_frame": "../interior-lhd-v2/shots/I05/start.png",
+      "mid_frame": "../interior-lhd-v2/shots/I05/mid.png",
+      "end_frame": "../interior-lhd-v2/shots/I05/end.png",
+      "camera_prompt": "Push gently toward the stationary steering ring, maintaining its original screen position and surrounding dashboard.",
+      "duration": 2,
+      "motion_mode": "camera_only",
+      "photos": "target_interior",
+      "prompt": "Push gently toward the stationary steering ring, maintaining its original screen position and surrounding dashboard. Keep the vehicle, wheels, environment and every interior object stationary. Use fixed focal length; no digital zoom. Left-hand-drive cabin: steering is on the vehicle left, viewed forward from the seats. Do not mirror the cabin.",
+      "description_ko": "스티어링 · 짧은 접근",
+      "core_duration": 2,
+      "camera_technique": "steering_push",
+      "anchor_frame": 60,
+      "anchor_source": "preset-camera-v001",
+      "anchor_at": "start",
+      "target": [
+        0.4300000071525574,
+        -0.41999998688697815,
+        1.0399999618530273
+      ],
+      "amount": 0.065,
+      "driving_side": "left_hand_drive",
+      "source_package": "interior-lhd-v2"
+    },
+    {
+      "id": "I02",
+      "title": "센터콘솔 · 형태 따라 슬라이드",
+      "classification": "interior",
+      "frames": 120,
+      "clip": "../interior-lhd-v2/shots/I02/preview.mp4",
+      "start_frame": "../interior-lhd-v2/shots/I02/start.png",
+      "mid_frame": "../interior-lhd-v2/shots/I02/mid.png",
+      "end_frame": "../interior-lhd-v2/shots/I02/end.png",
+      "camera_prompt": "Make a short slide along the blank console, maintaining it in frame. No gear lever movement or invented control action.",
+      "duration": 2,
+      "motion_mode": "camera_only",
+      "photos": "target_interior",
+      "prompt": "Make a short slide along the blank console, maintaining it in frame. No gear lever movement or invented control action. Keep the vehicle, wheels, environment and every interior object stationary. Use fixed focal length; no digital zoom. Left-hand-drive cabin: steering is on the vehicle left, viewed forward from the seats. Do not mirror the cabin.",
+      "description_ko": "센터콘솔 · 형태 따라 슬라이드",
+      "core_duration": 2,
+      "camera_technique": "console_slide",
+      "anchor_frame": 60,
+      "anchor_source": "preset-camera-v001",
+      "anchor_at": "start",
+      "target": [
+        0.08157265186309814,
+        -0.18496155738830566,
+        0.4209544062614441
+      ],
+      "amount": 0.065,
+      "driving_side": "left_hand_drive",
+      "source_package": "interior-lhd-v2"
+    },
+    {
+      "id": "I04",
+      "title": "시트 · 시트와 콘솔 사이 슬라이드",
+      "classification": "interior",
+      "frames": 120,
+      "clip": "../interior-lhd-v2/shots/I04/preview.mp4",
+      "start_frame": "../interior-lhd-v2/shots/I04/start.png",
+      "mid_frame": "../interior-lhd-v2/shots/I04/mid.png",
+      "end_frame": "../interior-lhd-v2/shots/I04/end.png",
+      "camera_prompt": "Make a small lateral camera move to reveal the separation between seat and console while keeping both in the accepted composition.",
+      "duration": 2,
+      "motion_mode": "camera_only",
+      "photos": "target_interior",
+      "prompt": "Make a small lateral camera move to reveal the separation between seat and console while keeping both in the accepted composition. Keep the vehicle, wheels, environment and every interior object stationary. Use fixed focal length; no digital zoom. Left-hand-drive cabin: steering is on the vehicle left, viewed forward from the seats. Do not mirror the cabin.",
+      "description_ko": "시트 · 시트와 콘솔 사이 슬라이드",
+      "core_duration": 2,
+      "camera_technique": "seat_slide",
+      "anchor_frame": 60,
+      "anchor_source": "preset-camera-v001",
+      "anchor_at": "start",
+      "target": [
+        0.30788272619247437,
+        0.3503127098083496,
+        0.6893186569213867
+      ],
+      "amount": 0.07,
+      "driving_side": "left_hand_drive",
+      "source_package": "interior-lhd-v2"
+    },
+    {
+      "id": "I06",
+      "title": "대시보드 · 라인 따라 슬라이드",
+      "classification": "interior",
+      "frames": 120,
+      "clip": "../interior-lhd-v2/shots/I06/preview.mp4",
+      "start_frame": "../interior-lhd-v2/shots/I06/start.png",
+      "mid_frame": "../interior-lhd-v2/shots/I06/mid.png",
+      "end_frame": "../interior-lhd-v2/shots/I06/end.png",
+      "camera_prompt": "Slide gently along the dashboard line, tracking the selected passenger-side volume rather than tilting away from it.",
+      "duration": 2,
+      "motion_mode": "camera_only",
+      "photos": "target_interior",
+      "prompt": "Slide gently along the dashboard line, tracking the selected passenger-side volume rather than tilting away from it. Keep the vehicle, wheels, environment and every interior object stationary. Use fixed focal length; no digital zoom. Left-hand-drive cabin: steering is on the vehicle left, viewed forward from the seats. Do not mirror the cabin.",
+      "description_ko": "대시보드 · 라인 따라 슬라이드",
+      "core_duration": 2,
+      "camera_technique": "dash_slide",
+      "anchor_frame": 60,
+      "anchor_source": "preset-camera-v001",
+      "anchor_at": "start",
+      "target": [
+        -0.4544042944908142,
+        -0.5871619582176208,
+        1.1140748262405396
+      ],
+      "amount": 0.075,
+      "driving_side": "left_hand_drive",
+      "source_package": "interior-lhd-v2"
+    }
+  ],
+  "presets": [
+    {
+      "id": "EXTERIOR",
+      "title": "실외 10초 · 후면 컷 분리",
+      "category": ".",
+      "seconds": 10,
+      "frames": 600,
+      "video": "EXTERIOR/previs.mp4",
+      "clean": "EXTERIOR/previs.mp4",
+      "prompt": "EXTERIOR/prompt.txt",
+      "source_package": "camera-only-20s-v3",
+      "shots": [
+        {
+          "id": "A06",
+          "title": "헤드라이트 · 라인 따라 슬라이드",
+          "start": 0,
+          "end": 2,
+          "camera_prompt": "Slide gently along the lamp and bumper line while maintaining the selected headlight at its original screen position. Keep the vehicle, wheels, environment and every interior object stationary. Use fixed focal length; no digital zoom.",
+          "transition_after": "직접 컷",
+          "transition": "cut"
+        },
+        {
+          "id": "A07",
+          "title": "뒤 휠 · 펜더 풀백 리빌",
+          "start": 2,
+          "end": 4,
+          "camera_prompt": "Start on the stationary rear wheel. Pull the camera back diagonally to reveal more fender and rear-quarter bodywork while retaining the wheel in frame. Keep the vehicle, wheels, environment and every interior object stationary. Use fixed focal length; no digital zoom.",
+          "transition_after": "직접 컷",
+          "transition": "cut"
+        },
+        {
+          "id": "A03",
+          "title": "후면 전체 · 수평 아크",
+          "start": 4,
+          "end": 6,
+          "camera_prompt": "Orbit twelve degrees toward the rear, retaining the full vehicle and revealing the rear-quarter depth. Keep the vehicle, wheels, environment and every interior object stationary. Use fixed focal length; no digital zoom.",
+          "transition_after": "직접 컷",
+          "transition": "cut"
+        },
+        {
+          "id": "A08",
+          "title": "상부 · 위에서 아래로 수직 아크",
+          "start": 6,
+          "end": 8,
+          "camera_prompt": "Descend on a twenty-four-degree curved camera orbit from the accepted overhead view, revealing hood, glass and side depth. The camera position moves, not just its tilt. Keep the vehicle, wheels, environment and every interior object stationary. Use fixed focal length; no digital zoom.",
+          "transition_after": "직접 컷",
+          "transition": "cut"
+        },
+        {
+          "id": "A11",
+          "title": "로우 후면 · 수평 아크",
+          "start": 8,
+          "end": 10,
+          "camera_prompt": "Make an eight-degree low horizontal orbit around the rear, keeping the full silhouette within the frame. Keep the vehicle, wheels, environment and every interior object stationary. Use fixed focal length; no digital zoom.",
+          "transition_after": "종료",
+          "transition": null
+        }
+      ],
+      "transitions": [
+        {
+          "at": 2,
+          "type": "cut",
+          "duration": 0
+        },
+        {
+          "at": 4,
+          "type": "cut",
+          "duration": 0
+        },
+        {
+          "at": 6,
+          "type": "cut",
+          "duration": 0
+        },
+        {
+          "at": 8,
+          "type": "cut",
+          "duration": 0
+        }
+      ]
+    },
+    {
+      "id": "INTERIOR",
+      "title": "좌핸들 실내 10초 · 첫 컷 돌리 인",
+      "category": ".",
+      "seconds": 10,
+      "frames": 600,
+      "video": "INTERIOR/previs.mp4",
+      "clean": "INTERIOR/previs.mp4",
+      "prompt": "INTERIOR/prompt.txt",
+      "source_package": "interior-lhd-v2",
+      "shots": [
+        {
+          "id": "I01",
+          "title": "실내 전체 · 짧은 돌리 인",
+          "start": 0,
+          "end": 2,
+          "camera_prompt": "Begin with the established wide left-hand-drive cabin composition. Make a very short, slow physical dolly in toward the visible dashboard. Use a fixed lens and fixed orientation; retain the visible steering, dashboard and console. No pullback, zoom out, widening field of view, newly revealed rear seats, additional roof structure or newly invented interior parts. All vehicle parts remain stationary. Camera movement only. Preserve the left-hand-drive layout.",
+          "transition_after": "직접 컷",
+          "transition": "cut"
+        },
+        {
+          "id": "I05",
+          "title": "스티어링 · 짧은 접근",
+          "start": 2,
+          "end": 4,
+          "camera_prompt": "Push gently toward the stationary steering ring, maintaining its original screen position and surrounding dashboard. Keep the vehicle, wheels, environment and every interior object stationary. Use fixed focal length; no digital zoom. Left-hand-drive cabin: steering is on the vehicle left, viewed forward from the seats. Do not mirror the cabin.",
+          "transition_after": "직접 컷",
+          "transition": "cut"
+        },
+        {
+          "id": "I02",
+          "title": "센터콘솔 · 형태 따라 슬라이드",
+          "start": 4,
+          "end": 6,
+          "camera_prompt": "Make a short slide along the blank console, maintaining it in frame. No gear lever movement or invented control action. Keep the vehicle, wheels, environment and every interior object stationary. Use fixed focal length; no digital zoom. Left-hand-drive cabin: steering is on the vehicle left, viewed forward from the seats. Do not mirror the cabin.",
+          "transition_after": "직접 컷",
+          "transition": "cut"
+        },
+        {
+          "id": "I04",
+          "title": "시트 · 시트와 콘솔 사이 슬라이드",
+          "start": 6,
+          "end": 8,
+          "camera_prompt": "Make a small lateral camera move to reveal the separation between seat and console while keeping both in the accepted composition. Keep the vehicle, wheels, environment and every interior object stationary. Use fixed focal length; no digital zoom. Left-hand-drive cabin: steering is on the vehicle left, viewed forward from the seats. Do not mirror the cabin.",
+          "transition_after": "직접 컷",
+          "transition": "cut"
+        },
+        {
+          "id": "I06",
+          "title": "대시보드 · 라인 따라 슬라이드",
+          "start": 8,
+          "end": 10,
+          "camera_prompt": "Slide gently along the dashboard line, tracking the selected passenger-side volume rather than tilting away from it. Keep the vehicle, wheels, environment and every interior object stationary. Use fixed focal length; no digital zoom. Left-hand-drive cabin: steering is on the vehicle left, viewed forward from the seats. Do not mirror the cabin.",
+          "transition_after": "종료",
+          "transition": null
+        }
+      ],
+      "transitions": [
+        {
+          "at": 2,
+          "type": "cut",
+          "duration": 0
+        },
+        {
+          "at": 4,
+          "type": "cut",
+          "duration": 0
+        },
+        {
+          "at": 6,
+          "type": "cut",
+          "duration": 0
+        },
+        {
+          "at": 8,
+          "type": "cut",
+          "duration": 0
+        }
+      ]
+    }
+  ]
+}

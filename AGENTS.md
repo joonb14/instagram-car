@@ -2,6 +2,8 @@
 
 Communicate in concise Korean. Treat this repository as the maintained source for the new per-scene Blender MCP previs skill. The former Future Classic bundle was removed by owner request. Keep installed copies and Git history consistent; do not claim a local edit was backed up before a successful push.
 
+Documentation entry points: `README.md` lists current deliverables; `docs/previs-production.md` explains how the scenes, camera paths, renders and checks were made; `presets/README.md` distinguishes current and archived versions; `tools/previs/README.md` maps code to tasks. Current generic Git delivery is `presets/current-10s/` (10s exterior + 10s LHD interior + 20s review). Reassemble it from tracked clips with `package_current_pair.py`; no Blender launch is needed for packaging. Keep the distinction between Git-only clip reassembly and full 3D reconstruction, which still needs the ignored local source blends.
+
 All video production is9:16 by owner requirement. Prepare actual1080x1920 Start Frames before paid requests. Landscape Element references are not landscape-video authorization. Validate actual file geometry, selected composition and provider settings before every Generate click. Do not compensate for a wrong source with an unrequested split-screen or landscape final.
 
 Preserve user-selected camera framing. Front-half describes coverage, not automatic permission to substitute a diagonal angle for a frontal view. Source selection, photo QA, paid generation authorization and publication are separate facts.

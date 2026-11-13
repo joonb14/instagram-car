@@ -1,0 +1,80 @@
+{
+  "id": "EXTERIOR",
+  "title": "실외 10초 · 후면 컷 분리",
+  "category": ".",
+  "seconds": 10,
+  "frames": 600,
+  "video": "EXTERIOR/previs.mp4",
+  "clean": "EXTERIOR/previs.mp4",
+  "prompt": "EXTERIOR/prompt.txt",
+  "source_package": "camera-only-20s-v3",
+  "shots": [
+    {
+      "id": "A06",
+      "title": "헤드라이트 · 라인 따라 슬라이드",
+      "start": 0,
+      "end": 2,
+      "camera_prompt": "Slide gently along the lamp and bumper line while maintaining the selected headlight at its original screen position. Keep the vehicle, wheels, environment and every interior object stationary. Use fixed focal length; no digital zoom.",
+      "transition_after": "직접 컷",
+      "transition": "cut"
+    },
+    {
+      "id": "A07",
+      "title": "뒤 휠 · 펜더 풀백 리빌",
+      "start": 2,
+      "end": 4,
+      "camera_prompt": "Start on the stationary rear wheel. Pull the camera back diagonally to reveal more fender and rear-quarter bodywork while retaining the wheel in frame. Keep the vehicle, wheels, environment and every interior object stationary. Use fixed focal length; no digital zoom.",
+      "transition_after": "직접 컷",
+      "transition": "cut"
+    },
+    {
+      "id": "A03",
+      "title": "후면 전체 · 수평 아크",
+      "start": 4,
+      "end": 6,
+      "camera_prompt": "Orbit twelve degrees toward the rear, retaining the full vehicle and revealing the rear-quarter depth. Keep the vehicle, wheels, environment and every interior object stationary. Use fixed focal length; no digital zoom.",
+      "transition_after": "직접 컷",
+      "transition": "cut"
+    },
+    {
+      "id": "A08",
+      "title": "상부 · 위에서 아래로 수직 아크",
+      "start": 6,
+      "end": 8,
+      "camera_prompt": "Descend on a twenty-four-degree curved camera orbit from the accepted overhead view, revealing hood, glass and side depth. The camera position moves, not just its tilt. Keep the vehicle, wheels, environment and every interior object stationary. Use fixed focal length; no digital zoom.",
+      "transition_after": "직접 컷",
+      "transition": "cut"
+    },
+    {
+      "id": "A11",
+      "title": "로우 후면 · 수평 아크",
+      "start": 8,
+      "end": 10,
+      "camera_prompt": "Make an eight-degree low horizontal orbit around the rear, keeping the full silhouette within the frame. Keep the vehicle, wheels, environment and every interior object stationary. Use fixed focal length; no digital zoom.",
+      "transition_after": "종료",
+      "transition": null
+    }
+  ],
+  "transitions": [
+    {
+      "at": 2,
+      "type": "cut",
+      "duration": 0
+    },
+    {
+      "at": 4,
+      "type": "cut",
+      "duration": 0
+    },
+    {
+      "at": 6,
+      "type": "cut",
+      "duration": 0
+    },
+    {
+      "at": 8,
+      "type": "cut",
+      "duration": 0
+    }
+  ]
+}

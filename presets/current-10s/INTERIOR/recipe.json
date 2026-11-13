@@ -1,0 +1,80 @@
+{
+  "id": "INTERIOR",
+  "title": "좌핸들 실내 10초 · 첫 컷 돌리 인",
+  "category": ".",
+  "seconds": 10,
+  "frames": 600,
+  "video": "INTERIOR/previs.mp4",
+  "clean": "INTERIOR/previs.mp4",
+  "prompt": "INTERIOR/prompt.txt",
+  "source_package": "interior-lhd-v2",
+  "shots": [
+    {
+      "id": "I01",
+      "title": "실내 전체 · 짧은 돌리 인",
+      "start": 0,
+      "end": 2,
+      "camera_prompt": "Begin with the established wide left-hand-drive cabin composition. Make a very short, slow physical dolly in toward the visible dashboard. Use a fixed lens and fixed orientation; retain the visible steering, dashboard and console. No pullback, zoom out, widening field of view, newly revealed rear seats, additional roof structure or newly invented interior parts. All vehicle parts remain stationary. Camera movement only. Preserve the left-hand-drive layout.",
+      "transition_after": "직접 컷",
+      "transition": "cut"
+    },
+    {
+      "id": "I05",
+      "title": "스티어링 · 짧은 접근",
+      "start": 2,
+      "end": 4,
+      "camera_prompt": "Push gently toward the stationary steering ring, maintaining its original screen position and surrounding dashboard. Keep the vehicle, wheels, environment and every interior object stationary. Use fixed focal length; no digital zoom. Left-hand-drive cabin: steering is on the vehicle left, viewed forward from the seats. Do not mirror the cabin.",
+      "transition_after": "직접 컷",
+      "transition": "cut"
+    },
+    {
+      "id": "I02",
+      "title": "센터콘솔 · 형태 따라 슬라이드",
+      "start": 4,
+      "end": 6,
+      "camera_prompt": "Make a short slide along the blank console, maintaining it in frame. No gear lever movement or invented control action. Keep the vehicle, wheels, environment and every interior object stationary. Use fixed focal length; no digital zoom. Left-hand-drive cabin: steering is on the vehicle left, viewed forward from the seats. Do not mirror the cabin.",
+      "transition_after": "직접 컷",
+      "transition": "cut"
+    },
+    {
+      "id": "I04",
+      "title": "시트 · 시트와 콘솔 사이 슬라이드",
+      "start": 6,
+      "end": 8,
+      "camera_prompt": "Make a small lateral camera move to reveal the separation between seat and console while keeping both in the accepted composition. Keep the vehicle, wheels, environment and every interior object stationary. Use fixed focal length; no digital zoom. Left-hand-drive cabin: steering is on the vehicle left, viewed forward from the seats. Do not mirror the cabin.",
+      "transition_after": "직접 컷",
+      "transition": "cut"
+    },
+    {
+      "id": "I06",
+      "title": "대시보드 · 라인 따라 슬라이드",
+      "start": 8,
+      "end": 10,
+      "camera_prompt": "Slide gently along the dashboard line, tracking the selected passenger-side volume rather than tilting away from it. Keep the vehicle, wheels, environment and every interior object stationary. Use fixed focal length; no digital zoom. Left-hand-drive cabin: steering is on the vehicle left, viewed forward from the seats. Do not mirror the cabin.",
+      "transition_after": "종료",
+      "transition": null
+    }
+  ],
+  "transitions": [
+    {
+      "at": 2,
+      "type": "cut",
+      "duration": 0
+    },
+    {
+      "at": 4,
+      "type": "cut",
+      "duration": 0
+    },
+    {
+      "at": 6,
+      "type": "cut",
+      "duration": 0
+    },
+    {
+      "at": 8,
+      "type": "cut",
+      "duration": 0
+    }
+  ]
+}
